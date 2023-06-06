@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct HomeScreen: View {
+
+    @State var tabSelection: TabBarItem
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        CustomTabBarContainerView(selection: $tabSelection) {
+            DashBoardView()
+                .tabBarView(tab: .home, selection: $tabSelection)
+            MonthlyExpenditureView()
+                .tabBarView(tab: .expenditure, selection: $tabSelection)
+        }
     }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen()
+        HomeScreen(tabSelection: .home)
     }
 }

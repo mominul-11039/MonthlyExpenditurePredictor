@@ -19,6 +19,11 @@
 		89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4369B2A2EE16F002C1CEB /* Constant.swift */; };
 		89B4369F2A2EE191002C1CEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4369E2A2EE191002C1CEB /* User.swift */; };
 		89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */; };
+		89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */; };
+		89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A52A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift */; };
+		89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A62A2F340B002C1CEB /* TabBarItem.swift */; };
+		89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */; };
+		89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		89B4369B2A2EE16F002C1CEB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		89B4369E2A2EE191002C1CEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitViewModel.swift; sourceTree = "<group>"; };
+		89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		89B436A52A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		89B436A62A2F340B002C1CEB /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				89B436962A2EE13C002C1CEB /* MonthlyExpenditureView.swift */,
+				89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */,
+				89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */,
+				89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +176,8 @@
 		89B4369A2A2EE15C002C1CEB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				89B436A62A2F340B002C1CEB /* TabBarItem.swift */,
+				89B436A52A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift */,
 				89B4369B2A2EE16F002C1CEB /* Constant.swift */,
 			);
 			path = Utils;
@@ -316,9 +331,14 @@
 			files = (
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
+				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
+				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
+				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
 				89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */,
 				89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */,
+				89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */,
+				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,
 				89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */,
 				89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */,
 			);
