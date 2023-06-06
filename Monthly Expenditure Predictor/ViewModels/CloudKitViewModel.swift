@@ -67,11 +67,9 @@ class CloudKitViewModel {
         }
     }
 
-    static func requestApplicationPermission() -> Future<Bool, Error> {
-        Future { promise in
-            CloudKitViewModel.requestApplicationPermission { result in
-                promise(result)
-            }
+    static func requestApplicationPermission() {
+        CloudKitViewModel.requestApplicationPermission { _ in
+            
         }
     }
 
