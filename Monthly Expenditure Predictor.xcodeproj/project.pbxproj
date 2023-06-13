@@ -24,6 +24,7 @@
 		89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A62A2F340B002C1CEB /* TabBarItem.swift */; };
 		89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */; };
 		89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */; };
+		89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF45242A3819AD004D2361 /* IntialScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		89B436A62A2F340B002C1CEB /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		89EF45242A3819AD004D2361 /* IntialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				89B436982A2EE14E002C1CEB /* HomeScreen.swift */,
+				89EF45242A3819AD004D2361 /* IntialScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,

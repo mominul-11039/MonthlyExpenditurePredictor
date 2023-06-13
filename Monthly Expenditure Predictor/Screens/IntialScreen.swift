@@ -16,7 +16,7 @@ struct InitialScreenView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.mint.opacity(0.1) // Background color
+                Color("app_bg")
                 VStack {
                     Image("bill_prev_ui")
                         .resizable()
@@ -30,10 +30,12 @@ struct InitialScreenView: View {
                         Button(action: {
                             isNavigationActive = true
                         }) {
-                            Text("Record your Expenditure")
+
+                            Text("Login or Register")
                                 .font(.title)
                                 .fontWeight(.medium)
-                                .foregroundColor(.black.opacity(0.5))
+                                .foregroundColor(Color("tint_color").opacity(0.8))
+
                                 .padding()
                                 .background(Color.white)
                                 .cornerRadius(10)
