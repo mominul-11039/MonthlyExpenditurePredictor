@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24AA2F242A36E0DB0095D347 /* DailyExpenditureEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
 		89B4366E2A2EDF93002C1CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B4366D2A2EDF93002C1CEB /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableView.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
 		89B4366B2A2EDF92002C1CEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */,
 				89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */,
 				89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */,
+				24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
+				24AA2F242A36E0DB0095D347 /* DailyExpenditureEditableView.swift in Sources */,
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,

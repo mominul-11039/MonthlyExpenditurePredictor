@@ -11,7 +11,8 @@ import SwiftUI
 struct Monthly_Expenditure_PredictorApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeScreen(tabSelection: .home)
+//            HomeScreen(tabSelection: .home)
+            DailyExpenditureEditableView()
         }
     }
 }
