@@ -9,7 +9,12 @@ import SwiftUI
 
 struct DashBoardView: View {
     var body: some View {
-        Text("Dashboard")
+        NavigationView {
+            VStack {
+                ProfileButtonView()
+                Spacer()
+            } //: VSTACK
+        } //: NAVIGATION VIEW
     }
 }
 
