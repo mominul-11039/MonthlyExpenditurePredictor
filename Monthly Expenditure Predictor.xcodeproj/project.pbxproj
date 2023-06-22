@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89554EA92A44482200BAAD25 /* EmptyRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89554EA82A44482200BAAD25 /* EmptyRecordView.swift */; };
 		896530C12A39DB4300008392 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896530C02A39DB4300008392 /* DateHelper.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89554EA82A44482200BAAD25 /* EmptyRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecordView.swift; sourceTree = "<group>"; };
 		896530C02A39DB4300008392 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */,
 				89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */,
 				89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */,
+				89554EA82A44482200BAAD25 /* EmptyRecordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
 				89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */,
+				89554EA92A44482200BAAD25 /* EmptyRecordView.swift in Sources */,
 				89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */,
 				89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */,
 				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,

@@ -9,13 +9,12 @@ import SwiftUI
 
 struct RecordsView: View {
     let selectedMonth: String
-    @ObservedObject var vm: ExpenditureRecordViewModel
     var startingTime : Int
     var endingTime : Int
-
-    init(selectedMonth: String, vm: ExpenditureRecordViewModel = ExpenditureRecordViewModel(), startingTime: Int, endingTime: Int) {
+    @ObservedObject var expenditureVM : ExpenditureRecordViewModel
+    init(selectedMonth: String, startingTime: Int, endingTime: Int, expenditureVM: ExpenditureRecordViewModel) {
         self.selectedMonth = selectedMonth
-        self.vm = ExpenditureRecordViewModel(startingTimestamp: startingTime, endingTimestamp: endingTime)
+        self.expenditureVM = ExpenditureRecordViewModel(startingTimestamp: startingTime, endingTimestamp: endingTime)
         self.startingTime = startingTime
         self.endingTime = endingTime
     }
@@ -25,23 +24,19 @@ struct RecordsView: View {
             VStack {
                 Text("Records for \(selectedMonth)")
                     .font(.title)
+                    .fontWeight(.bold)
                     .padding()
 
                 List {
+                    let filteredRecords = expenditureVM.expenditureList
                     Section(header: TableHeaderView()) {
-                        ForEach(vm.expenditureList, id: \.expenditureRecordId) { record in
+                        ForEach(filteredRecords, id: \.expenditureRecordId) { record in
                             TableRowView(record: record)
                         }
                     }
                 }
             }
-            .navigationTitle("Expenditure Records")
+            //.navigationTitle("Expenditure Records")
         }
-    }
-}
-
-struct RecordsView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordsView(selectedMonth: "June", startingTime: 0, endingTime: 0)
     }
 }
