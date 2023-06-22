@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896530C12A39DB4300008392 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896530C02A39DB4300008392 /* DateHelper.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
 		89B4366E2A2EDF93002C1CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B4366D2A2EDF93002C1CEB /* Assets.xcassets */; };
@@ -24,6 +25,11 @@
 		89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A62A2F340B002C1CEB /* TabBarItem.swift */; };
 		89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */; };
 		89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */; };
+		89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */; };
+		89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */; };
+		89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */; };
+		89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */; };
+		89D7F2C02A3ACDB000B3A0DA /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */; };
 		89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF45242A3819AD004D2361 /* IntialScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		896530C02A39DB4300008392 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
 		89B4366B2A2EDF92002C1CEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +73,11 @@
 		89B436A62A2F340B002C1CEB /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecord.swift; sourceTree = "<group>"; };
+		89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecordViewModel.swift; sourceTree = "<group>"; };
+		89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
+		89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
 		89EF45242A3819AD004D2361 /* IntialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		896530BF2A39DB2900008392 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				896530C02A39DB4300008392 /* DateHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		89B4365D2A2EDF92002C1CEB = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,7 @@
 		89B436682A2EDF92002C1CEB /* Monthly Expenditure Predictor */ = {
 			isa = PBXGroup;
 			children = (
+				896530BF2A39DB2900008392 /* Utilities */,
 				89B436A02A2EE1A7002C1CEB /* ViewModels */,
 				89B4369D2A2EE180002C1CEB /* Models */,
 				89B4369A2A2EE15C002C1CEB /* Utils */,
@@ -163,6 +184,9 @@
 				89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */,
 				89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */,
 				89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */,
+				89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */,
+				89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */,
+				89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				89B4369E2A2EE191002C1CEB /* User.swift */,
+				89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */,
+				89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,10 +358,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
+				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
+				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
+				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
+				89D7F2C02A3ACDB000B3A0DA /* TableRowView.swift in Sources */,
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
@@ -344,6 +375,7 @@
 				89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */,
 				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,
 				89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */,
+				89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */,
 				89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
