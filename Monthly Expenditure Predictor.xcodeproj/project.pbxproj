@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24647E212A44041700AB6E36 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24647E202A44041700AB6E36 /* RegistrationView.swift */; };
+		24647E252A44044500AB6E36 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24647E242A44044500AB6E36 /* RegistrationViewModel.swift */; };
+		24647E282A441F1600AB6E36 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24647E272A441F1600AB6E36 /* ViewExtension.swift */; };
+		24647E2A2A4452D700AB6E36 /* RegisterPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24647E292A4452D700AB6E36 /* RegisterPersonalDetailsView.swift */; };
+		24A210C82A3C6C21006628D8 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A210C72A3C6C21006628D8 /* RegistrationScreen.swift */; };
 		24AA2F242A36E0DB0095D347 /* DailyExpenditureEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
@@ -45,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24647E202A44041700AB6E36 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		24647E242A44044500AB6E36 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		24647E272A441F1600AB6E36 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		24647E292A4452D700AB6E36 /* RegisterPersonalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPersonalDetailsView.swift; sourceTree = "<group>"; };
+		24A210C72A3C6C21006628D8 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableView.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
@@ -94,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24647E262A441D8E00AB6E36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24647E272A441F1600AB6E36 /* ViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		89B4365D2A2EDF92002C1CEB = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +135,7 @@
 		89B436682A2EDF92002C1CEB /* Monthly Expenditure Predictor */ = {
 			isa = PBXGroup;
 			children = (
+				24647E262A441D8E00AB6E36 /* Extensions */,
 				89B436A02A2EE1A7002C1CEB /* ViewModels */,
 				89B4369D2A2EE180002C1CEB /* Models */,
 				89B4369A2A2EE15C002C1CEB /* Utils */,
@@ -164,6 +183,8 @@
 				89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */,
 				89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */,
 				24AA2F232A36E0DB0095D347 /* DailyExpenditureEditableView.swift */,
+				24647E202A44041700AB6E36 /* RegistrationView.swift */,
+				24647E292A4452D700AB6E36 /* RegisterPersonalDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				89B436982A2EE14E002C1CEB /* HomeScreen.swift */,
+				24A210C72A3C6C21006628D8 /* RegistrationScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -198,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */,
+				24647E242A44044500AB6E36 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A210C82A3C6C21006628D8 /* RegistrationScreen.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
@@ -340,10 +364,14 @@
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
 				89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */,
+				24647E212A44041700AB6E36 /* RegistrationView.swift in Sources */,
 				89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */,
 				89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */,
 				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,
+				24647E252A44044500AB6E36 /* RegistrationViewModel.swift in Sources */,
+				24647E282A441F1600AB6E36 /* ViewExtension.swift in Sources */,
 				89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */,
+				24647E2A2A4452D700AB6E36 /* RegisterPersonalDetailsView.swift in Sources */,
 				89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,6 +41,7 @@ struct DailyExpenditureEditableView: View {
                 Text("Price")
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
+                    
             }
             ForEach(items.indices, id: \.self) { index in
                 HStack {
@@ -50,7 +51,8 @@ struct DailyExpenditureEditableView: View {
                         .multilineTextAlignment(.center)
                     TextField("Price", value: $items[index].price, formatter: currencyFormatter)
                         .keyboardType(.decimalPad)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.trailing)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25))
                     
                 }
                 
