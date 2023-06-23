@@ -16,6 +16,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmPassword = ""
     @Published var isValid = false
+    @Published var isUserExists = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -53,20 +54,31 @@ class RegistrationViewModel: ObservableObject {
     }
     
     // MARK: Check if user exist
-    func checkUserExists() -> Future<Bool, Error> {
-        let predicate = NSPredicate(format: "user_email == %@", email)
-        return CloudKitViewModel.fetch(predicate: predicate, recordType: "expenditure_user")
-            .map { users in
-                return !users.isEmpty
+    func checkIfUserExists(completion: @escaping ()->Void ){
+        CloudKitViewModel.checkUserExistsWithEmail(email: email) {[weak self] result in
+            guard let self = self else {return}
+            switch result{
+            case .success(let isUserExists):
+                print(isUserExists)
+                DispatchQueue.main.async {
+                    self.isUserExists = isUserExists
+                }
+                
+            case .failure(let err):
+                print(err)
             }
+            
+            completion()
+        }
     }
 
        
         func register() {
             if isValid{
-                saveUser()
-                print("email",email)
-                print("pass",password)
+                checkIfUserExists {[weak self] in
+                    guard let self = self else {return}
+                    isUserExists ? print("User already registered") : saveUser()
+                }
                 
             }else{
                 print("registration not succeed")
