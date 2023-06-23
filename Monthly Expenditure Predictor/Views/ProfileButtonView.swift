@@ -12,7 +12,7 @@ struct ProfileButtonView: View {
     // MARK: - VIEW
     var body: some View {
         HStack {
-            NavigationLink(destination: UserProfileView()) {
+            NavigationLink(destination: UserProfileView(vm: ProfileViewModel(userEmail: ""))) {
                 Capsule()
                     .fill(.ultraThinMaterial)
                     .frame(width: 125, height: 60)
@@ -22,7 +22,6 @@ struct ProfileButtonView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 35, height: 35)
-                            .padding(10)
                             .padding(.leading, 30)
                             .tint(.red.opacity(0.6))
                     )
