@@ -28,14 +28,26 @@ struct RegistrationView: View {
                     .styledTextField()
                     .frame(alignment: .center)
                 
-                NavigationLink( destination: RegisterPersonalDetailsView()){
-                    Text("Next")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(viewModel.isValid ? Color.blue : Color.gray)
-                        .cornerRadius(8)
+                if viewModel.isValid {
+                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel)) {
+                        Text("Next")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                    }
+                } else {
+                    Button(action: {}) {
+                        Text("Next")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.gray)
+                            .cornerRadius(8)
+                    }
                 }
+
                 
             }
             

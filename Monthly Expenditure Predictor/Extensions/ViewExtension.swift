@@ -14,4 +14,12 @@ extension View {
             .background(Color.gray.opacity(0.2))
             .cornerRadius(8)
     }
+    
+    func registrationButtonStyle()-> some View{
+        return self
+            .foregroundColor(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .cornerRadius(8)
+    }
 }
