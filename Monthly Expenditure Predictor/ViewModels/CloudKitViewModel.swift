@@ -87,11 +87,13 @@ class CloudKitViewModel {
     }
     
     static func checkUserExistsWithEmail(email: String, completion: @escaping (Result<Bool, Error>) -> Void) {
-            let predicate = NSPredicate(format: "userEmail == %@", email)
+            let predicate = NSPredicate(format: "user_email == %@", email)
             let recordType = "expenditure_user"
 
             fetch(predicate: predicate, recordType: recordType) { (users: [User]) in
+                print("userscount: ", users.count)
                 if users.isEmpty {
+                    
                     // User with the provided email does not exist
                     completion(.success(false))
                 } else {
@@ -100,6 +102,21 @@ class CloudKitViewModel {
                 }
             }
         }
+    
+    // MARK:
+    static func fetchUser(){
+        // Fetch Public Database
+        let publicDatabase = CKContainer.default().publicCloudDatabase
+               
+               // Initialize Query
+               let query = CKQuery(recordType: "expenditure_user", predicate: NSPredicate(format: "user_email == %@", "yeasir.arefin@bjitgroup.com"))
+               
+               
+               // Perform Query
+        publicDatabase.fetch(withQuery: query) { result in
+            print(result)
+        }
+    }
 
     static private func fetch<T: CloudKitableProtocol> (
         predicate: NSPredicate,

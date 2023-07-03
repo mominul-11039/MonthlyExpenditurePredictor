@@ -18,7 +18,6 @@ struct RegistrationView: View {
                 Text("Sign Up")
                     .fontWeight(.bold)
                     .font(.system(size: 24))
-               
                 TextField("Email", text: $viewModel.email)
                     .styledTextField()
                     .keyboardType(.emailAddress)
@@ -27,7 +26,6 @@ struct RegistrationView: View {
                 SecureField("Confirm Password", text: $viewModel.confirmPassword)
                     .styledTextField()
                     .frame(alignment: .center)
-                
                 if viewModel.isValid {
                     NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel)) {
                         Text("Next")

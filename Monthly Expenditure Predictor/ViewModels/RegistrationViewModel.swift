@@ -42,6 +42,7 @@ class RegistrationViewModel: ObservableObject {
         record["no_of_family_member"] = self.noOfFamilyMember as CKRecordValue
         record["password"] = self.password as CKRecordValue
         record["confirm_password"] = self.confirmPassword as CKRecordValue
+        
         CloudKitViewModel.add(item: User(record: record)!) { result in
             switch result{
             case .failure(let err):
@@ -62,13 +63,15 @@ class RegistrationViewModel: ObservableObject {
                 print(isUserExists)
                 DispatchQueue.main.async {
                     self.isUserExists = isUserExists
+                    completion()
                 }
                 
             case .failure(let err):
                 print(err)
+                completion()
             }
             
-            completion()
+            
         }
     }
 
