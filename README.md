@@ -1,7 +1,7 @@
 # MonthlyExpenditurePredictor
 
 ## Used Framework: 
-### SiwftUI
+### SwiftUI
 ### CloudKit
 ### Vision
 ### Combine

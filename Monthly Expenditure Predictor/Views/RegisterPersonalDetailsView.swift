@@ -12,40 +12,46 @@ struct RegisterPersonalDetailsView: View {
     
     var body: some View {
        
-            VStack {
-                Text("Personal Details")
-                    .fontWeight(.bold)
-                TextField("Full Name", text: $viewModel.fullName)
-                    .styledTextField()
-                TextField("Number of family member", text: Binding(
-                    get: { viewModel.noOfFamilyMember == 0 ? "" : String(viewModel.noOfFamilyMember) },
-                    set: { viewModel.noOfFamilyMember = Int($0) ?? 0 }
-                ))
-                    .styledTextField()
-                    .keyboardType(.numberPad)
-                TextField("Address", text: $viewModel.address)
-                    .styledTextField()
-                TextField("Age", text: Binding(
-                    get: {viewModel.age == 0 ? "" : String(viewModel.age)},
-                    set: { viewModel.age = Int($0) ?? 0}
-                ))
-                    .styledTextField()
-                    .keyboardType(.numberPad)
-                
-                Button(action: viewModel.register) {
-                    Text("Finish")
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue )
-                        .cornerRadius(8)
+        NavigationView {
+            if viewModel.isAuthenticated {
+                NavigationLink(destination: HomeScreen(tabSelection: .home).navigationBarBackButtonHidden(true), isActive: $viewModel.isAuthenticated) {
+                        EmptyView()
                 }
-//                .disabled(viewModel.isValid)
-                .padding()
-                
-                
+            } else {
+                VStack {
+                    Text("Personal Details")
+                        .fontWeight(.bold)
+                    TextField("Full Name", text: $viewModel.fullName)
+                        .styledTextField()
+                    TextField("Number of family member", text: Binding(
+                        get: { viewModel.noOfFamilyMember == 0 ? "" : String(viewModel.noOfFamilyMember) },
+                        set: { viewModel.noOfFamilyMember = Int($0) ?? 0 }
+                    ))
+                        .styledTextField()
+                        .keyboardType(.numberPad)
+                    TextField("Address", text: $viewModel.address)
+                        .styledTextField()
+                    TextField("Age", text: Binding(
+                        get: {viewModel.age == 0 ? "" : String(viewModel.age)},
+                        set: { viewModel.age = Int($0) ?? 0}
+                    ))
+                        .styledTextField()
+                        .keyboardType(.numberPad)
+                    
+                    Button(action: viewModel.register) {
+                        Text("Finish")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue )
+                            .cornerRadius(8)
+                    }
+    //                .disabled(viewModel.isValid)
+                    .padding()
+                }
+            .padding()
             }
-        .padding()
+        }
     }
 }
 

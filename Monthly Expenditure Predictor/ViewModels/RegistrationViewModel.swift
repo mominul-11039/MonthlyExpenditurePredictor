@@ -18,6 +18,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var isValid = false
     @Published var isUserExists = false
     @Published var isUserActive = false
+    @Published var isAuthenticated = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -44,13 +45,15 @@ class RegistrationViewModel: ObservableObject {
         record["password"] = self.password as CKRecordValue
         record["confirm_password"] = self.confirmPassword as CKRecordValue
         
-        CloudKitViewModel.add(item: User(record: record)!) { result in
+        CloudKitViewModel.add(item: User(record: record)!) { [weak self] result in
             switch result{
             case .failure(let err):
                 print(err)
             case .success(_):
-                // TODO: make status authenticated
                 print("Succeed!!")
+                DispatchQueue.main.async {
+                    self?.isAuthenticated = true
+                }
             }
         }
     }
