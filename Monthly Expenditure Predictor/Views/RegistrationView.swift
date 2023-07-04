@@ -45,18 +45,9 @@ struct RegistrationView: View {
                             .cornerRadius(8)
                     }
                 }
-
-                
             }
             
         }
         .padding()
-    }
-}
-
-
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
     }
 }

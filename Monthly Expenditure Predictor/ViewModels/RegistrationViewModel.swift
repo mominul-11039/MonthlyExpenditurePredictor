@@ -55,20 +55,16 @@ class RegistrationViewModel: ObservableObject {
     }
     
     // MARK: Check if user exist
-    func checkIfUserExists(completion: @escaping ()->Void ){
+    func checkIfUserExists(){
         CloudKitViewModel.checkUserExistsWithEmail(email: email) {[weak self] result in
             guard let self = self else {return}
             switch result{
             case .success(let isUserExists):
-                print(isUserExists)
                 DispatchQueue.main.async {
                     self.isUserExists = isUserExists
-                    completion()
                 }
-                
             case .failure(let err):
                 print(err)
-                completion()
             }
             
             
@@ -77,15 +73,6 @@ class RegistrationViewModel: ObservableObject {
 
        
         func register() {
-            if isValid{
-                checkIfUserExists {[weak self] in
-                    guard let self = self else {return}
-                    isUserExists ? print("User already registered") : saveUser()
-                }
-                
-            }else{
-                print("registration not succeed")
-            }
-        
+            isValid ? saveUser() : print("registration unsuccessful")
     }
 }

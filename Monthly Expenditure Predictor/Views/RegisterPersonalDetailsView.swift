@@ -18,7 +18,7 @@ struct RegisterPersonalDetailsView: View {
                 TextField("Full Name", text: $viewModel.fullName)
                     .styledTextField()
                 TextField("Number of family member", text: Binding(
-                    get: { String(viewModel.noOfFamilyMember) },
+                    get: { viewModel.noOfFamilyMember == 0 ? "" : String(viewModel.noOfFamilyMember) },
                     set: { viewModel.noOfFamilyMember = Int($0) ?? 0 }
                 ))
                     .styledTextField()
@@ -26,9 +26,8 @@ struct RegisterPersonalDetailsView: View {
                 TextField("Address", text: $viewModel.address)
                     .styledTextField()
                 TextField("Age", text: Binding(
-                    get: {String(viewModel.noOfFamilyMember)},
-                    set: { viewModel.age = Int($0) ?? 0
-                    }
+                    get: {viewModel.age == 0 ? "" : String(viewModel.age)},
+                    set: { viewModel.age = Int($0) ?? 0}
                 ))
                     .styledTextField()
                     .keyboardType(.numberPad)
@@ -38,11 +37,13 @@ struct RegisterPersonalDetailsView: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(viewModel.isValid ? Color.blue : Color.gray)
+                        .background(Color.blue )
                         .cornerRadius(8)
                 }
 //                .disabled(viewModel.isValid)
                 .padding()
+                
+                
             }
         .padding()
     }
