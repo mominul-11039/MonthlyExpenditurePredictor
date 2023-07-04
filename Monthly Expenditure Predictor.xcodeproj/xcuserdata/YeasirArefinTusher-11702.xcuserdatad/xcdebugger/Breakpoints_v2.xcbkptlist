@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6B4E7587-3718-4EB3-A1C3-0D585CABFB1D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A489BCE-CFB0-4D43-89DD-FED52F3BDD8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/CloudKitViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "checkUserExistsWithEmail(email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0A489BCE-CFB0-4D43-89DD-FED52F3BDD8D - c1dcddcc71c106f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Monthly_Expenditure_Predictor.User&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.checkUserExistsWithEmail(email: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "0A489BCE-CFB0-4D43-89DD-FED52F3BDD8D - c1dcddcc71c10690"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Monthly_Expenditure_Predictor.User&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.checkUserExistsWithEmail(email: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "546ABD4D-8C84-4EDE-AB15-84C227D5BD94"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/CloudKitViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "checkUserExistsWithEmail(email:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "546ABD4D-8C84-4EDE-AB15-84C227D5BD94 - c1dcddcc71c10737"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Monthly_Expenditure_Predictor.User&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.checkUserExistsWithEmail(email: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "546ABD4D-8C84-4EDE-AB15-84C227D5BD94 - c1dcddcc71c10737"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Monthly_Expenditure_Predictor.User&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.checkUserExistsWithEmail(email: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
