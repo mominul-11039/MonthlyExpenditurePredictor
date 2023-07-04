@@ -17,6 +17,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var confirmPassword = ""
     @Published var isValid = false
     @Published var isUserExists = false
+    @Published var isUserActive = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -62,6 +63,7 @@ class RegistrationViewModel: ObservableObject {
             case .success(let isUserExists):
                 DispatchQueue.main.async {
                     self.isUserExists = isUserExists
+                    self.isUserActive = !isUserExists
                 }
             case .failure(let err):
                 print(err)

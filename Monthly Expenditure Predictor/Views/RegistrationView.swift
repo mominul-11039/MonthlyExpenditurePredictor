@@ -26,8 +26,21 @@ struct RegistrationView: View {
                 SecureField("Confirm Password", text: $viewModel.confirmPassword)
                     .styledTextField()
                     .frame(alignment: .center)
+                
+                if viewModel.isUserExists{
+                    Text("The provided email address is already registered. Please use a different email address or try logging in.")
+                        .font(.system(size: 12))
+                        .foregroundColor(.red)
+                        .padding(8)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                }else{
+                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel), isActive: $viewModel.isUserActive) {
+                            EmptyView()
+                        }
+                }
                 if viewModel.isValid {
-                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel)) {
+                    Button(action: {viewModel.checkIfUserExists()}) {
                         Text("Next")
                             .foregroundColor(.white)
                             .padding()
@@ -35,6 +48,7 @@ struct RegistrationView: View {
                             .background(Color.blue)
                             .cornerRadius(8)
                     }
+                    .padding()
                 } else {
                     Button(action: {}) {
                         Text("Next")
@@ -44,6 +58,7 @@ struct RegistrationView: View {
                             .background(Color.gray)
                             .cornerRadius(8)
                     }
+                    .padding()
                 }
             }
             
