@@ -39,6 +39,7 @@ struct RegistrationView: View {
                             EmptyView()
                         }
                 }
+                
                 if viewModel.isValid {
                     Button(action: {viewModel.checkIfUserExists()}) {
                         Text("Next")
