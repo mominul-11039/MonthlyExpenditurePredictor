@@ -35,7 +35,7 @@ struct RegistrationView: View {
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
                 }else{
-                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel), isActive: $viewModel.isUserActive) {
+                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel).navigationBarBackButtonHidden(true), isActive: $viewModel.isUserActive) {
                             EmptyView()
                         }
                 }

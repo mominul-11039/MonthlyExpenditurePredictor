@@ -36,6 +36,9 @@
 		89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3F2A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift */; };
 		89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F402A53DD8A00C5FB13 /* RegistrationView.swift */; };
 		89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F452A53DFFA00C5FB13 /* ViewExtension.swift */; };
+		89EF9F482A53E39C00C5FB13 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */; };
+		89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F492A53E3AA00C5FB13 /* LoginScreen.swift */; };
+		89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F4B2A53E3B200C5FB13 /* RegistrationScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		89EF9F3F2A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPersonalDetailsView.swift; sourceTree = "<group>"; };
 		89EF9F402A53DD8A00C5FB13 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		89EF9F452A53DFFA00C5FB13 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		89EF9F492A53E3AA00C5FB13 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		89EF9F4B2A53E3B200C5FB13 /* RegistrationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,8 @@
 		89B436952A2EE024002C1CEB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				89EF9F4B2A53E3B200C5FB13 /* RegistrationScreen.swift */,
+				89EF9F492A53E3AA00C5FB13 /* LoginScreen.swift */,
 				89B436982A2EE14E002C1CEB /* HomeScreen.swift */,
 				89EF45242A3819AD004D2361 /* IntialScreen.swift */,
 			);
@@ -236,6 +244,7 @@
 		89B436A02A2EE1A7002C1CEB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */,
 				89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */,
 				89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */,
 				89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */,
@@ -381,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */,
 				89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */,
 				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
 				89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */,
@@ -394,6 +404,8 @@
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
 				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
 				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
+				89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */,
+				89EF9F482A53E39C00C5FB13 /* LoginViewModel.swift in Sources */,
 				89D7F2C02A3ACDB000B3A0DA /* TableRowView.swift in Sources */,
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,

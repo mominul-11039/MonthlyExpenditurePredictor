@@ -25,7 +25,7 @@ struct InitialScreenView: View {
                         .animation(.interpolatingSpring(stiffness: 100, damping: 10))
                         .opacity(isDiaryVisible ? 1 : 0)
 
-                    NavigationLink(destination: HomeScreen(tabSelection: .home), isActive: $isNavigationActive) {
+                    NavigationLink(destination: LoginScreen().navigationBarBackButtonHidden(true), isActive: $isNavigationActive) {
                         Button(action: {
                             isNavigationActive = true
                         }) {
