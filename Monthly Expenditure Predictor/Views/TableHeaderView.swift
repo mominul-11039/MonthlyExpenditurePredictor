@@ -11,13 +11,13 @@ struct TableHeaderView: View {
     var body: some View {
         HStack {
             Text("Product Name")
-            //.frame(maxWidth: .infinity, alignment: .leading)
+              .frame(maxWidth: .infinity, alignment: .center)
             Spacer()
             Text("Quantity")
-            //.frame(maxWidth: .infinity, alignment: .center)
+              .frame(maxWidth: .infinity, alignment: .center)
             Spacer()
             Text("Price")
-            //.frame(maxWidth: .infinity, alignment: .trailing)
+              .frame(maxWidth: .infinity, alignment: .center)
         }
         .font(.headline)
         .padding(.horizontal)

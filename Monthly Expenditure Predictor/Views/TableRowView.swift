@@ -11,15 +11,20 @@ struct TableRowView: View {
     let record: ExpenditureRecord
 
     var body: some View {
-        HStack {
-            Text(record.productName)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Spacer()
-            Text("\(record.productQuantity)")
-                .frame(maxWidth: .infinity, alignment: .center)
-            Spacer()
-            Text("$\(record.productPrice)")
-                .frame(maxWidth: .infinity, alignment: .trailing)
+        ZStack {
+            HStack {
+                Text(record.productName)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("app_bg").opacity(0.7))
+                Spacer()
+                Text("\(record.productQuantity)")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("app_bg").opacity(0.7))
+                Spacer()
+                Text("$\(record.productPrice)")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("app_bg").opacity(0.7))
+            }
         }
     }
 }

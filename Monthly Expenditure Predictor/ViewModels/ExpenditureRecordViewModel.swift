@@ -29,10 +29,10 @@ class ExpenditureRecordViewModel: ObservableObject {
     }
 
         func getExpenditures(startingTimestamp: Int, endingTimestamp: Int) {
+            let userEmail = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME") ?? ""
             print("startingTimestamp",startingTimestamp)
             print("endingTimestamp",endingTimestamp)
-            let predicate = NSPredicate(format: "date >= %d AND date <= %d",  startingTimestamp,  endingTimestamp)
-
+            let predicate = NSPredicate(format: "date >= %d AND date <= %d AND user_email == %@",  startingTimestamp,  endingTimestamp, userEmail)
 
             let recordType = "expenditure_info"
             CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)

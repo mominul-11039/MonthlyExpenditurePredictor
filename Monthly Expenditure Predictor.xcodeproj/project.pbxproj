@@ -44,6 +44,7 @@
 		89EF9F522A54042500C5FB13 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F512A54042400C5FB13 /* ProfileViewModel.swift */; };
 		89EF9F542A5408DB00C5FB13 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F532A5408DB00C5FB13 /* LogoutView.swift */; };
 		89EF9F562A541BCA00C5FB13 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F552A541BCA00C5FB13 /* SessionManager.swift */; };
+		89EF9F582A542DD800C5FB13 /* EmptyRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F572A542DD800C5FB13 /* EmptyRecordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		89EF9F512A54042400C5FB13 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		89EF9F532A5408DB00C5FB13 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		89EF9F552A541BCA00C5FB13 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		89EF9F572A542DD800C5FB13 /* EmptyRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyRecordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		89B436942A2EE01C002C1CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89EF9F572A542DD800C5FB13 /* EmptyRecordView.swift */,
 				89EF9F4D2A54041800C5FB13 /* ProfileButtonView.swift */,
 				89EF9F4E2A54041800C5FB13 /* UserProfileView.swift */,
 				89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */,
@@ -418,6 +421,7 @@
 				89EF9F3D2A53DD6A00C5FB13 /* RegistrationViewModel.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
 				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
+				89EF9F582A542DD800C5FB13 /* EmptyRecordView.swift in Sources */,
 				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
 				89EF9F562A541BCA00C5FB13 /* SessionManager.swift in Sources */,
 				89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */,
