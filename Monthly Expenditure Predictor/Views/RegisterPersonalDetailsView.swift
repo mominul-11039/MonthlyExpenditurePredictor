@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct RegisterPersonalDetailsView: View {
+    @EnvironmentObject var sessionManager: SessionManager
     @ObservedObject var viewModel: RegistrationViewModel
     
     var body: some View {
        
         NavigationView {
             if viewModel.isAuthenticated {
-                NavigationLink(destination: HomeScreen(tabSelection: .home).navigationBarBackButtonHidden(true), isActive: $viewModel.isAuthenticated) {
+                NavigationLink(destination: HomeScreen(tabSelection: .home)
+                    .environmentObject(sessionManager)
+                    .navigationBarBackButtonHidden(true), isActive: $viewModel.isAuthenticated) {
                         EmptyView()
                 }
             } else {

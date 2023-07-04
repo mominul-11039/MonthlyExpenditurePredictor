@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginScreen: View {
 
+    @EnvironmentObject var sessionManager: SessionManager
     @StateObject var loginViewModel = LoginViewModel()
 
     var body: some View {
@@ -16,12 +17,16 @@ struct LoginScreen: View {
             VStack {
                 switch loginViewModel.isAuthenticated {
                 case true:
-                    NavigationLink(destination: HomeScreen(tabSelection: .home).navigationBarBackButtonHidden(true), isActive: $loginViewModel.isAuthenticated) {
+                    NavigationLink(destination: HomeScreen(tabSelection: .home)
+                        .environmentObject(sessionManager)
+                        .navigationBarBackButtonHidden(true), isActive: $loginViewModel.isAuthenticated) {
                         EmptyView()
                     }
                 default:
                     if loginViewModel.notHaveAccount {
-                        NavigationLink(destination: RegistrationView().navigationBarBackButtonHidden(false), isActive: $loginViewModel.notHaveAccount) {
+                        NavigationLink(destination: RegistrationView()
+                            .environmentObject(sessionManager)
+                            .navigationBarBackButtonHidden(false), isActive: $loginViewModel.notHaveAccount) {
                             EmptyView()
                         }
                     } else {
@@ -43,6 +48,9 @@ struct LoginScreen: View {
                     }
                 }
             }
+        }
+        .onAppear{
+            self.loginViewModel.setUpEnv(session: sessionManager)
         }
     }
 }

@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct DashBoardView: View {
+    @EnvironmentObject var sessionManager: SessionManager
+
     var body: some View {
-        Text("Dashboard")
+        NavigationView {
+            VStack {
+                HStack {
+                    ProfileButtonView()
+                    Spacer()
+                    LogoutButtonView()
+                        .environmentObject(sessionManager)
+                }
+                Spacer()
+            } //: VSTACK
+        } //: NAVIGATION VIEW
     }
 }
 

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Monthly_Expenditure_PredictorApp: App {
+    @StateObject var sessionManager = SessionManager()
     var body: some Scene {
         WindowGroup {
-            InitialScreenView()
+            InitialScreenView().environmentObject(sessionManager)
         }
     }
 }

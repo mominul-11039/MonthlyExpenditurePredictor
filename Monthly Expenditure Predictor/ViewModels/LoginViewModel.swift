@@ -8,9 +8,11 @@
 import Foundation
 import Combine
 import CloudKit
+import SwiftUI
 
 class LoginViewModel: ObservableObject{
 
+    var sessionManager: SessionManager?
     var cancellables = Set<AnyCancellable>()
     @Published var userEmail = ""
     @Published var password = ""
@@ -19,9 +21,13 @@ class LoginViewModel: ObservableObject{
     @Published var isAuthenticated: Bool = false
     @Published var notHaveAccount: Bool = false
 
+    func setUpEnv(session: SessionManager) {
+        self.sessionManager = session
+    }
+
     // MARK: - Fetch employee from cloudkit
     func login(){
-        let predicate = NSPredicate(format: "user_email == %@", "islam.mominul@bjitgroup.com")
+        let predicate = NSPredicate(format: "user_email == %@", userEmail)
         let recordType = "expenditure_user"
         print("User email : \(userEmail)")
         print("User password : \(password)")
@@ -32,6 +38,8 @@ class LoginViewModel: ObservableObject{
                 self?.user = returnedItems.first
                 if returnedItems.count > 0 && self?.user?.userPasswrod == self?.password {
                     self?.isAuthenticated = true
+                    UserDefaults.standard.set(self?.user?.userEmail, forKey: "MEP_LOGGED_IN_USER_NAME")
+                    self?.sessionManager?.login()
                 }
             }
             .store(in: &cancellables)

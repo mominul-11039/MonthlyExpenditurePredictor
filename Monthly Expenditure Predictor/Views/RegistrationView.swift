@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct RegistrationView: View {
+    @EnvironmentObject var sessionManager: SessionManager
     @StateObject private var viewModel = RegistrationViewModel()
     @State private var isRegistrationComplete = false
     
@@ -35,7 +36,9 @@ struct RegistrationView: View {
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
                 }else{
-                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel).navigationBarBackButtonHidden(true), isActive: $viewModel.isUserActive) {
+                    NavigationLink(destination: RegisterPersonalDetailsView(viewModel: viewModel)
+                        .environmentObject(sessionManager)
+                        .navigationBarBackButtonHidden(true), isActive: $viewModel.isUserActive) {
                             EmptyView()
                         }
                 }
@@ -65,5 +68,8 @@ struct RegistrationView: View {
             
         }
         .padding()
+        .onAppear{
+            self.viewModel.setUpEnv(session: sessionManager)
+        }
     }
 }

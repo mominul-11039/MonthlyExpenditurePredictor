@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct HomeScreen: View {
-
+    @EnvironmentObject var sessionManager: SessionManager
     @State var tabSelection: TabBarItem
 
     var body: some View {
         CustomTabBarContainerView(selection: $tabSelection) {
             DashBoardView()
                 .tabBarView(tab: .home, selection: $tabSelection)
+                .environmentObject(sessionManager)
             MonthlyExpenditureView()
                 .tabBarView(tab: .expenditure, selection: $tabSelection)
         }
