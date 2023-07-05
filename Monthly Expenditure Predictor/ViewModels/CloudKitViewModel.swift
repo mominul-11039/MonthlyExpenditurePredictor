@@ -242,32 +242,4 @@ class CloudKitViewModel {
 
             addOperation(operation: operation)
     }
-    
-   static func saveItemsToCloudKit(_ items: [ExpenditureRecord]) {
-        let records = items.map { item in
-            let recordID = CKRecord.ID(recordName: item.expenditureRecordId.uuidString)
-            let record = CKRecord(recordType: "expenditure_info", recordID: recordID)
-            record["product_name"] = item.productName as CKRecordValue
-            record["product_quantity"] = item.productQuantity as CKRecordValue
-            record["product_price"] = item.productPrice as CKRecordValue
-            record["date"] = item.timestamp as CKRecordValue
-            record["category"] = item.category as CKRecordValue
-            record["user_email"] = item.userEmail as CKRecordValue
-            return record
-        }
-        let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: nil)
-        operation.savePolicy = .changedKeys
-        operation.qualityOfService = .userInitiated
-        operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
-            if let error = error {
-                print("Error saving records: \(error.localizedDescription)")
-            } else {
-                print("Records saved successfully")
-            }
-        }
-        
-       let container = CloudKitViewModel.ckContainer
-        let database = container.publicCloudDatabase
-        database.add(operation)
-    }
 }

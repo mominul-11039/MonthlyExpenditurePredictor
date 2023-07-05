@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2414D3E02A541BB6003C2595 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3DF2A541BB6003C2595 /* ScanData.swift */; };
-		2414D3E22A541C8B003C2595 /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3E12A541C8B003C2595 /* DocumentCameraView.swift */; };
-		2414D3E42A541DFD003C2595 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3E32A541DFD003C2595 /* TextRecognizer.swift */; };
-		2414D3E62A542B08003C2595 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3E52A542B08003C2595 /* Item.swift */; };
-		2414D3E82A553139003C2595 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3E72A553139003C2595 /* DashBoardViewModel.swift */; };
-		2414D3EA2A566B4E003C2595 /* DailyExpenditureEditableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414D3E92A566B4E003C2595 /* DailyExpenditureEditableViewModel.swift */; };
 		896530C12A39DB4300008392 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896530C02A39DB4300008392 /* DateHelper.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
@@ -65,12 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2414D3DF2A541BB6003C2595 /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
-		2414D3E12A541C8B003C2595 /* DocumentCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
-		2414D3E32A541DFD003C2595 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
-		2414D3E52A542B08003C2595 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		2414D3E72A553139003C2595 /* DashBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewModel.swift; sourceTree = "<group>"; };
-		2414D3E92A566B4E003C2595 /* DailyExpenditureEditableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableViewModel.swift; sourceTree = "<group>"; };
 		896530C02A39DB4300008392 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
@@ -138,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				896530C02A39DB4300008392 /* DateHelper.swift */,
-				2414D3E32A541DFD003C2595 /* TextRecognizer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,7 +207,6 @@
 				89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */,
 				89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */,
 				89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */,
-				2414D3E12A541C8B003C2595 /* DocumentCameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,8 +237,6 @@
 			children = (
 				89B4369E2A2EE191002C1CEB /* User.swift */,
 				89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */,
-				2414D3DF2A541BB6003C2595 /* ScanData.swift */,
-				2414D3E52A542B08003C2595 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,8 +248,6 @@
 				89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */,
 				89B436A12A2EE1C5002C1CEB /* CloudKitViewModel.swift */,
 				89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */,
-				2414D3E72A553139003C2595 /* DashBoardViewModel.swift */,
-				2414D3E92A566B4E003C2595 /* DailyExpenditureEditableViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -410,21 +392,16 @@
 			files = (
 				89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */,
 				89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */,
-				2414D3E22A541C8B003C2595 /* DocumentCameraView.swift in Sources */,
 				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
 				89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */,
 				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
-				2414D3E62A542B08003C2595 /* Item.swift in Sources */,
-				2414D3E82A553139003C2595 /* DashBoardViewModel.swift in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
-				2414D3EA2A566B4E003C2595 /* DailyExpenditureEditableViewModel.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89EF9F3D2A53DD6A00C5FB13 /* RegistrationViewModel.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
-				2414D3E02A541BB6003C2595 /* ScanData.swift in Sources */,
 				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
 				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
 				89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */,
@@ -433,7 +410,6 @@
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
-				2414D3E42A541DFD003C2595 /* TextRecognizer.swift in Sources */,
 				89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */,
 				89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */,
 				89B436A72A2F340B002C1CEB /* TabBarItemsPreferenceKey.swift in Sources */,
@@ -603,7 +579,6 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(DEVELOPMENT_LANGUAGE) camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -635,7 +610,6 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(DEVELOPMENT_LANGUAGE) camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
