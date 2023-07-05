@@ -36,7 +36,6 @@ class RegistrationViewModel: ObservableObject {
     // MARK: Save User to cloudkit
     private func saveUser(){
         let record = CKRecord(recordType: "expenditure_user")
-            
         record["user_name"] = self.fullName as CKRecordValue
         record["user_email"] = self.email as CKRecordValue
         record["user_address"] = self.address as CKRecordValue

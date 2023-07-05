@@ -66,7 +66,7 @@ struct MonthlyExpenditureView: View {
             }
             .navigationTitle("Monthly Books")
             .sheet(isPresented: $isShowingRecordsView) {
-                if let selectedMonth = selectedMonth, let selectedYear = 2023 {
+                if let selectedMonth = selectedMonth, let selectedYear =    Int(selectedYear) {
                     let startingTimestamp = getStartingTimestamp(for: selectedMonth, year: selectedYear)
                     let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
                     if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {

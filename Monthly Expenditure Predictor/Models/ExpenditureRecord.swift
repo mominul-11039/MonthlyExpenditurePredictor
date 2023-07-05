@@ -9,7 +9,7 @@ import Foundation
 import CloudKit
 struct ExpenditureRecord : Hashable, CloudKitableProtocol{
     let expenditureRecordId = UUID()
-    let userId: Int
+    let userEmail: String
     let timestamp: Int
     let productName: String
     let productQuantity: Int
@@ -18,7 +18,7 @@ struct ExpenditureRecord : Hashable, CloudKitableProtocol{
     let record: CKRecord
 
     init?(record: CKRecord) {
-        self.userId = record["user_id"] ?? 0
+        self.userEmail = record["user_email"] ?? ""
         self.timestamp = record["date"] ?? 0
         self.productName = record["product_name"] ?? ""
         self.productQuantity = record["product_quantity"] ?? 0

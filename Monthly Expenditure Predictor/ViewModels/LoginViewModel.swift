@@ -21,7 +21,7 @@ class LoginViewModel: ObservableObject{
 
     // MARK: - Fetch employee from cloudkit
     func login(){
-        let predicate = NSPredicate(format: "user_email == %@", "islam.mominul@bjitgroup.com")
+        let predicate = NSPredicate(format: "user_email == %@", userEmail)
         let recordType = "expenditure_user"
         print("User email : \(userEmail)")
         print("User password : \(password)")
@@ -31,7 +31,10 @@ class LoginViewModel: ObservableObject{
             } receiveValue: { [weak self] returnedItems in
                 self?.user = returnedItems.first
                 if returnedItems.count > 0 && self?.user?.userPasswrod == self?.password {
-                    self?.isAuthenticated = true
+                    DispatchQueue.main.async {
+                        self?.isAuthenticated = true
+                    }
+                    
                 }
             }
             .store(in: &cancellables)

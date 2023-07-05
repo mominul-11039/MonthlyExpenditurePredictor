@@ -11,7 +11,11 @@ import SwiftUI
 struct Monthly_Expenditure_PredictorApp: App {
     var body: some Scene {
         WindowGroup {
-            InitialScreenView()
+            NavigationView {
+                NavigationLink(destination: DashBoardView()) {
+                    Text("Home")
+                }
+            }
         }
     }
 }
