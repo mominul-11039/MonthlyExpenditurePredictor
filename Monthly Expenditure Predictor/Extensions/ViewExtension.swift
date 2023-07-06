@@ -20,6 +20,7 @@ extension View {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
+            .background(Color.blue)
             .cornerRadius(8)
     }
 }

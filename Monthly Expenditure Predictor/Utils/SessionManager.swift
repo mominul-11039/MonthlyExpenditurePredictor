@@ -21,12 +21,16 @@ class SessionManager: ObservableObject {
 
     func login() {
         // Perform login logic here
-        isLoggedIn = true
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoggedIn = true
+        }
     }
 
     func logout() {
         // Perform logout logic here
-        isLoggedIn = false
-        UserDefaults.standard.set("", forKey: "MEP_LOGGED_IN_USER_NAME")
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoggedIn = false
+            UserDefaults.standard.set("", forKey: "MEP_LOGGED_IN_USER_NAME")
+        }
     }
 }
