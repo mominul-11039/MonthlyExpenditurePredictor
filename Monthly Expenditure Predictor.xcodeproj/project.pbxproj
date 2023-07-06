@@ -25,6 +25,12 @@
 		89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A62A2F340B002C1CEB /* TabBarItem.swift */; };
 		89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */; };
 		89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */; };
+		89BA2EE52A569A9500EEBDA5 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EE42A569A9500EEBDA5 /* TextRecognizer.swift */; };
+		89BA2EE72A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EE62A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift */; };
+		89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EE82A569AC600EEBDA5 /* ScanData.swift */; };
+		89BA2EEB2A569AC600EEBDA5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EE92A569AC600EEBDA5 /* Item.swift */; };
+		89BA2EED2A569B0A00EEBDA5 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EEC2A569B0A00EEBDA5 /* DashBoardViewModel.swift */; };
+		89BA2EEF2A569B2400EEBDA5 /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */; };
 		89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */; };
 		89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */; };
 		89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */; };
@@ -87,6 +93,12 @@
 		89B436A62A2F340B002C1CEB /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		89B436AB2A2F41AB002C1CEB /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		89BA2EE42A569A9500EEBDA5 /* TextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		89BA2EE62A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableViewModel.swift; sourceTree = "<group>"; };
+		89BA2EE82A569AC600EEBDA5 /* ScanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		89BA2EE92A569AC600EEBDA5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		89BA2EEC2A569B0A00EEBDA5 /* DashBoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewModel.swift; sourceTree = "<group>"; };
+		89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
 		89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecord.swift; sourceTree = "<group>"; };
 		89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecordViewModel.swift; sourceTree = "<group>"; };
 		89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
@@ -137,6 +149,7 @@
 		896530BF2A39DB2900008392 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				89BA2EE42A569A9500EEBDA5 /* TextRecognizer.swift */,
 				896530C02A39DB4300008392 /* DateHelper.swift */,
 			);
 			path = Utilities;
@@ -209,6 +222,7 @@
 		89B436942A2EE01C002C1CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */,
 				89EF9F572A542DD800C5FB13 /* EmptyRecordView.swift */,
 				89EF9F4D2A54041800C5FB13 /* ProfileButtonView.swift */,
 				89EF9F4E2A54041800C5FB13 /* UserProfileView.swift */,
@@ -252,6 +266,8 @@
 		89B4369D2A2EE180002C1CEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				89BA2EE92A569AC600EEBDA5 /* Item.swift */,
+				89BA2EE82A569AC600EEBDA5 /* ScanData.swift */,
 				89B4369E2A2EE191002C1CEB /* User.swift */,
 				89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */,
 			);
@@ -261,6 +277,8 @@
 		89B436A02A2EE1A7002C1CEB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				89BA2EEC2A569B0A00EEBDA5 /* DashBoardViewModel.swift */,
+				89BA2EE62A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift */,
 				89EF9F512A54042400C5FB13 /* ProfileViewModel.swift */,
 				89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */,
 				89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */,
@@ -408,16 +426,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BA2EE72A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift in Sources */,
 				89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */,
+				89BA2EEB2A569AC600EEBDA5 /* Item.swift in Sources */,
 				89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */,
 				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
 				89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */,
 				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
+				89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
+				89BA2EED2A569B0A00EEBDA5 /* DashBoardViewModel.swift in Sources */,
 				89EF9F3D2A53DD6A00C5FB13 /* RegistrationViewModel.swift in Sources */,
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
 				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
@@ -425,6 +447,7 @@
 				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
 				89EF9F562A541BCA00C5FB13 /* SessionManager.swift in Sources */,
 				89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */,
+				89BA2EEF2A569B2400EEBDA5 /* DocumentCameraView.swift in Sources */,
 				89EF9F482A53E39C00C5FB13 /* LoginViewModel.swift in Sources */,
 				89D7F2C02A3ACDB000B3A0DA /* TableRowView.swift in Sources */,
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
@@ -438,6 +461,7 @@
 				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,
 				89EF9F542A5408DB00C5FB13 /* LogoutView.swift in Sources */,
 				89EF9F502A54041800C5FB13 /* UserProfileView.swift in Sources */,
+				89BA2EE52A569A9500EEBDA5 /* TextRecognizer.swift in Sources */,
 				89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */,
 				89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */,
 				89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */,
@@ -603,6 +627,7 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -634,6 +659,7 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
