@@ -9,20 +9,67 @@ import SwiftUI
 
 struct DashBoardView: View {
     @EnvironmentObject var sessionManager: SessionManager
+    @State private var showScannerSheet = false
+    @State private var texts:[ScanData] = []
+    @StateObject var viewModel = DashBoardViewModel()
+    var items:[Item] = []
 
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    ProfileButtonView()
-                    Spacer()
-                    LogoutButtonView()
-                        .environmentObject(sessionManager)
-                }
+        VStack {
+            HStack {
+                ProfileButtonView()
                 Spacer()
-            } //: VSTACK
-        } //: NAVIGATION VIEW
+                LogoutButtonView()
+                    .environmentObject(sessionManager)
+            }
+            VStack{
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.showScannerSheet = true
+                    }, label: {
+                        Image(systemName: "doc.text.magnifyingglass")
+                            .font(.title)
+                    })
+                    .sheet(isPresented: $showScannerSheet, content: {
+                        self.makeScannerView()
+                    })
+                }
+                if texts.count > 0{
+                    List{
+                        ForEach(texts){text in
+                            let items = viewModel.extractItems(from: text.content)
+                            
+                            NavigationLink(
+                                destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
+                                    Text(viewModel.storeName)
+                                }
+                        }
+                    }
+                    .listStyle(.grouped)
+                    
+                }
+                else{
+                    Text("No scan yet").font(.title)
+                }
+            }
+            Spacer()
+        } //: VSTACK
+        .padding(EdgeInsets(top: 40, leading: 0, bottom: 60, trailing: 0))
     }
+    
+    // MARK: Create document scanner
+    private func makeScannerView()-> DocumentCameraView {
+        DocumentCameraView(completion: {
+            textPerPage in
+            if let outputText = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines){
+                let newScanData = ScanData(content: outputText)
+                self.texts.append(newScanData)
+            }
+            self.showScannerSheet = false
+        })
+    }
+    
 }
 
 struct DashBoardView_Previews: PreviewProvider {

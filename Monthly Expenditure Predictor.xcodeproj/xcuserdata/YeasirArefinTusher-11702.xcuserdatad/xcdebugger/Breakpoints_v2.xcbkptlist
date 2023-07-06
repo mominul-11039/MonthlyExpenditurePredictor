@@ -100,5 +100,165 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60A4E0D1-B9B9-4A24-98D5-AB59CD7F6935"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/CloudKitViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "saveItemsToCloudKit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "60A4E0D1-B9B9-4A24-98D5-AB59CD7F6935 - daf2783109e093b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;__C.CKRecord&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;__C.CKRecordID&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "60A4E0D1-B9B9-4A24-98D5-AB59CD7F6935 - daf2783109e093e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;__C.CKRecord&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;__C.CKRecordID&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12D343F9-C0B8-4360-B4B8-FCAC3460BC3C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/CloudKitViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "saveItemsToCloudKit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12D343F9-C0B8-4360-B4B8-FCAC3460BC3C - daf2783109e09474"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;__C.CKRecord&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;__C.CKRecordID&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "261"
+                  endingLineNumber = "261"
+                  offsetFromSymbolStart = "972">
+               </Location>
+               <Location
+                  uuid = "12D343F9-C0B8-4360-B4B8-FCAC3460BC3C - daf2783109e093b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;__C.CKRecord&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;__C.CKRecordID&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D8606C9-CC81-4B17-A913-9A9F5AC179A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/CloudKitViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "saveItemsToCloudKit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D8606C9-CC81-4B17-A913-9A9F5AC179A2 - de6d91e0686eb15a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "3D8606C9-CC81-4B17-A913-9A9F5AC179A2 - de6d91e0686eb198"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Monthly_Expenditure_Predictor.CloudKitViewModel.saveItemsToCloudKit(Swift.Array&lt;Monthly_Expenditure_Predictor.ExpenditureRecord&gt;) -&gt; ()"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/CloudKitViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A3A22F7-8694-4C24-81B7-674535FD705E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "extractItemsLegacy(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
