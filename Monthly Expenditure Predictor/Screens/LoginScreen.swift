@@ -8,47 +8,64 @@
 import SwiftUI
 
 struct LoginScreen: View {
-
+    
     @EnvironmentObject var sessionManager: SessionManager
     @StateObject var loginViewModel = LoginViewModel()
-
+    
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .center) {
                 switch loginViewModel.isAuthenticated {
                 case true:
                     NavigationLink(destination: HomeScreen(tabSelection: .home)
                         .environmentObject(sessionManager)
                         .navigationBarBackButtonHidden(true), isActive: $loginViewModel.isAuthenticated) {
-                        EmptyView()
-                    }
+                            EmptyView()
+                        }
                 default:
                     if loginViewModel.notHaveAccount {
                         NavigationLink(destination: RegistrationView()
                             .environmentObject(sessionManager)
                             .navigationBarBackButtonHidden(false), isActive: $loginViewModel.notHaveAccount) {
-                            EmptyView()
-                        }
+                                EmptyView()
+                            }
                     } else {
+                        Text("Login")
+                            .fontWeight(.bold)
+                            .font(.system(size: 24))
                         TextField("User email", text: $loginViewModel.userEmail)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.default)
-                            .padding(10)
+                            .styledTextField()
+                            .frame(alignment: .center)
+                            .keyboardType(.emailAddress)
                         TextField("Password", text: $loginViewModel.password)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .styledTextField()
+                            .frame(alignment: .center)
                             .keyboardType(.default)
-                            .padding(10)
-                        Button("Submit") {
+                        Button {
                             loginViewModel.login()
+                        } label: {
+                            Text("Submit")
+                                .registrationButtonStyle()
                         }
-                        Button("Don't have an Account? Please register") {
+                        .padding(.vertical)
+                        Button {
                             loginViewModel.navigateToRegistrationScreen()
+                        } label: {
+                            Text("Don't have an Account? Please register")
+                            //.registrationButtonStyle()
                         }
-                        .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 10))
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                        )
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
-            }
-        }
+            }  //:- VSTACK
+        } //:- NAVIGATION VIEW
+        .padding()
         .onAppear{
             self.loginViewModel.setUpEnv(session: sessionManager)
         }
