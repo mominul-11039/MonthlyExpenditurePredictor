@@ -29,8 +29,8 @@ class SessionManager: ObservableObject {
     func logout() {
         // Perform logout logic here
         DispatchQueue.main.async { [weak self] in
-            self?.isLoggedIn = false
             UserDefaults.standard.set("", forKey: "MEP_LOGGED_IN_USER_NAME")
+            self?.isLoggedIn = false
         }
     }
 }

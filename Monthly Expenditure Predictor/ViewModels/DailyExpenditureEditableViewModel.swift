@@ -24,7 +24,7 @@ class DailyExpenditureEditableViewModel: ObservableObject{
             record["date"] = Int(Date().timeIntervalSince1970)
             record["product_price"] = $0.price
             record["product_quantity"] = $0.quantity
-            record["user_email"] = "email@email.com"
+            record["user_email"] = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME") ?? ""
             return ExpenditureRecord(record: record)
         }
         return items
