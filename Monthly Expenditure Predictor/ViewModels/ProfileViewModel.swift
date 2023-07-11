@@ -11,6 +11,9 @@ import Combine
 
 class ProfileViewModel: ObservableObject {
     @Published var userInfo: [User] = []
+    @Published var showingFamilyAlert = false
+    @Published var showingNameAlert = false
+    @Published var showingAddressAlert = false
     var vm: CloudKitViewModel = CloudKitViewModel()
     var userEmail: String?
     var cancellables = Set<AnyCancellable>()
