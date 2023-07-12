@@ -26,7 +26,7 @@ struct TableRowView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("app_bg").opacity(0.7))
                 Spacer()
-                Text("$\(record.productPrice)")
+                Text("\(record.productPrice)")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("app_bg").opacity(0.7))
             }
