@@ -95,10 +95,10 @@ struct UserProfileView: View {
                                         .foregroundColor(.gray)
                                 }
                                 .alert("Edit Info", isPresented: $vm.showingNameAlert) {
-                                    TextField("No of Family Members", text: $changedValue)
+                                    TextField("Name", text: $changedValue)
                                     Button("OK", action: submitName)
                                 } message: {
-                                    Text("Change No of Family Members")
+                                    Text("Change User Name")
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             }
@@ -203,7 +203,7 @@ struct UserProfileView: View {
                 vm.userInfo[0].fullName = changedValue
                 vm.userInfo.first?.record["user_name"] = changedValue
             case 1 :
-            vm.userInfo[0].userNoOfFamilyMember = Int(changedValue) ?? 0
+                vm.userInfo[0].userNoOfFamilyMember = Int(changedValue) ?? 0
                 vm.userInfo.first?.record["no_of_family_member"] = Int(changedValue) ?? 0
             case 2 :
                 vm.userInfo[0].userEmail = changedValue
