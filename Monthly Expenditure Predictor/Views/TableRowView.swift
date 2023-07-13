@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct TableRowView: View {
     let record: ExpenditureRecord
@@ -13,6 +14,10 @@ struct TableRowView: View {
     var body: some View {
         ZStack {
             HStack {
+                Text("\(record.dateProcessed)")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("app_bg").opacity(0.7))
+                Spacer()
                 Text(record.productName)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("app_bg").opacity(0.7))
@@ -21,7 +26,7 @@ struct TableRowView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("app_bg").opacity(0.7))
                 Spacer()
-                Text("$\(record.productPrice)")
+                Text("\(record.productPrice)")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("app_bg").opacity(0.7))
             }

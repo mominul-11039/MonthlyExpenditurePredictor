@@ -8,12 +8,12 @@
 import Foundation
 import CloudKit
 class DashBoardViewModel: ObservableObject{
-    
+
     var storeName = ""
     @Published var isValidDocument = true
     @Published var items:[Item] = []
-    
-    func extractItems(from text: String){
+
+    func extractItems(from text: String) -> [Item]{
         if #available(iOS 16.0, *) {
         extractItem16Dev(from: text)
             return self.items
@@ -28,7 +28,7 @@ class DashBoardViewModel: ObservableObject{
         var lines = text.components(separatedBy: .newlines)
         storeName = lines[0]
         lines.removeFirst(5)
-        
+
         for (index, line) in lines.enumerated() {
             if index % 3 == 0 {
                 let item = Item(name: line, quantity: 0, price: 0)
@@ -41,13 +41,13 @@ class DashBoardViewModel: ObservableObject{
         }
         self.items = items
     }
-    
+
     // MARK: Extract item for iphone 16+ devices
     private func extractItem16Dev(from text: String){
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
-        
-        
+
+
         storeName = lines[0]
         lines.removeFirst(2)
         let a = lines.count/3
@@ -55,10 +55,12 @@ class DashBoardViewModel: ObservableObject{
         for i in 0...a-2{
             items.append(Item(name: lines[i+1], quantity: Int(lines[a+i+1]) ?? 0, price: Double(lines[b+i+1]) ?? 0.0))
         }
-        self.items = items
+        DispatchQueue.main.async { [weak self] in
+            self?.items = items
+        }
     }
-    
-    
+
+
 //    // MARK: Remove storename and date from the array
 //    private func removeElementsBeforeProductQuantity(_ array: [String]) -> [String] {
 //        guard let productQuantityIndex = array.firstIndex(of: "Product Quantity") else {

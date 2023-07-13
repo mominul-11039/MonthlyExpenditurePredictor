@@ -10,14 +10,25 @@ import SwiftUI
 struct TableHeaderView: View {
     var body: some View {
         HStack {
+            Text("Date")
+                .font(Font.system(size: 12))
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .center)
+            Spacer()
             Text("Product Name")
-              .frame(maxWidth: .infinity, alignment: .center)
+                .font(Font.system(size: 12))
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .center)
             Spacer()
             Text("Quantity")
-              .frame(maxWidth: .infinity, alignment: .center)
+                .font(Font.system(size: 11))
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .center)
             Spacer()
             Text("Price")
-              .frame(maxWidth: .infinity, alignment: .center)
+                .font(Font.system(size: 12))
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .center)
         }
         .font(.headline)
         .padding(.horizontal)

@@ -80,8 +80,7 @@ struct MonthlyExpenditureView: View {
                     }
                 }
                 .navigationTitle(
-                    Text("Monthly Books")
-                        .font(.headline)
+                    Text("Monthly Expenditure")
                 )
                 .navigationBarTitleDisplayMode(.automatic)
                 .sheet(isPresented: $isShowingRecordsView) {

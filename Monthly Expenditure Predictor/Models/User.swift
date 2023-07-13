@@ -20,12 +20,12 @@ struct User: Hashable, CloudKitableProtocol{
         self.userConfirmPassword = record["password"] ?? ""
         self.record = record
     }
-    
-    let fullName: String
-    let userEmail: String
-    let userAddress: String
+
+    var fullName: String
+    var userEmail: String
+    var userAddress: String
     let userAge: Int
-    let userNoOfFamilyMember: Int
+    var userNoOfFamilyMember: Int
     let userPasswrod:String
     let userConfirmPassword:String
     let record: CKRecord

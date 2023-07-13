@@ -36,6 +36,7 @@
 		89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */; };
 		89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */; };
 		89D7F2C02A3ACDB000B3A0DA /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */; };
+		89ED45402A556E10005C5F91 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED453F2A556E10005C5F91 /* EditInfoView.swift */; };
 		89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF45242A3819AD004D2361 /* IntialScreen.swift */; };
 		89EF9F3D2A53DD6A00C5FB13 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */; };
 		89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */; };
@@ -104,6 +105,7 @@
 		89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
 		89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
+		89ED453F2A556E10005C5F91 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
 		89EF45242A3819AD004D2361 /* IntialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialScreen.swift; sourceTree = "<group>"; };
 		89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */,
 				89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */,
 				89EF9F532A5408DB00C5FB13 /* LogoutView.swift */,
+				89ED453F2A556E10005C5F91 /* EditInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				89B436A82A2F340B002C1CEB /* TabBarItem.swift in Sources */,
 				89B4369F2A2EE191002C1CEB /* User.swift in Sources */,
 				89B436A42A2F2BB8002C1CEB /* CustomTabBarView.swift in Sources */,
+				89ED45402A556E10005C5F91 /* EditInfoView.swift in Sources */,
 				89B4369C2A2EE16F002C1CEB /* Constant.swift in Sources */,
 				89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */,
 				89EF9F4F2A54041800C5FB13 /* ProfileButtonView.swift in Sources */,

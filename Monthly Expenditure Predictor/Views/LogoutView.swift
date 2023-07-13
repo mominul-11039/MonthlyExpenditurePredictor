@@ -27,7 +27,9 @@ struct LogoutButtonView: View {
                 )
                 .padding(.trailing, -45)
                 .onTapGesture {
-                    sessionManager.logout()
+                    DispatchQueue.main.async {
+                        sessionManager.logout()
+                    }
                 }
         } //: HSTACK
     }

@@ -12,7 +12,6 @@ struct DashBoardView: View {
     @State private var showScannerSheet = false
     @State private var texts:[ScanData] = []
     @StateObject var viewModel = DashBoardViewModel()
-    var items:[Item] = []
 
     var body: some View {
         VStack {
@@ -39,7 +38,6 @@ struct DashBoardView: View {
                     List{
                         ForEach(texts){text in
                             let items = viewModel.extractItems(from: text.content)
-                            
                             NavigationLink(
                                 destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
                                     Text(viewModel.storeName)
