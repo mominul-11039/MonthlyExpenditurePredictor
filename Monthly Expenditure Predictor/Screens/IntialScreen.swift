@@ -96,12 +96,15 @@ struct InitialScreenView: View {
                                             let gestureWidth = dragGesture.translation.width
                                             if gestureWidth > 0 && gestureWidth <= buttonWidth-80 {
                                                 buttonOffset = gestureWidth
+                                                
                                             }
                                         })
                                         .onEnded({ dragGesture in
                                             let gestureWidth = dragGesture.translation.width
                                             if gestureWidth <= buttonWidth/2 {
                                                 buttonOffset = 0
+                                                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                                                    impactMed.impactOccurred()
                                             }else{
                                                 buttonOffset = buttonWidth - 80
                                                 isNavigationActive = true
