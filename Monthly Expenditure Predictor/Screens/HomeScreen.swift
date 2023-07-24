@@ -18,6 +18,10 @@ struct HomeScreen: View {
                 .environmentObject(sessionManager)
             MonthlyExpenditureView()
                 .tabBarView(tab: .expenditure, selection: $tabSelection)
+            ScanView()
+                .tabBarView(tab: .scan, selection: $tabSelection)
+            UserProfileView(vm: ProfileViewModel())
+                .tabBarView(tab: .profile, selection: $tabSelection)
         }
     }
 }

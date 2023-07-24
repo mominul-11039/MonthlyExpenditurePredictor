@@ -166,7 +166,6 @@ struct UserProfileView: View {
                 .listStyle(.grouped)
             }
         }
-        .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.large)
         .onChange(of: UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME")) { _ in
             viewModel = ProfileViewModel()

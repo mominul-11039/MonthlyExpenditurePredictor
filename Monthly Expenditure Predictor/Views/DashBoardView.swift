@@ -15,43 +15,8 @@ struct DashBoardView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                ProfileButtonView()
-                Spacer()
-                LogoutButtonView()
-                    .environmentObject(sessionManager)
-            }
-            VStack{
-                HStack{
-                    Spacer()
-                    Button(action: {
-                        self.showScannerSheet = true
-                    }, label: {
-                        Image(systemName: "doc.text.magnifyingglass")
-                            .font(.title)
-                    })
-                    .sheet(isPresented: $showScannerSheet, content: {
-                        self.makeScannerView()
-                    })
-                }
-                if texts.count > 0{
-                    List{
-                        ForEach(texts){text in
-                            let items = viewModel.extractItems(from: text.content)
-                            NavigationLink(
-                                destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
-                                    Text(viewModel.storeName)
-                                }
-                        }
-                    }
-                    .listStyle(.grouped)
-                    
-                }
-                else{
-                    Text("No scan yet").font(.title)
-                }
-            }
-            Spacer()
+            HomeBackGroundView()
+                .background(Color("PrimaryBackgroundColor").opacity(0.8))
         } //: VSTACK
         .padding(EdgeInsets(top: 40, leading: 0, bottom: 60, trailing: 0))
     }
@@ -75,3 +40,44 @@ struct DashBoardView_Previews: PreviewProvider {
         DashBoardView()
     }
 }
+
+
+
+
+//HStack {
+//    ProfileButtonView()
+//    Spacer()
+//    LogoutButtonView()
+//        .environmentObject(sessionManager)
+//}
+//VStack{
+//    HStack{
+//        Spacer()
+//        Button(action: {
+//            self.showScannerSheet = true
+//        }, label: {
+//            Image(systemName: "doc.text.magnifyingglass")
+//                .font(.title)
+//        })
+//        .sheet(isPresented: $showScannerSheet, content: {
+//            self.makeScannerView()
+//        })
+//    }
+//    if texts.count > 0{
+//        List{
+//            ForEach(texts){text in
+//                let items = viewModel.extractItems(from: text.content)
+//                NavigationLink(
+//                    destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
+//                        Text(viewModel.storeName)
+//                    }
+//            }
+//        }
+//        .listStyle(.grouped)
+//
+//    }
+//    else{
+//        Text("No scan yet").font(.title)
+//    }
+//}
+//Spacer()
