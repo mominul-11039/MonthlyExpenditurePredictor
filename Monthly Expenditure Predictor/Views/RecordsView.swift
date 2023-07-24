@@ -22,6 +22,7 @@ struct RecordsView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color("PrimaryBackgroundColor").opacity(0.8)
                 let filteredRecords = expenditureVM.expenditureList
                 if filteredRecords.count != 0 {
                     VStack {
@@ -42,7 +43,6 @@ struct RecordsView: View {
                         .clipped()
                         .cornerRadius(20)
                         .padding(.leading, 30) // Add padding around the entire List
-                        .cornerRadius(20) // Corner radius for the List container
                     }
                 }
                 else {
@@ -56,7 +56,6 @@ struct RecordsView: View {
 
 
             }
-            .cornerRadius(10)
         }
         .background(Color("PrimaryBackgroundColor").opacity(1))
     }
