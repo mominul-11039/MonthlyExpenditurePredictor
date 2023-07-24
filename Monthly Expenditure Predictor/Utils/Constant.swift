@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public class Constant {
     public static let cloudKitContainerName = "iCloud.TeamCombine.bjitgroup.upskilldev"
@@ -29,4 +30,9 @@ public class Constant {
                                               "Departmental",
                                               "Store"
     ]
+    
+   public static let primaryBgColor = Color("PrimaryBackgroundColor")
+    public static let listBackground = Color("listBackground")
+     
+   
 }
