@@ -30,6 +30,8 @@ struct MonthlyExpenditureView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color("PrimaryBackgroundColor").opacity(0.8)
+                    .ignoresSafeArea()
                 VStack {
                     VStack {
                         Text("Please choose a year") // Title
@@ -41,7 +43,7 @@ struct MonthlyExpenditureView: View {
                                     Text($0)
                                 }
                             }
-                            .background(Color("PrimaryBackgroundColor").opacity(0.7))
+                            .background(Color("PrimaryBackgroundColor").opacity(0.2))
                             .pickerStyle(.segmented) // Optionally, specify the picker style
                             .frame(height: 50) // Set frame size
                         }
@@ -71,8 +73,8 @@ struct MonthlyExpenditureView: View {
                                             .font(.subheadline)
                                             .frame(maxHeight: .infinity) // Adjusted to fill the height of each cell
                                             .padding()
-                                            .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color("PrimaryBackgroundColor").opacity(0.5))
-                                            .cornerRadius(15)
+                                            .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color.white)//("PrimaryBackgroundColor").opacity(0.2))
+                                            .border(Color.black, width: 2)
                                             .foregroundColor(selectedMonth == month ? Color.white : Color.black)
                                     }
                                 }
@@ -86,7 +88,6 @@ struct MonthlyExpenditureView: View {
                             let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
                             if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {
                                 RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
-                                    .background(Color.red)
                             }
                         }
                     }
