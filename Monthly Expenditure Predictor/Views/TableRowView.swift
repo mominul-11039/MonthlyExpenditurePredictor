@@ -12,24 +12,30 @@ struct TableRowView: View {
     let record: ExpenditureRecord
 
     var body: some View {
-        ZStack {
+        ScrollView {
             HStack {
                 Text("\(record.dateProcessed)")
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color("app_bg").opacity(0.7))
+                    .cornerRadius(15)
                 Spacer()
                 Text(record.productName)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color("app_bg").opacity(0.7))
+                    .cornerRadius(15)
                 Spacer()
                 Text("\(record.productQuantity)")
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color("app_bg").opacity(0.7))
+                    .cornerRadius(15)
                 Spacer()
                 Text("\(record.productPrice)")
+                    .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color("app_bg").opacity(0.7))
+                    .foregroundColor(Color("PrimaryBackgroundColor"))
+                    .cornerRadius(15)
             }
         }
+        .listRowBackground(
+            Color("SecondaryBackgroundColor")
+        )
+        .padding(0)
     }
 }
