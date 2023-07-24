@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24BC06412A67FA5C00B2FA51 /* RoundedCornerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC06402A67FA5C00B2FA51 /* RoundedCornerBackground.swift */; };
 		896530C12A39DB4300008392 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896530C02A39DB4300008392 /* DateHelper.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24BC06402A67FA5C00B2FA51 /* RoundedCornerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerBackground.swift; sourceTree = "<group>"; };
 		896530C02A39DB4300008392 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				89D7F2BF2A3ACDB000B3A0DA /* TableRowView.swift */,
 				89EF9F532A5408DB00C5FB13 /* LogoutView.swift */,
 				89ED453F2A556E10005C5F91 /* EditInfoView.swift */,
+				24BC06402A67FA5C00B2FA51 /* RoundedCornerBackground.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
+				24BC06412A67FA5C00B2FA51 /* RoundedCornerBackground.swift in Sources */,
 				89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,

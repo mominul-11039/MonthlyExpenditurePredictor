@@ -35,6 +35,7 @@ struct LoginScreen: View {
                             .font(.system(size: 24))
                         TextField("User email", text: $loginViewModel.userEmail)
                             .styledTextField()
+                           
                             .frame(alignment: .center)
                             .keyboardType(.emailAddress)
                         TextField("Password", text: $loginViewModel.password)
