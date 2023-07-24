@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DE38A12A6E392F00F3FBBB /* RoundedCornerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE38A02A6E392F00F3FBBB /* RoundedCornerBackground.swift */; };
 		891093F92A6A3D7F00B7CAF9 /* HomeBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */; };
 		891093FB2A6A4E8B00B7CAF9 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093FA2A6A4E8B00B7CAF9 /* GraphView.swift */; };
 		891094022A6A503100B7CAF9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093FC2A6A503100B7CAF9 /* Date.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24DE38A02A6E392F00F3FBBB /* RoundedCornerBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerBackground.swift; sourceTree = "<group>"; };
 		891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackGroundView.swift; sourceTree = "<group>"; };
 		891093FA2A6A4E8B00B7CAF9 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		891093FC2A6A503100B7CAF9 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		89B436942A2EE01C002C1CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24DE38A02A6E392F00F3FBBB /* RoundedCornerBackground.swift */,
 				89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */,
 				89EF9F572A542DD800C5FB13 /* EmptyRecordView.swift */,
 				89EF9F4D2A54041800C5FB13 /* ProfileButtonView.swift */,
@@ -464,7 +467,6 @@
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				891094042A6A503100B7CAF9 /* Color.swift in Sources */,
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
-				24BC06412A67FA5C00B2FA51 /* RoundedCornerBackground.swift in Sources */,
 				89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
@@ -502,6 +504,7 @@
 				891094032A6A503100B7CAF9 /* Double.swift in Sources */,
 				89B436A22A2EE1C5002C1CEB /* CloudKitViewModel.swift in Sources */,
 				891094062A6A503100B7CAF9 /* String.swift in Sources */,
+				24DE38A12A6E392F00F3FBBB /* RoundedCornerBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

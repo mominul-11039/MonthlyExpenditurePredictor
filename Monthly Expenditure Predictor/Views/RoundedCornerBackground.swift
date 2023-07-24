@@ -10,11 +10,13 @@ import SwiftUI
 
 struct RoundedCornerBackground<Content: View>: View {
     var content: Content
+    var header: Content
     let backgroundColor: Color
     let screenHeight = UIScreen.screenHeight
     
-    init(backgroundColor:Color, @ViewBuilder content: () -> Content) {
+    init(backgroundColor:Color, @ViewBuilder content: () -> Content, @ViewBuilder header: () -> Content) {
         self.content = content()
+        self.header = header()
         self.backgroundColor = backgroundColor
     }
     
@@ -23,8 +25,7 @@ struct RoundedCornerBackground<Content: View>: View {
             VStack(spacing: 20){
                 ZStack {
                     backgroundColor
-                        Text("Header")
-                       
+                        header
                         }
                 .cornerRadius(50, corners: [.bottomRight])
                 .frame(width: .infinity, height: screenHeight * 0.20)
@@ -50,9 +51,7 @@ struct RoundedCornerBackground<Content: View>: View {
 
 struct RoundedCornerBackground_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedCornerBackground(backgroundColor: Color("AppBackground")){
-            Text("hello world")
-        }
+        EmptyView()
     }
 }
 
