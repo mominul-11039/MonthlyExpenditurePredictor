@@ -9,15 +9,18 @@ import SwiftUI
 
 struct EmptyRecordView: View {
     var body: some View {
-        Text("Please Select Year & Month Properly!")
-            .font(.title)
-            .fontWeight(.semibold)
-            .padding(20)
-            .frame(alignment: .center)
-            .multilineTextAlignment(.center)
-            .background(Color("app_bg"))
-           .cornerRadius(20)
-
+        VStack {
+            Image(systemName: "bookmark.slash")
+                .resizable()
+                .foregroundColor(Color("PrimaryBackgroundColor").opacity(0.7))
+                .frame(width: UIScreen.screenWidth/3, height: UIScreen.screenHeight/6)
+                .cornerRadius(15)
+            Text("Please Select Year & Month Properly!")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .padding(20)
+                .buttonStyle(PlainButtonStyle()) 
+        }
     }
 }
 

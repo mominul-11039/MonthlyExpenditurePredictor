@@ -25,6 +25,7 @@ struct MonthlyExpenditureView: View {
     @State private var startingTimestamp: Int? = 0
     @State private var endingTimestamp: Int? = 0
     let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    let gridItemLayoutH = [GridItem(.flexible())]
 
     var body: some View {
         NavigationView {
@@ -40,7 +41,7 @@ struct MonthlyExpenditureView: View {
                                     Text($0)
                                 }
                             }
-                            .background(Color("tint_color").opacity(0.2))
+                            .background(Color("PrimaryBackgroundColor").opacity(0.7))
                             .pickerStyle(.segmented) // Optionally, specify the picker style
                             .frame(height: 50) // Set frame size
                         }
@@ -52,49 +53,45 @@ struct MonthlyExpenditureView: View {
                         }
                     }
                     .frame(height: 100)
-                    ScrollView {
-                        // Month Grid
-                        LazyVGrid(columns: gridItemLayout, spacing: 16) {
-                            ForEach(months, id: \.self) { month in
-                                Button(action: {
-                                    // Update the selected month
-                                    selectedMonth = month
-                                    if selectedYear != "" {
-                                        isShowingRecordsView = true
+
+                    GeometryReader { geometry in
+                        ScrollView(.horizontal) {
+                            LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
+                                ForEach(months, id: \.self) { month in
+                                    Button(action: {
+                                        // Update the selected month
+                                        selectedMonth = month
+                                        if selectedYear != "" {
+                                            isShowingRecordsView = true
+                                        } else {
+                                            isShowingEmptyView = true
+                                        }
+                                    }) {
+                                        Text(month)
+                                            .font(.subheadline)
+                                            .frame(maxHeight: .infinity) // Adjusted to fill the height of each cell
+                                            .padding()
+                                            .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color("PrimaryBackgroundColor").opacity(0.5))
+                                            .cornerRadius(15)
+                                            .foregroundColor(selectedMonth == month ? Color.white : Color.black)
                                     }
-                                    else {
-                                        isShowingEmptyView = true
-                                    }
-                                }) {
-                                    Text(month)
-                                        .font(.title)
-                                        .frame(maxWidth: .infinity)
-                                        .padding()
-                                        .background(selectedMonth == month ? Color("tint_color") : Color("app_bg"))
-                                        .cornerRadius(8)
-                                        .foregroundColor(selectedMonth == month ? Color.white : Color.black)
                                 }
                             }
+                            .padding()
                         }
-                        .padding()
-                    }
-                }
-                .navigationTitle(
-                    Text("Monthly Expenditure")
-                )
-                .navigationBarTitleDisplayMode(.automatic)
-                .sheet(isPresented: $isShowingRecordsView) {
-                    if let selectedMonth = selectedMonth, let selectedYear = Int(selectedYear) {
-                        let startingTimestamp = getStartingTimestamp(for: selectedMonth, year: selectedYear)
-                        let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
-                        if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {
-                            RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
+                        .frame(width: geometry.size.width, height: 50) // Set a fixed height for ScrollView
+
+                        if let selectedMonth = selectedMonth, let selectedYear = Int(selectedYear) {
+                            let startingTimestamp = getStartingTimestamp(for: selectedMonth, year: selectedYear)
+                            let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
+                            if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {
+                                RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
+                                    .background(Color.red)
+                            }
                         }
                     }
                 }
-                .sheet(isPresented: $isShowingEmptyView) {
-                    EmptyRecordView()
-                }
+                .navigationBarHidden(true)
             }
         }
     }

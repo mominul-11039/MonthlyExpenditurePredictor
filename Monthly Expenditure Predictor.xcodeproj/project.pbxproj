@@ -16,6 +16,7 @@
 		891094072A6A503100B7CAF9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891094012A6A503100B7CAF9 /* UIApplication.swift */; };
 		891094092A6A8BFC00B7CAF9 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891094082A6A8BFC00B7CAF9 /* ScanView.swift */; };
 		896530C12A39DB4300008392 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896530C02A39DB4300008392 /* DateHelper.swift */; };
+		898E74412A67A40F00A36F59 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898E74402A67A40F00A36F59 /* ArrayExtension.swift */; };
 		89B4366A2A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */; };
 		89B4366C2A2EDF92002C1CEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4366B2A2EDF92002C1CEB /* ContentView.swift */; };
 		89B4366E2A2EDF93002C1CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B4366D2A2EDF93002C1CEB /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		89BA2EED2A569B0A00EEBDA5 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EEC2A569B0A00EEBDA5 /* DashBoardViewModel.swift */; };
 		89BA2EEF2A569B2400EEBDA5 /* DocumentCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */; };
 		89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */; };
+		89D4BC8A2A69301200E73018 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D4BC892A69301200E73018 /* UIScreen.swift */; };
 		89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */; };
 		89D7F2BC2A3ACD2500B3A0DA /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */; };
 		89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */; };
@@ -89,6 +91,7 @@
 		891094012A6A503100B7CAF9 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		891094082A6A8BFC00B7CAF9 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		896530C02A39DB4300008392 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		898E74402A67A40F00A36F59 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		89B436662A2EDF92002C1CEB /* Monthly Expenditure Predictor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monthly Expenditure Predictor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthly_Expenditure_PredictorApp.swift; sourceTree = "<group>"; };
 		89B4366B2A2EDF92002C1CEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		89BA2EEC2A569B0A00EEBDA5 /* DashBoardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardViewModel.swift; sourceTree = "<group>"; };
 		89BA2EEE2A569B2400EEBDA5 /* DocumentCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentCameraView.swift; sourceTree = "<group>"; };
 		89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecord.swift; sourceTree = "<group>"; };
+		89D4BC892A69301200E73018 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		89D7F2B92A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureRecordViewModel.swift; sourceTree = "<group>"; };
 		89D7F2BB2A3ACD2500B3A0DA /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
 		89D7F2BD2A3ACD8100B3A0DA /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
@@ -319,6 +323,8 @@
 				891094002A6A503100B7CAF9 /* String.swift */,
 				891094012A6A503100B7CAF9 /* UIApplication.swift */,
 				89EF9F452A53DFFA00C5FB13 /* ViewExtension.swift */,
+				898E74402A67A40F00A36F59 /* ArrayExtension.swift */,
+				89D4BC892A69301200E73018 /* UIScreen.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
 				89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
+				898E74412A67A40F00A36F59 /* ArrayExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
 				89B436972A2EE13C002C1CEB /* MonthlyExpenditureView.swift in Sources */,
 				89BA2EED2A569B0A00EEBDA5 /* DashBoardViewModel.swift in Sources */,
@@ -473,7 +480,11 @@
 				89B436AA2A2F36A2002C1CEB /* CustomTabBarContainerView.swift in Sources */,
 				89BCB3312A396BFA00C2EF89 /* ExpenditureRecord.swift in Sources */,
 				89EF9F582A542DD800C5FB13 /* EmptyRecordView.swift in Sources */,
+<<<<<<< Updated upstream
 				891094022A6A503100B7CAF9 /* Date.swift in Sources */,
+=======
+				89D4BC8A2A69301200E73018 /* UIScreen.swift in Sources */,
+>>>>>>> Stashed changes
 				89D7F2BA2A3AB48400B3A0DA /* ExpenditureRecordViewModel.swift in Sources */,
 				891093F92A6A3D7F00B7CAF9 /* HomeBackGroundView.swift in Sources */,
 				89EF9F562A541BCA00C5FB13 /* SessionManager.swift in Sources */,
