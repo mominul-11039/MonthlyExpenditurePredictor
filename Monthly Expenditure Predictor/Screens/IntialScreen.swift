@@ -25,8 +25,9 @@ struct InitialScreenView: View {
                     Color("AppBackground")
                         .ignoresSafeArea(.all,edges: .all)
                     VStack {
+                        Spacer()
                         VStack{
-                            Text("SpendWise")
+                            Text("SPENDWISE")
                                 .font(.system(size: 32, weight: .bold))
                                 .foregroundColor(Color("PrimaryBackgroundColor"))
                                 .padding(.vertical, 8)
@@ -72,16 +73,16 @@ struct InitialScreenView: View {
                             // Dynamic capsul
                             HStack{
                                 Capsule()
-                                    .fill(Color("PrimaryBackgroundColor"))
+                                    .fill(Constant.gradientBG)
                                     .frame(width: buttonOffset + 80, alignment: .center)
                                 Spacer()
                             }//:Dynamic Capsul
                             HStack{
                                 ZStack{
                                     Circle()
-                                        .fill(Color("PrimaryBackgroundColor"))
+                                        .fill(Constant.gradientBG)
                                     Circle()
-                                        .fill(.black.opacity(0.15))
+                                        .fill(.black.opacity(0.10))
                                         .padding(8)
                                     Image(systemName: "chevron.forward.2")
                                         .font(.system(size: 24, weight: .bold))
@@ -136,6 +137,6 @@ struct InitialScreenView: View {
 
 struct InitialScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialScreenView()
+        InitialScreenView().environmentObject(SessionManager())
     }
 }

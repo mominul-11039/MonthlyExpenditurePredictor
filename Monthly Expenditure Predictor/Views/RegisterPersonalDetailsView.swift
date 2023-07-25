@@ -13,7 +13,9 @@ struct RegisterPersonalDetailsView: View {
     
     var body: some View {
        
-        NavigationView {
+        ZStack {
+            Constant.appBackground
+                .ignoresSafeArea()
             if viewModel.isAuthenticated {
                 NavigationLink(destination: HomeScreen(tabSelection: .home)
                     .environmentObject(sessionManager)
@@ -22,8 +24,15 @@ struct RegisterPersonalDetailsView: View {
                 }
             } else {
                 VStack {
+                    Image("AvaterImage")
+                        .resizable()
+                        .frame(width: 180, height: 180)
+                        
                     Text("Personal Details")
-                        .fontWeight(.bold)
+                        .font(.system(.title))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.black.opacity(0.6))
+                        .padding(.bottom,60)
                     TextField("Full Name", text: $viewModel.fullName)
                         .styledTextField()
                     TextField("Number of family member", text: Binding(
@@ -44,9 +53,11 @@ struct RegisterPersonalDetailsView: View {
                     Button(action: viewModel.register) {
                         Text("Finish")
                             .foregroundColor(.white)
+                            .font(.system(.title3))
+                            .fontWeight(.bold)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(Color.blue )
+                            .background(Constant.gradientBG )
                             .cornerRadius(8)
                     }
     //                .disabled(viewModel.isValid)
@@ -58,8 +69,8 @@ struct RegisterPersonalDetailsView: View {
     }
 }
 
-//struct RegisterPersonalDetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RegisterPersonalDetailsView()
-//    }
-//}
+struct RegisterPersonalDetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegisterPersonalDetailsView(viewModel: RegistrationViewModel())
+    }
+}
