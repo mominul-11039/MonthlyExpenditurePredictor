@@ -24,6 +24,9 @@ struct HomeBackGroundView: View {
             listContainerView()
                 .fill(Color("SecondaryBackgroundColor"))
                 .ignoresSafeArea()
+                .overlay(alignment: .bottom) {
+                    CurrentMonthExpenseView()
+                }
         }
     }
 }
