@@ -27,7 +27,7 @@ struct RecordsView: View {
                     Text("Records for \(selectedMonth)")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding()
+                        .padding(.top, 20)
                     List {
                         Section(header: TableHeaderView()) {
                             ForEach(filteredRecords, id: \.expenditureRecordId) { record in
@@ -45,9 +45,6 @@ struct RecordsView: View {
             }
             else {
                 VStack {
-                    Text("Records for \(selectedMonth)")
-                        .font(.title)
-                        .fontWeight(.bold)
                     EmptyRecordView()
                 }
                 .frame(height: UIScreen.screenHeight - 400)

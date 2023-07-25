@@ -34,10 +34,12 @@ struct MonthlyExpenditureView: View {
                 ZStack(alignment: .top) {
                     WaveShape()
                         .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.2),radius: 5, x: -5, y: -5)
                         .ignoresSafeArea()
                 }
                 listContainerView()
                     .fill(Color("SecondaryBackgroundColor"))
+                    .shadow(color: Color.black.opacity(0.2),radius: 3, x: -5, y: -5)
                     .ignoresSafeArea()
                     .overlay (alignment: .bottom) {
                         if isShowingRecordsView {
@@ -101,13 +103,13 @@ struct MonthlyExpenditureView: View {
         VStack {
             Text("Please choose a year")
                 .font(.headline)
-                .padding(10)
+                .padding(.top, 50)
                 .frame(height: 50)
 
             ScrollView(.horizontal) {
                 LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
                     ForEach(2023...2100, id: \.self) { year in
-                        Text("\(year)")
+                        Text(verbatim: "\(year)")
                             .font(.subheadline)
                             .padding(10)
                             .background(selectedYear == "\(year)" ? Color("SecondaryBackgroundColor"): Color("PrimaryBackgroundColor").opacity(0.7))
