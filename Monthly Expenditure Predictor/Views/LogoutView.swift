@@ -13,25 +13,21 @@ struct LogoutButtonView: View {
     // MARK: - VIEW
     var body: some View {
         HStack {
-            Capsule()
-                .fill(.ultraThinMaterial)
-                .frame(width: 125, height: 60)
-                .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 2)
-                .overlay(
-                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 35, height: 35)
-                        .padding(.trailing, 30)
-                        .tint(.red.opacity(0.6))
-                )
-                .padding(.trailing, -45)
-                .onTapGesture {
-                    DispatchQueue.main.async {
-                        sessionManager.logout()
-                    }
-                }
+            Text("Logout")
+                .foregroundColor(Color.red)
+            Spacer()
+            Image(systemName: "rectangle.portrait.and.arrow.right")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20, height: 20)
+                .padding(.trailing, 15)
+                .tint(.red.opacity(0.6))
         } //: HSTACK
+        .onTapGesture {
+            DispatchQueue.main.async {
+                sessionManager.logout()
+            }
+        }
     }
 }
 

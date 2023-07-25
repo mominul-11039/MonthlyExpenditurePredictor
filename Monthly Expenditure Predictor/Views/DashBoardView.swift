@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DashBoardView: View {
-    @EnvironmentObject var sessionManager: SessionManager
     @State private var showScannerSheet = false
     @State private var texts:[ScanData] = []
     @StateObject var viewModel = DashBoardViewModel()

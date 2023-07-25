@@ -28,73 +28,35 @@ struct MonthlyExpenditureView: View {
     let gridItemLayoutH = [GridItem(.flexible())]
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("PrimaryBackgroundColor").opacity(0.8)
-                    .ignoresSafeArea()
-                VStack {
-                    VStack {
-                        Text("Please choose a year") // Title
-                            .font(.headline)
-                            .padding(10)
-                        GeometryReader { geometry in
-                            Picker("", selection: $selectedYear) {
-                                ForEach(options, id: \.self) {
-                                    Text($0)
-                                }
-                            }
-                            .background(Color("PrimaryBackgroundColor").opacity(0.2))
-                            .pickerStyle(.segmented) // Optionally, specify the picker style
-                            .frame(height: 50) // Set frame size
-                        }
-                        .background(Color.white.opacity(0.2))
-                        .cornerRadius(15)
-                        .onChange(of: selectedYear) { newValue in
-                            // Reset the selected month when changing the year
-                            selectedMonth = nil
-                        }
-                    }
-                    .frame(height: 100)
-
-                    GeometryReader { geometry in
-                        ScrollView(.horizontal) {
-                            LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
-                                ForEach(months, id: \.self) { month in
-                                    Button(action: {
-                                        // Update the selected month
-                                        selectedMonth = month
-                                        if selectedYear != "" {
-                                            isShowingRecordsView = true
-                                        } else {
-                                            isShowingEmptyView = true
-                                        }
-                                    }) {
-                                        Text(month)
-                                            .font(.subheadline)
-                                            .frame(maxHeight: .infinity) // Adjusted to fill the height of each cell
-                                            .padding()
-                                            .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color.white)//("PrimaryBackgroundColor").opacity(0.2))
-                                            .border(Color.black, width: 2)
-                                            .foregroundColor(selectedMonth == month ? Color.white : Color.black)
-                                    }
-                                }
-                            }
-                            .padding()
-                        }
-                        .frame(width: geometry.size.width, height: 50) // Set a fixed height for ScrollView
-
-                        if let selectedMonth = selectedMonth, let selectedYear = Int(selectedYear) {
-                            let startingTimestamp = getStartingTimestamp(for: selectedMonth, year: selectedYear)
-                            let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
-                            if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {
-                                RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
-                            }
-                        }
-                    }
+        ZStack (alignment: .top) {
+            Color("PrimaryBackgroundColor").opacity(0.8)
+            ZStack (alignment: .bottom) {
+                ZStack(alignment: .top) {
+                    WaveShape()
+                        .fill(Color.white)
+                        .ignoresSafeArea()
                 }
-                .navigationBarHidden(true)
+                listContainerView()
+                    .fill(Color("SecondaryBackgroundColor"))
+                    .ignoresSafeArea()
+                    .overlay (alignment: .bottom) {
+                        if isShowingRecordsView {
+                            if let selectedMonth = selectedMonth, let selectedYear = Int(selectedYear) {
+                                let startingTimestamp = getStartingTimestamp(for: selectedMonth, year: selectedYear)
+                                let endingTimestamp = getEndingTimestamp(for: selectedMonth, year: selectedYear)
+                                if (Int(startingTimestamp) != 0) && (Int(endingTimestamp) != 0) {
+                                    RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
+//                                        .background(Color.red)
+                                }
+                            }
+                        }
+                    }
             }
+
+            topView
+                .padding(.top, 30)
         }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0))
     }
 
     func getStartingTimestamp(for month: String, year: Int) -> TimeInterval {
@@ -133,6 +95,61 @@ struct MonthlyExpenditureView: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM"
         return formatter.string(from: date)
+    }
+
+    var topView: some View {
+        VStack {
+            Text("Please choose a year")
+                .font(.headline)
+                .padding(10)
+                .frame(height: 50)
+
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
+                    ForEach(2023...2100, id: \.self) { year in
+                        Text("\(year)")
+                            .font(.subheadline)
+                            .padding(10)
+                            .background(selectedYear == "\(year)" ? Color("SecondaryBackgroundColor"): Color("PrimaryBackgroundColor").opacity(0.7))
+                            .cornerRadius(10)
+                            .foregroundColor(selectedYear == "\(year)" ? Color("PrimaryBackgroundColor") : .white)
+                            .onTapGesture {
+                                selectedYear = "\(year)"
+                            }
+                    }
+                }
+                .frame(height: 40)
+                .padding(.horizontal, 20)
+                .padding(.top, 30)
+            }
+
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
+                    ForEach(months, id: \.self) { month in
+                        Button(action: {
+                            selectedMonth = month
+                            if selectedYear != "" {
+                                isShowingRecordsView = true
+                                isShowingEmptyView = false
+                            } else {
+                                isShowingRecordsView = false
+                                isShowingEmptyView = true
+                            }
+                        }) {
+                            Text(month)
+                                .font(.subheadline)
+                                .frame(maxHeight: .infinity)
+                                .padding()
+                                .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color.white)
+                                .cornerRadius(10)
+                                .foregroundColor(selectedMonth == month ? Color.white : Color.black)
+                        }
+                    }
+                }
+                .padding()
+            }
+            .frame(width: UIScreen.screenWidth, height: 50)
+        }
     }
 }
 
