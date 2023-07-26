@@ -19,7 +19,7 @@ struct DashBoardView: View {
                 .background(Constant.gradientBG.opacity(0.8))
             
         } //: VSTACK
-        .padding(EdgeInsets(top: 40, leading: 0, bottom: 60, trailing: 0))
+        .padding(EdgeInsets(top: 40, leading: 0, bottom: 100, trailing: 0))
     }
 }
 

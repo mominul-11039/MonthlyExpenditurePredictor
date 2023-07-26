@@ -32,16 +32,18 @@ struct RegistrationScreen: View {
                         .font(.system(size: 12))
                         .foregroundColor(.black.opacity(0.5))
                 }
-                .padding(.top, 80)
                 Spacer()
                 TextField("Email", text: $viewModel.email)
                     .styledTextField()
                     .keyboardType(.emailAddress)
+                    .padding(.horizontal, 20)
                 SecureField("Password [At least 6 char]", text: $viewModel.password)
                     .styledTextField()
+                    .padding(.horizontal, 20)
                 SecureField("Confirm Password", text: $viewModel.confirmPassword)
                     .styledTextField()
                     .frame(alignment: .center)
+                    .padding(.horizontal, 20)
                 
                 if viewModel.isUserExists{
                     Text("""

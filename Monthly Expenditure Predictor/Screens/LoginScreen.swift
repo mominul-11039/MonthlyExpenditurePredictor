@@ -13,8 +13,6 @@ struct LoginScreen: View {
     @StateObject var loginViewModel = LoginViewModel()
     @State var deviceWidth = UIScreen.main.bounds.width
     var body: some View {
-        NavigationView {
-
             ZStack{
                 Constant.appBackground
                 VStack(alignment: .center) {
@@ -109,13 +107,12 @@ struct LoginScreen: View {
                     }
                 }  //:- VSTACK
             }//:- zestack
-        } //:- NAVIGATION VIEW
-        .padding()
-        .background(Constant.appBackground)
-        .accentColor(Constant.primaryBgColor)
-        .onAppear{
-            self.loginViewModel.setUpEnv(session: sessionManager)
-        }
+            .padding()
+            .background(Constant.appBackground)
+            .accentColor(Constant.primaryBgColor)
+            .onAppear{
+                self.loginViewModel.setUpEnv(session: sessionManager)
+            }
     }
 }
 

@@ -35,20 +35,24 @@ struct RegisterPersonalDetailsView: View {
                         .padding(.bottom,60)
                     TextField("Full Name", text: $viewModel.fullName)
                         .styledTextField()
+                        .padding(.horizontal, 20)
                     TextField("Number of family member", text: Binding(
                         get: { viewModel.noOfFamilyMember == 0 ? "" : String(viewModel.noOfFamilyMember) },
                         set: { viewModel.noOfFamilyMember = Int($0) ?? 0 }
                     ))
                         .styledTextField()
                         .keyboardType(.numberPad)
+                        .padding(.horizontal, 20)
                     TextField("Address", text: $viewModel.address)
                         .styledTextField()
+                        .padding(.horizontal, 20)
                     TextField("Age", text: Binding(
                         get: {viewModel.age == 0 ? "" : String(viewModel.age)},
                         set: { viewModel.age = Int($0) ?? 0}
                     ))
                         .styledTextField()
                         .keyboardType(.numberPad)
+                        .padding(.horizontal, 20)
                     
                     Button(action: viewModel.register) {
                         Text("Finish")

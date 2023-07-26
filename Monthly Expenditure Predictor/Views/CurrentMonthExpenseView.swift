@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrentMonthExpenseView: View {
     // MARK: - PROPERTIES
-    @ObservedObject var vm = CurrentMonthExpenditureViewModel()
+    var dailyExpense: [DailyExpense] = []
     
     // MARK: - VIEW
     var body: some View {
@@ -22,7 +22,7 @@ struct CurrentMonthExpenseView: View {
                     .fontWeight(.medium)
             } //:- HSTACK
             .padding(.horizontal, 15)
-            List(vm.dailyExpense) { expense in
+            List(dailyExpense) { expense in
                 HStack {
                     Text(expense.date)
                         .font(Font.system(size: 14))
@@ -36,7 +36,7 @@ struct CurrentMonthExpenseView: View {
             } //:- LIST
             .padding(.bottom, 30)
         } //:- VSTACK
-        .frame(width: 300, height: 450)
+        .frame(width: 300, height: UIScreen.screenHeight - 400)
         .listStyle(.plain)
     }
 }

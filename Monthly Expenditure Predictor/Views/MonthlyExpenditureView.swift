@@ -39,7 +39,7 @@ struct MonthlyExpenditureView: View {
                 }
                 listContainerView()
                     .fill(Color("SecondaryBackgroundColor"))
-                    .shadow(color: Color.black.opacity(0.2),radius: 3, x: -5, y: -5)
+                    .shadow(color: Color.black.opacity(0.2),radius: 5, x: -5, y: -5)
                     .ignoresSafeArea()
                     .overlay (alignment: .bottom) {
                         if isShowingRecordsView {

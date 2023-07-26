@@ -18,25 +18,21 @@ struct GraphView: View {
     
     init(data: [Double]) {
         self.data = data
-        maxY = (data.max() ?? 0) + 500
+        maxY = data.max() ?? 0
         minY = 0
         
         let priceChange = (data.last ?? 0) - (data.first ?? 0)
-        lineColor = priceChange > 0 ? Color("PrimaryBackgroundColor") : Color.red
-        let isoDate = "2023-07-31"
-
-        let dateFormatter = ISO8601DateFormatter()
-        let date = dateFormatter.date(from:isoDate)
-        endingDate = date ?? Date()
-        startingDate = endingDate.addingTimeInterval(-30*24*60*60)
+        lineColor = Color("PrimaryBackgroundColor")
+        endingDate = Date()
+        startingDate = endingDate.addingTimeInterval(-14*24*60*60)
     }
     
     var body: some View {
         VStack {
             chartView
-                .frame(height: 150)
+                .frame(width: 280, height: 140)
                 .background(chartBackground)
-                .overlay(chartYAxis.padding(8), alignment: .leading)
+                .overlay(chartYAxis.padding(.horizontal, 8), alignment: .leading)
             
             chartDateLabels
                 .padding(8)

@@ -8,24 +8,42 @@
 import SwiftUI
 
 struct HomeBackGroundView: View {
+    @ObservedObject var vm = CurrentMonthExpenditureViewModel()
     var data: [Double] = [1000, 1500, 2000, 1200, 1500, 1000, 1100, 1200, 1500, 2000, 3000, 1000, 1500, 2000, 1200, 1500, 1000, 1100, 1200, 1500, 2000, 1000, 1500, 2000, 1200, 1500, 1000, 1100, 1200, 1500, 2000]
+
     var body: some View {
         ZStack (alignment: .bottom) {
             ZStack(alignment: .top) {
                 WaveShape()
                     .fill(Color.white)
                     .ignoresSafeArea()
-                GraphView(data: data)
-                    .frame(width: 300, height: 190)
-                    .background(Color("SecondaryBackgroundColor"))
-                    .cornerRadius(10)
-                    .shadow(color: Color.gray.opacity(0.3), radius: 5, x: 10, y: 10)
+                    .shadow(color: Color.black.opacity(0.2),radius: 5, x: -5, y: -5)
+                if vm.isShowGraph {
+                    GraphView(data: vm.graphData)
+                        .frame(width: 300, height: 190)
+                        .background(Color("SecondaryBackgroundColor"))
+                        .cornerRadius(10)
+                        .shadow(color: Color.gray.opacity(0.3), radius: 5, x: 10, y: 10)
+                } else {
+                    ProgressView()
+                        .frame(width: 300, height: 190)
+                        .background(Color("SecondaryBackgroundColor"))
+                        .cornerRadius(10)
+                        .shadow(color: Color.gray.opacity(0.3), radius: 5, x: 10, y: 10)
+                }
             }
             listContainerView()
                 .fill(Color("SecondaryBackgroundColor"))
+                .shadow(color: Color.black.opacity(0.2),radius: 5, x: -5, y: -5)
                 .ignoresSafeArea()
                 .overlay(alignment: .bottom) {
-                    CurrentMonthExpenseView()
+                    if vm.isShowList {
+                        CurrentMonthExpenseView(dailyExpense: vm.dailyExpense)
+                    } else {
+                        ProgressView()
+                        .frame(width: 300, height: UIScreen.screenHeight - 400)
+                        .background(Color.clear)
+                    }
                 }
         }
     }

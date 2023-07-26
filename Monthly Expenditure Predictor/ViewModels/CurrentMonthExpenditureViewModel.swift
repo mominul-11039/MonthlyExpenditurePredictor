@@ -11,12 +11,14 @@ import Combine
 
 class CurrentMonthExpenditureViewModel: ObservableObject {
     @Published var expenditureList: [ExpenditureRecord] = []
+    @Published var isShowGraph: Bool = false
+    @Published var isShowList: Bool = false
     var dailyExpense: [DailyExpense] = []
+    var graphData: [Double] = []
     var cancellables = Set<AnyCancellable>()
     
     init() {
         getExpenditures()
-        //        getDailyExpenditure()
     }
     
     func getExpenditures() {
@@ -58,19 +60,35 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
         
         return displayDate
     }
-    
+
+    func getExpenseListForGraph() {
+        graphData.removeAll()
+        dailyExpense.forEach { dailyExpense in
+            graphData.append(Double(dailyExpense.price))
+        }
+        DispatchQueue.main.async { [weak self] in
+            self?.isShowGraph = true
+        }
+    }
+
     func getDailyExpenditure() {
         for i in 0...13 {
             let timeStamprange = getTimestampRange(numberOfDay: i)
             
             dailyExpense.append(DailyExpense(date: getRelativeDateTime(timestamp: timeStamprange.startTimestamp + 1), price: 0))
+            print(timeStamprange.startTimestamp)
+            print(timeStamprange.endTimestamp)
             expenditureList.forEach { expenditure in
+                print("expenditure.timestamp : \(expenditure.timestamp)")
                 if expenditure.timestamp >= Int(timeStamprange.startTimestamp) && expenditure.timestamp <= Int(timeStamprange.endTimestamp) {
                     dailyExpense[i].price = dailyExpense[i].price + expenditure.productPrice
                 }
             }
         }
-        print(dailyExpense[1].date)
+        DispatchQueue.main.async { [weak self] in
+            self?.isShowList = true
+            self?.getExpenseListForGraph()
+        }
     }
     
     func getTimestampRange(numberOfDay: Int) -> (startTimestamp: TimeInterval, endTimestamp: TimeInterval) {
@@ -79,15 +97,16 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
         // Get the start of today (00:00:00)
         let startOfToday = calendar.startOfDay(for: now)
         // Subtract one day from the start of today to get the start of yesterday
-        guard let startOfYesterday = calendar.date(byAdding: .day, value: -numberOfDay, to: startOfToday) else {
+        guard let startOfTheDay = calendar.date(byAdding: .day, value: -numberOfDay, to: startOfToday) else {
             // If for some reason we cannot calculate start of yesterday, return 0 for both timestamps
             return (0, 0)
         }
-        // Get the end of yesterday (23:59:59)
-        let endOfYesterday = calendar.date(byAdding: .second, value: -numberOfDay, to: startOfToday)
+        // Get the end of the day (23:59:59)
+        let endOfTheDay = calendar.date(byAdding: .day, value: numberOfDay == 0 ? 1 : -(numberOfDay - 1), to: startOfToday)
         // Convert to UNIX timestamp format
-        let startTimestamp = startOfYesterday.timeIntervalSince1970
-        let endTimestamp = endOfYesterday?.timeIntervalSince1970 ?? startTimestamp
+        let startTimestamp = numberOfDay == 0 ? startOfToday.timeIntervalSince1970 : startOfTheDay.timeIntervalSince1970
+        print("enddd : \(endOfTheDay?.timeIntervalSince1970)" ?? "default")
+        let endTimestamp = endOfTheDay?.timeIntervalSince1970 ?? startTimestamp - 1
         
         return (startTimestamp, endTimestamp)
     }
