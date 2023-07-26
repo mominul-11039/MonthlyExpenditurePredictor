@@ -21,36 +21,39 @@ struct RecordsView: View {
 
     var body: some View {
         ZStack {
-            let filteredRecords = expenditureVM.expenditureList
-            if filteredRecords.count != 0 {
-                VStack {
-                    Text("Records for \(selectedMonth)")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.top, 20)
-                    List {
-                        Section(header: TableHeaderView()) {
-                            ForEach(filteredRecords, id: \.expenditureRecordId) { record in
-                                TableRowView(record: record)
-                                    .cornerRadius(8) // Corner radius for each row
+            if expenditureVM.willShowLoader {
+                ProgressView()
+                    .frame(height: UIScreen.screenHeight - 400)
+                    .background(Color.clear)
+            } else {
+                let filteredRecords = expenditureVM.expenditureList
+                if filteredRecords.count != 0 {
+                    VStack {
+                        Text("Records of \(selectedMonth)")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding(.top, 20)
+                        List {
+                            Section(header: TableHeaderView()) {
+                                ForEach(filteredRecords, id: \.expenditureRecordId) { record in
+                                    TableRowView(record: record)
+                                        .cornerRadius(8) // Corner radius for each row
+                                }
                             }
                         }
+                        .listStyle(.plain)
+                        .clipped()
+                        .cornerRadius(20)
+                        .padding(.leading, 40) // Add padding around the entire List
                     }
-                    .listStyle(.plain)
-                    .clipped()
-                    .cornerRadius(20)
-                    .padding(.leading, 40) // Add padding around the entire List
+                    .frame(height: UIScreen.screenHeight - 400)
+                } else {
+                    VStack {
+                        EmptyRecordView(state: 1)
+                    }
+                    .frame(height: UIScreen.screenHeight - 400)
                 }
-                .frame(height: UIScreen.screenHeight - 400)
             }
-            else {
-                VStack {
-                    EmptyRecordView()
-                }
-                .frame(height: UIScreen.screenHeight - 400)
-            }
-
-
         }
     }
 }

@@ -66,6 +66,7 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
         dailyExpense.forEach { dailyExpense in
             graphData.append(Double(dailyExpense.price))
         }
+        graphData.reverse()
         DispatchQueue.main.async { [weak self] in
             self?.isShowGraph = true
         }

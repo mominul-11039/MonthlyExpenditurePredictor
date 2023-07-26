@@ -243,7 +243,7 @@ class CloudKitViewModel {
             addOperation(operation: operation)
     }
     
-   static func saveItemsToCloudKit(_ items: [ExpenditureRecord]) {
+   static func saveItemsToCloudKit(_ items: [ExpenditureRecord], completion: @escaping (Bool) -> ()) {
         let records = items.map { item in
             let recordID = CKRecord.ID(recordName: item.expenditureRecordId.uuidString)
             let record = CKRecord(recordType: "expenditure_info", recordID: recordID)
@@ -260,8 +260,10 @@ class CloudKitViewModel {
         operation.qualityOfService = .userInitiated
         operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
             if let error = error {
+                completion(false)
                 print("Error saving records: \(error.localizedDescription)")
             } else {
+                completion(true)
                 print("Records saved successfully")
             }
         }

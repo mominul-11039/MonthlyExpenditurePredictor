@@ -10,6 +10,10 @@ import CloudKit
 
 class DailyExpenditureEditableViewModel: ObservableObject{
     @Published var items: [Item]
+    @Published var willShowLoader = false
+    @Published var isSucces = false
+    @Published var willShowAlert = false
+
     init(items: [Item]) {
         self.items = items
     }
@@ -31,7 +35,16 @@ class DailyExpenditureEditableViewModel: ObservableObject{
     }
     
     func saveToCloudKit(){
+        DispatchQueue.main.async { [weak self] in
+            self?.willShowLoader = true
+        }
         let items = makeCkRecordList()
-        CloudKitViewModel.saveItemsToCloudKit(items)
+        CloudKitViewModel.saveItemsToCloudKit(items) { status in
+            DispatchQueue.main.async { [weak self] in
+                self?.willShowLoader = true
+                self?.willShowAlert = true
+                self?.isSucces = status
+            }
+        }
     }
 }

@@ -20,7 +20,7 @@ struct MonthlyExpenditureView: View {
     @State private var selectedYear: String = ""
     @State private var selectedMonth: String?
     @State private var isShowingRecordsView = false
-    @State private var isShowingEmptyView = false
+    @State private var isShowingErrorView = false
     var options = ["2022", "2023", "2024", "2025"]
     @State private var startingTimestamp: Int? = 0
     @State private var endingTimestamp: Int? = 0
@@ -50,6 +50,14 @@ struct MonthlyExpenditureView: View {
                                     RecordsView(selectedMonth: selectedMonth, startingTime: Int(startingTimestamp), endingTime: Int(endingTimestamp), expenditureVM: ExpenditureRecordViewModel(startingTimestamp: Int(startingTimestamp), endingTimestamp: Int(endingTimestamp)))
 //                                        .background(Color.red)
                                 }
+                            }
+                        } else {
+                            if isShowingErrorView {
+                                EmptyRecordView(state: 2)
+                                    .frame(height: UIScreen.screenHeight - 400)
+                            } else {
+                                EmptyRecordView(state: 0)
+                                    .frame(height: UIScreen.screenHeight - 400)
                             }
                         }
                     }
@@ -134,10 +142,10 @@ struct MonthlyExpenditureView: View {
                             selectedMonth = month
                             if selectedYear != "" {
                                 isShowingRecordsView = true
-                                isShowingEmptyView = false
+                                isShowingErrorView = false
                             } else {
                                 isShowingRecordsView = false
-                                isShowingEmptyView = true
+                                isShowingErrorView = true
                             }
                         }) {
                             Text(month)

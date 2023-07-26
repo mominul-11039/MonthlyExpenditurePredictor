@@ -11,6 +11,7 @@ import Combine
 
 class ExpenditureRecordViewModel: ObservableObject {
     @Published var expenditureList: [ExpenditureRecord] = []
+    @Published var willShowLoader = true
     var vm: CloudKitViewModel = CloudKitViewModel()
     var startingTimestamp: Int?
     var endingTimestamp: Int?
@@ -39,6 +40,7 @@ class ExpenditureRecordViewModel: ObservableObject {
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
                 } receiveValue: { [weak self] returnedItems in
+                    self?.willShowLoader = false
                     self?.expenditureList = returnedItems
                 }
                 .store(in: &cancellables)
