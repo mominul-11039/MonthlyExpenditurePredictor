@@ -259,9 +259,9 @@ class CloudKitViewModel {
         operation.savePolicy = .changedKeys
         operation.qualityOfService = .userInitiated
         operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
-            if let error = error {
+            if error != nil || savedRecords?.isEmpty == true {
                 completion(false)
-                print("Error saving records: \(error.localizedDescription)")
+                print("Error saving records: \(error?.localizedDescription ?? "")")
             } else {
                 completion(true)
                 print("Records saved successfully")

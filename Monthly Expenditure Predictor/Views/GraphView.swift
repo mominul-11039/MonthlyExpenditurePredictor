@@ -18,7 +18,7 @@ struct GraphView: View {
     
     init(data: [Double]) {
         self.data = data
-        maxY = data.max() ?? 0
+        maxY = (data.max() ?? 0) + (data.max() ?? 0 == 0 ? 400 : 0)
         minY = 0
         
         let priceChange = (data.last ?? 0) - (data.first ?? 0)

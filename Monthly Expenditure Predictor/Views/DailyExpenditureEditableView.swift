@@ -29,6 +29,13 @@ struct DailyExpenditureEditableView: View {
             Constant.listBackground
                 .ignoresSafeArea()
             VStack{
+                if viewModel.isError{
+                    Text("Something Went Wrong! Please Try Again" )
+                        .font(.system(.callout))
+                        .foregroundColor(.red)
+                        .padding(20)
+                }
+               
                 List {
                     HStack(alignment: .center){
                         Text("Item")
@@ -90,6 +97,11 @@ struct DailyExpenditureEditableView: View {
                     
                 })
                             
+            }
+            if viewModel.willShowLoader {
+                ProgressView()
+                    .frame(width: 100, height: 100)
+                    .background(Color("SecondaryBackgroundColor"))
             }
         }
     }
