@@ -11,14 +11,15 @@ import CloudKit
 struct DailyExpenditureEditableView: View {
         @ObservedObject var viewModel:DailyExpenditureEditableViewModel
         private let currencyFormatter: NumberFormatter
-        
+       @State var deviceWidth = UIScreen.main.bounds.width
+    
         init(viewModel : DailyExpenditureEditableViewModel) {
             currencyFormatter = NumberFormatter()
             currencyFormatter.numberStyle = .currency
             currencyFormatter.decimalSeparator = ","
             currencyFormatter.maximumFractionDigits = 2
             self.viewModel = viewModel
-            UINavigationBar.appearance().tintColor = UIColor(Constant.primaryBgColor)
+            UINavigationBar.appearance().barTintColor = UIColor(Constant.primaryBgColor)
 
                         
         }
@@ -72,7 +73,7 @@ struct DailyExpenditureEditableView: View {
                         }
                     }
                 }
-                .navigationTitle("Save to CloudKit")
+                .navigationTitle("Save To CloudKit")
                 .navigationBarTitleDisplayMode(.automatic)
                 
                 Button(action: {
@@ -80,12 +81,14 @@ struct DailyExpenditureEditableView: View {
                 }, label: {Text("Submit")
                         .font(.system(.subheadline))
                         .fontWeight(.bold)
-                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .frame(width: deviceWidth * 0.8, height: 40)
+                        .background(Constant.gradientBG)
+                        .cornerRadius(8)
+                        .padding(10)
+               
                     
                 })
-                .padding()
-                            .buttonStyle(.borderedProminent)
-                            .tint(Constant.primaryBgColor)
                             
             }
         }

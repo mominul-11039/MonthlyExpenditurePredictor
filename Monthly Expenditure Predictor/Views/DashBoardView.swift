@@ -16,7 +16,7 @@ struct DashBoardView: View {
     var body: some View {
         VStack {
             HomeBackGroundView()
-                .background(Color("PrimaryBackgroundColor").opacity(0.8))
+                .background(Constant.gradientBG.opacity(0.8))
             
         } //: VSTACK
         .padding(EdgeInsets(top: 40, leading: 0, bottom: 60, trailing: 0))

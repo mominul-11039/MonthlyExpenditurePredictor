@@ -32,7 +32,12 @@ public class Constant {
     ]
     
    public static let primaryBgColor = Color("PrimaryBackgroundColor")
-    public static let listBackground = Color("listBackground")
+   public static let listBackground = Color("listBackground")
+   public static let gradientColor = Color("Gradient")
+   public static let appBackground = Color("AppBackground")
+
+   public static let gradientBG = LinearGradient(gradient: Gradient(colors: [primaryBgColor,gradientColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    
      
    
 }

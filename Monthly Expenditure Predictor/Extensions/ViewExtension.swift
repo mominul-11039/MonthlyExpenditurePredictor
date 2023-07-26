@@ -10,6 +10,7 @@ import SwiftUI
 extension View {
     func styledTextField() -> some View {
         return self
+            .frame(maxHeight: 24)
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(8)

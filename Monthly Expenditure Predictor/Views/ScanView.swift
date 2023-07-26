@@ -72,7 +72,8 @@ struct ScanView: View {
                             .font(.title)
                     })
                     .padding()
-                                .background(Color("PrimaryBackgroundColor"))
+                    .background(Constant.gradientBG)
+                                
                                 .foregroundColor(.white)
                                 .clipShape(Circle())
                     .sheet(isPresented: $showScannerSheet, content: {
