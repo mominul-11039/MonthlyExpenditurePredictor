@@ -104,20 +104,22 @@ struct MonthlyExpenditureView: View {
             Text("Please choose a year")
                 .font(.headline)
                 .padding(.top, 50)
-                .frame(height: 50)
+                .frame(height: 40)
+                .foregroundColor(Color("SecondaryBackgroundColor"))
 
             ScrollView(.horizontal) {
                 LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
                     ForEach(2023...2100, id: \.self) { year in
                         Text(verbatim: "\(year)")
                             .font(.subheadline)
-                            .padding(10)
+                            .padding(6)
                             .background(selectedYear == "\(year)" ? Color("SecondaryBackgroundColor"): Color("PrimaryBackgroundColor").opacity(0.7))
                             .cornerRadius(10)
-                            .foregroundColor(selectedYear == "\(year)" ? Color("PrimaryBackgroundColor") : .white)
+                            .foregroundColor(selectedYear == "\(year)" ? Color("PrimaryBackgroundColor") : Color("SecondaryBackgroundColor"))
                             .onTapGesture {
                                 selectedYear = "\(year)"
                             }
+                            .shadow(color: Color.black.opacity(0.2),radius: 3, x: 3, y: 3)
                     }
                 }
                 .frame(height: 40)
@@ -141,10 +143,11 @@ struct MonthlyExpenditureView: View {
                             Text(month)
                                 .font(.subheadline)
                                 .frame(maxHeight: .infinity)
-                                .padding()
-                                .background(selectedMonth == month ? Color.gray.opacity(0.5) : Color.white)
+                                .padding(8)
+                                .background(selectedMonth == month ? Color("PrimaryBackgroundColor").opacity(0.7) : Color("SecondaryBackgroundColor"))
                                 .cornerRadius(10)
-                                .foregroundColor(selectedMonth == month ? Color.white : Color.black)
+                                .foregroundColor(selectedMonth == month ? Color("SecondaryBackgroundColor") : Color.black)
+                                .shadow(color: Color.black.opacity(0.2),radius: 3, x: 3, y: 3)
                         }
                     }
                 }
