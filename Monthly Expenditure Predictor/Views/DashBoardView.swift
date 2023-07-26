@@ -11,27 +11,16 @@ struct DashBoardView: View {
     @State private var showScannerSheet = false
     @State private var texts:[ScanData] = []
     @StateObject var viewModel = DashBoardViewModel()
+    @State var screenHeight = UIScreen.screenHeight
 
     var body: some View {
         VStack {
             HomeBackGroundView()
                 .background(Color("PrimaryBackgroundColor").opacity(0.8))
+            
         } //: VSTACK
         .padding(EdgeInsets(top: 40, leading: 0, bottom: 60, trailing: 0))
     }
-    
-    // MARK: Create document scanner
-    private func makeScannerView()-> DocumentCameraView {
-        DocumentCameraView(completion: {
-            textPerPage in
-            if let outputText = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines){
-                let newScanData = ScanData(content: outputText)
-                self.texts.append(newScanData)
-            }
-            self.showScannerSheet = false
-        })
-    }
-    
 }
 
 struct DashBoardView_Previews: PreviewProvider {

@@ -74,6 +74,7 @@ struct LoginScreen: View {
             }  //:- VSTACK
         } //:- NAVIGATION VIEW
         .padding()
+        .accentColor(Constant.primaryBgColor)
         .onAppear{
             self.loginViewModel.setUpEnv(session: sessionManager)
         }

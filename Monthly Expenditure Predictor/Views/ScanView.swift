@@ -7,9 +7,97 @@
 
 import SwiftUI
 
+
 struct ScanView: View {
+    @State private var showScannerSheet = false
+    @State private var texts:[ScanData] = []
+    @StateObject var viewModel = DashBoardViewModel()
+    @State private var screenHeight: Double = UIScreen.main.bounds.height
+    @State private var screenWidth: Double = UIScreen.main.bounds.width
+    
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("listBackground")
+                .ignoresSafeArea()
+            VStack{
+                HStack{
+                    Text("Scan Document")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black.opacity(0.7))
+                    Spacer()
+                }
+                .padding(18)
+                   
+                if texts.count > 0{
+                    List{
+                        ForEach(texts){text in
+                            let items = viewModel.extractItems(from: text.content)
+                            NavigationLink(
+                                destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
+                                    Text(viewModel.storeName)
+                                        .font(.system(size: 12, weight: .bold))
+                                        .foregroundColor(Constant.primaryBgColor)
+                                }
+                                .accentColor(Constant.primaryBgColor)
+                        }
+                        
+                    }
+                    .listStyle(.automatic)
+                    
+                }
+                else{
+                    Spacer()
+                    VStack{
+                        Image("EmptyData")
+                            .resizable()
+                            .frame(width: 120, height: 120)
+                            .padding(.bottom, 20)
+                           
+                        Text("No scan data").font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.gray)
+                            
+                    }
+                }
+                Spacer()
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.showScannerSheet = true
+                        print(showScannerSheet)
+                    }, label: {
+                        Image(systemName: "camera.viewfinder")
+                            .font(.title)
+                    })
+                    .padding()
+                                .background(Color("PrimaryBackgroundColor"))
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                    .sheet(isPresented: $showScannerSheet, content: {
+                        self.makeScannerView()
+                    })
+                }
+                .padding(.trailing, 36)
+                .padding(.bottom, 60)
+            }
+            //: VSTACK
+            .padding(EdgeInsets(top: 50, leading: 0, bottom: 60, trailing: 0))
+        }
+        
+    }
+    
+    // MARK: ScannerView
+    private func makeScannerView()-> DocumentCameraView {
+        DocumentCameraView(completion: {
+            textPerPage in
+            if let outputText = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines){
+                let newScanData = ScanData(content: outputText)
+                self.texts.append(newScanData)
+            }
+            self.showScannerSheet = false
+        })
     }
 }
 
@@ -18,3 +106,4 @@ struct ScanView_Previews: PreviewProvider {
         ScanView()
     }
 }
+
