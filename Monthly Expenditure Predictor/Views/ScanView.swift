@@ -11,7 +11,7 @@ import SwiftUI
 struct ScanView: View {
     @State private var showScannerSheet = false
     @State private var texts:[ScanData] = []
-    @StateObject var viewModel = DashBoardViewModel()
+    @ObservedObject var viewModel = DashBoardViewModel()
     @State private var screenHeight: Double = UIScreen.main.bounds.height
     @State private var screenWidth: Double = UIScreen.main.bounds.width
     var body: some View {
@@ -28,12 +28,12 @@ struct ScanView: View {
                 }
                 .padding(18)
                    
-                if texts.count > 0 && viewModel.isValidDocument  {
+                if viewModel.isValidDocument  {
                     List{
                         ForEach(texts){text in
                             let items = viewModel.extractItems(from: text.content)
                             NavigationLink(
-                                destination: DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: items))) {
+                                destination: DailyExpenditureEditableView(items: items)) {
                                     Text(viewModel.storeName)
                                         .font(.system(size: 12, weight: .bold))
                                         .foregroundColor(Constant.primaryBgColor)
@@ -53,14 +53,14 @@ struct ScanView: View {
                             .foregroundColor(.red)
                             .padding(20)
                             .multilineTextAlignment(.center)
-                            
+
                     }
                     VStack{
                         Image("EmptyData")
                             .resizable()
                             .frame(width: 120, height: 120)
                             .padding(.bottom, 20)
-                           
+
                         Text("No scan data").font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(.gray)

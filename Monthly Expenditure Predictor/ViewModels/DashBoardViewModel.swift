@@ -11,7 +11,7 @@ class DashBoardViewModel: ObservableObject{
     
     var storeName = ""
     @Published var isValidDocument = true
-    @Published var items:[Item] = []
+    var items:[Item] = []
     
     fileprivate func documentNotValid() {
         DispatchQueue.main.async {[weak self] in

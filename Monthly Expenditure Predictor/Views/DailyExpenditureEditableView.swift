@@ -13,12 +13,12 @@ struct DailyExpenditureEditableView: View {
         private let currencyFormatter: NumberFormatter
        @State var deviceWidth = UIScreen.main.bounds.width
     
-        init(viewModel : DailyExpenditureEditableViewModel) {
+        init(items: [Item]) {
             currencyFormatter = NumberFormatter()
             currencyFormatter.numberStyle = .currency
             currencyFormatter.decimalSeparator = ","
             currencyFormatter.maximumFractionDigits = 2
-            self.viewModel = viewModel
+            self.viewModel = DailyExpenditureEditableViewModel(items: items)
             UINavigationBar.appearance().barTintColor = UIColor(Constant.primaryBgColor)
 
                         
@@ -109,7 +109,7 @@ struct DailyExpenditureEditableView: View {
     
     struct DailyExpenditureEditableView_Previews: PreviewProvider {
         static var previews: some View {
-            DailyExpenditureEditableView(viewModel: DailyExpenditureEditableViewModel(items: []))
+            DailyExpenditureEditableView(items: [])
         }
     }
 }
