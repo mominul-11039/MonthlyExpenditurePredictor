@@ -9,7 +9,7 @@ import SwiftUI
 import CloudKit
 
 struct DailyExpenditureEditableView: View {
-        @ObservedObject var viewModel:DailyExpenditureEditableViewModel
+        @ObservedObject var viewModel: DailyExpenditureEditableViewModel = DailyExpenditureEditableViewModel(items: [])
         private let currencyFormatter: NumberFormatter
        @State var deviceWidth = UIScreen.main.bounds.width
     
@@ -29,7 +29,7 @@ struct DailyExpenditureEditableView: View {
             Constant.listBackground
                 .ignoresSafeArea()
             VStack{
-                if viewModel.isError{
+                if viewModel.isError {
                     Text("Something Went Wrong! Please Try Again" )
                         .font(.system(.callout))
                         .foregroundColor(.red)
