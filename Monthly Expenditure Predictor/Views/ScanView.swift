@@ -14,8 +14,6 @@ struct ScanView: View {
     @StateObject var viewModel = DashBoardViewModel()
     @State private var screenHeight: Double = UIScreen.main.bounds.height
     @State private var screenWidth: Double = UIScreen.main.bounds.width
-    
-   
     var body: some View {
         ZStack{
             Color("listBackground")
@@ -30,7 +28,7 @@ struct ScanView: View {
                 }
                 .padding(18)
                    
-                if texts.count > 0{
+                if texts.count > 0 && viewModel.isValidDocument  {
                     List{
                         ForEach(texts){text in
                             let items = viewModel.extractItems(from: text.content)
@@ -49,6 +47,14 @@ struct ScanView: View {
                 }
                 else{
                     Spacer()
+                    if !viewModel.isValidDocument{
+                        Text("The scanned document is not valid! Please, try again with a valide document")
+                            .font(.system(.caption2))
+                            .foregroundColor(.red)
+                            .padding(20)
+                            .multilineTextAlignment(.center)
+                            
+                    }
                     VStack{
                         Image("EmptyData")
                             .resizable()
@@ -58,10 +64,11 @@ struct ScanView: View {
                         Text("No scan data").font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(.gray)
-                            
                     }
                 }
                 Spacer()
+                
+                // MARK: Camera
                 HStack{
                     Spacer()
                     Button(action: {

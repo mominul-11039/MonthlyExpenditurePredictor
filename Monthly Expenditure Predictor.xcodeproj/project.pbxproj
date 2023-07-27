@@ -206,10 +206,10 @@
 			children = (
 				89EF9F442A53DFFA00C5FB13 /* Extensions */,
 				896530BF2A39DB2900008392 /* Utilities */,
-				89B436A02A2EE1A7002C1CEB /* ViewModels */,
 				89B4369D2A2EE180002C1CEB /* Models */,
 				89B4369A2A2EE15C002C1CEB /* Utils */,
 				89B436952A2EE024002C1CEB /* Screens */,
+				89B436A02A2EE1A7002C1CEB /* ViewModels */,
 				89B436942A2EE01C002C1CEB /* Views */,
 				89B436932A2EDFCB002C1CEB /* Monthly Expenditure Predictor.entitlements */,
 				89B436692A2EDF92002C1CEB /* Monthly_Expenditure_PredictorApp.swift */,

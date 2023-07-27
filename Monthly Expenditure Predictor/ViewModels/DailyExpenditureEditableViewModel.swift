@@ -9,7 +9,7 @@ import Foundation
 import CloudKit
 
 class DailyExpenditureEditableViewModel: ObservableObject{
-    @Published var items: [Item]
+    @Published var items: [Item] = []
     @Published var willShowLoader = false
     @Published var isError = false
 
@@ -34,13 +34,14 @@ class DailyExpenditureEditableViewModel: ObservableObject{
     }
     
     func saveToCloudKit(){
-        DispatchQueue.main.async { [weak self] in
-            self?.willShowLoader = true
-            let items = self?.makeCkRecordList()
+        DispatchQueue.main.async {
+            self.willShowLoader = true
+            let items = self.makeCkRecordList()
             CloudKitViewModel.saveItemsToCloudKit(items ?? []) { status in
-                DispatchQueue.main.async { [weak self] in
-                    self?.willShowLoader = false
-                    self?.isError = !status
+                DispatchQueue.main.async {
+                    self.willShowLoader = false
+                    self.isError = !status
+                    print(self.isError)
                 }
             }
         }
