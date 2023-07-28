@@ -37,51 +37,53 @@ struct DailyExpenditureEditableView: View {
                 }
                
                 List {
-                    HStack(alignment: .center){
-                        Text("Item")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .font(.system(size: 12))
-                            .foregroundColor(Constant.primaryBgColor)
-                        Text("Quantity")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .font(.system(size: 12))
-                            .foregroundColor(Constant.primaryBgColor)
-
-                        Text("Price")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity)
-                            .font(.system(size: 12))
-                            .foregroundColor(Constant.primaryBgColor)
-
-                    }
-                    ForEach($viewModel.items.indices, id: \.self) { index in
-                        HStack {
-                            //                    TextField("Item Description", text: $items[index].name)
-                            TextEditor(text: $viewModel.items[index].name)
-                                .multilineTextAlignment(.leading)
-                                .lineLimit(2)
-                                .font(.system(size: 12, weight: .bold))
-                                .foregroundColor(.secondary)
+                    Section{
+                        ForEach($viewModel.items.indices, id: \.self) { index in
+                            HStack {
                                 
-                            TextField("Quantity", value: $viewModel.items[index].quantity, formatter: NumberFormatter())
-                                .multilineTextAlignment(.center)
-                                .font(.system(size: 12, weight: .bold))
-                                .foregroundColor(.secondary)
-                            
-                            TextField("Price", value: $viewModel.items[index].price, formatter: currencyFormatter)
-                                .keyboardType(.decimalPad)
-                                .multilineTextAlignment(.trailing)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
-                                .font(.system(size: 12, weight: .bold))
-                                .foregroundColor(.secondary)
-                            
+                                TextEditor(text: $viewModel.items[index].name)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(2)
+                                    .font(.system(size: 12, weight: .bold))
+                                    .foregroundColor(.secondary)
+                                
+                                TextField("Quantity", value: $viewModel.items[index].quantity, formatter: NumberFormatter())
+                                    .multilineTextAlignment(.center)
+                                    .font(.system(size: 12, weight: .bold))
+                                    .foregroundColor(.secondary)
+                                
+                                TextField("Price", value: $viewModel.items[index].price, formatter: currencyFormatter)
+                                    .keyboardType(.decimalPad)
+                                    .multilineTextAlignment(.trailing)
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
+                                    .font(.system(size: 12, weight: .bold))
+                                    .foregroundColor(.secondary)
+                                
+                            }
                         }
+                    }header: {
+                        HStack(){
+                            Text("Item")
+                                .multilineTextAlignment(.leading)
+                                .background(.orange)
+                                .styledHeader()
+                                .frame(alignment: .leading)
+                                
+                            Text("Quantity")
+                                .styledHeader()
+                               
+                            Text("Price")
+                                .styledHeader()
+                                
+                        }
+                        .background(.red)
+                        .padding(0)
+                            
                     }
                 }
+                .listStyle(.inset)
                 .navigationTitle("Save To CloudKit")
-                .navigationBarTitleDisplayMode(.automatic)
+                .navigationBarTitleDisplayMode(.inline)
                 
                 Button(action: {
                     viewModel.saveToCloudKit()
