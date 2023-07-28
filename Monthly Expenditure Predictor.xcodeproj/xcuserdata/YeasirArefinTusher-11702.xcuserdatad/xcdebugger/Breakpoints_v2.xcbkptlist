@@ -1,342 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "6B4E7587-3718-4EB3-A1C3-0D585CABFB1D"
+   uuid = "815DC23E-F8BB-49FF-AE75-FED14DCA07CF"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "897C70AE-3BC0-42EF-A7C4-5799319190A7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "extractItemsLegacy(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "460CE817-EEAC-4FFA-B550-B06F45C094CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "extractItems(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "76E2B9E7-9096-4146-9FA5-D47576A30957"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "76E2B9E7-9096-4146-9FA5-D47576A30957 - b4d06ebe6eec74d4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "76E2B9E7-9096-4146-9FA5-D47576A30957 - b3e4b304b5f63fd7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "504">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "96A365A4-6ECB-4B43-A015-E982900771C8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/Views/HomeBackGroundView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "96A365A4-6ECB-4B43-A015-E982900771C8 - 782ba236580e8abe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.HomeBackGroundView.body.getter : some"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/HomeBackGroundView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "96A365A4-6ECB-4B43-A015-E982900771C8 - 42b63ddaf0e8f6a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(alignment: SwiftUI.Alignment, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.HomeBackGroundView.body.getter : some"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/HomeBackGroundView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "352">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D2A94A84-E662-4A8A-96C5-4D6339E9EC4E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "documentNotValid()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF0CB93D-477C-40F0-9742-6371D9799CC2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "extractItems(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "DashBoardViewModel"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 3ff59802711c7ff4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Monthly_Expenditure_Predictor.DashBoardViewModel.isValidDocument : Swift.Bool"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 2c01689e4a4be6e8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.isValidDocument.getter : Swift.Bool"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 1eed66a20258bef4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.isValidDocument.setter : Swift.Bool"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 7e269b544a1bbceb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.isValidDocument.modify : Swift.Bool"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - a98b00da67f11d4d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.isValidDocument.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 7d6342fca9057676"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$isValidDocument.getter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 38694bf617e33e42"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$isValidDocument.setter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - aef1c9344c1e23a6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$isValidDocument.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - e2d8ef125233caef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$isValidDocument.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "24000DB2-5C9F-4ACA-A6EA-616C1E36E6A8 - 7f2f57845eba883"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.init() -&gt; Monthly_Expenditure_Predictor.DashBoardViewModel"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EFA9A8CF-10B3-47BC-A101-201210B116CF"
-            shouldBeEnabled = "Yes"
+            uuid = "E8C77605-9D7B-47C8-A4C7-7842DD007D70"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
@@ -351,7 +23,421 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BDA946FF-6909-48A4-A8FE-394D3ADCE440"
+            uuid = "CB6D7C6B-639C-4B43-9E7B-DEB416C291AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "extractItems(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "DashBoardViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - d17c4e3b84f82555"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Monthly_Expenditure_Predictor.DashBoardViewModel.showAlert : Swift.Bool"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - a141de40bd155050"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.showAlert.getter : Swift.Bool"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 64dabc933fe5685c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.showAlert.setter : Swift.Bool"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - e573bd23c634b653"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.showAlert.modify : Swift.Bool"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 6126602f2bc78502"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.showAlert.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 370f92b429314d1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$showAlert.getter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 91881d40c31ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$showAlert.setter : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - ac8b08ea9d1f03ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$showAlert.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 991f7a26dab9124"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$showAlert.modify : Combine.Published&lt;Swift.Bool&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "D5E255A5-8FC0-4904-8695-BC339DC21B98 - 7f2f57845eba883"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.init() -&gt; Monthly_Expenditure_Predictor.DashBoardViewModel"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28E5284E-8177-4FD8-BCFC-772493AFB6FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "DashBoardViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b4d06ebe6eec0f4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b3e4b304b5f644af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - 6a36ca5f04b77146"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b4d06ebe6eec0f6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b3e4b304b5f6448c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - 6a36ca5f04b770a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b4d06ebe6eec0ff3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b3e4b304b5f64413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - 6a36ca5f04b7703a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b4d06ebe6eec09e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - b3e4b304b5f64200"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "1036">
+               </Location>
+               <Location
+                  uuid = "4BE81A03-C479-4D02-9167-2179A5D6C556 - 6a36ca5f04b7762b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33FC6160-5C06-4078-A76C-0AA9596D8095"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -364,7 +450,7 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "BDA946FF-6909-48A4-A8FE-394D3ADCE440 - e80d1fb384c328a2"
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - e80d1fb384c328a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -379,7 +465,7 @@
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
-                  uuid = "BDA946FF-6909-48A4-A8FE-394D3ADCE440 - 39ed12bba6d86ac0"
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - 39ed12bba6d86ac0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -394,11 +480,56 @@
                   offsetFromSymbolStart = "116">
                </Location>
                <Location
-                  uuid = "BDA946FF-6909-48A4-A8FE-394D3ADCE440 - 94e5573d6ceacf9e"
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - 80d70d61d2ff9bbf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.ScanView.init(viewModel: @autoclosure () -&gt; Monthly_Expenditure_Predictor.DashBoardViewModel) -&gt; Monthly_Expenditure_Predictor.ScanView"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.init(viewModel: Monthly_Expenditure_Predictor.DashBoardViewModel) -&gt; Monthly_Expenditure_Predictor.ScanView"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - d012075e7220847b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Monthly_Expenditure_Predictor.ScanView.viewModel : Monthly_Expenditure_Predictor.DashBoardViewModel"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - dc5d1b606c899df1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.viewModel.getter : Monthly_Expenditure_Predictor.DashBoardViewModel"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - 3eaa5250ed5329e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.viewModel.setter : Monthly_Expenditure_Predictor.DashBoardViewModel"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
@@ -408,173 +539,273 @@
                   endingLineNumber = "13"
                   offsetFromSymbolStart = "64">
                </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - edcac76bfb6cf0f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.viewModel.modify : Monthly_Expenditure_Predictor.DashBoardViewModel"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - 7f38b08b914b115e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.viewModel.modify : Monthly_Expenditure_Predictor.DashBoardViewModel with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "A9C46045-65F5-4D38-AF58-9C64FC83249A - 56f692459e5dd258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.$viewModel.getter : SwiftUI.ObservedObject&lt;Monthly_Expenditure_Predictor.DashBoardViewModel&gt;.Wrapper"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "92">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF"
+            uuid = "A90541BF-5456-4918-8F47-82CBDD531E3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79798E2C-06D7-4D83-8FCD-D46171E0E61D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Monthly Expenditure Predictor/ViewModels/DashBoardViewModel.swift"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "DashBoardViewModel"
-            landmarkType = "3">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "body"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - 4df4391c2f01d6d9"
+                  uuid = "79798E2C-06D7-4D83-8FCD-D46171E0E61D - 6dea76eeb3afc136"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Monthly_Expenditure_Predictor.DashBoardViewModel.items : Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3180">
                </Location>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - fd3e9abe0e4d75e0"
+                  uuid = "79798E2C-06D7-4D83-8FCD-D46171E0E61D - 6dea76eeb3afc1f4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.items.getter : Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "112">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "3180">
                </Location>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - e6689456ad99a1ec"
+                  uuid = "79798E2C-06D7-4D83-8FCD-D46171E0E61D - 34a1d1d358ca55e3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.items.setter : Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "140">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "4380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3D62ADE-1BE5-4FFC-A800-834B20C4C2AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ScanView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C3D62ADE-1BE5-4FFC-A800-834B20C4C2AE - 39ed12bba6d86aa7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.init() -&gt; Monthly_Expenditure_Predictor.ScanView"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - b81f0e5b2b7370dd"
+                  uuid = "C3D62ADE-1BE5-4FFC-A800-834B20C4C2AE - 80d70d61d2ff9bd8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.items.modify : Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.init(viewModel: Monthly_Expenditure_Predictor.DashBoardViewModel) -&gt; Monthly_Expenditure_Predictor.ScanView"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "0">
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F8C4FA0-759F-4057-B033-7AFB7E3E339E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2F8C4FA0-759F-4057-B033-7AFB7E3E339E - b4d06ebe6eec74d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "448">
                </Location>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - be798f396a9aba01"
+                  uuid = "2F8C4FA0-759F-4057-B033-7AFB7E3E339E - b3e4b304b5f63fd7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.items.modify : Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "20">
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9973322E-0FA8-47F8-9F11-727B6A6F79A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Monthly Expenditure Predictor/Views/ScanView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9973322E-0FA8-47F8-9F11-727B6A6F79A7 - 34a1d1d358ca5713"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
+                  moduleName = "Monthly Expenditure Predictor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3288">
                </Location>
                <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - d3fb8e3cf85bd3a9"
+                  uuid = "9973322E-0FA8-47F8-9F11-727B6A6F79A7 - 865561abfb31e857"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$items.getter : Combine.Published&lt;Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;&gt;.Publisher"
+                  symbolName = "closure #4 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;&gt;)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0)&gt; in Monthly_Expenditure_Predictor.ScanView.body.getter : some"
                   moduleName = "Monthly Expenditure Predictor"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
+                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/Views/ScanView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - 2a50deafbf0877b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$items.setter : Combine.Published&lt;Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;&gt;.Publisher"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - 28cb5f54af3b3c9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$items.modify : Combine.Published&lt;Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;&gt;.Publisher"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/%3Ccompiler-generated%3E"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - c3f5694c388f2c6b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.$items.modify : Combine.Published&lt;Swift.Array&lt;Monthly_Expenditure_Predictor.Item&gt;&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "8D17207C-28EE-44F1-B996-9205A70D17AF - 7f2f57845ebab62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Monthly_Expenditure_Predictor.DashBoardViewModel.init() -&gt; Monthly_Expenditure_Predictor.DashBoardViewModel"
-                  moduleName = "Monthly Expenditure Predictor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/YeasirArefinTusher-11702/Documents/BJIT/Expenditure/MonthlyExpenditurePredictor/Monthly%20Expenditure%20Predictor/ViewModels/DashBoardViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "288">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "148">
                </Location>
             </Locations>
          </BreakpointContent>
