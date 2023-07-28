@@ -10,12 +10,19 @@ import CloudKit
 class DashBoardViewModel: ObservableObject{
     
     var storeName = ""
-    @Published var isValidDocument = true
-    var items:[Item] = []
+    @Published var showAlert = false
+    
     
     fileprivate func documentNotValid() {
         DispatchQueue.main.async {[weak self] in
-            self?.isValidDocument = false
+            self?.storeName = ""
+            self?.showAlert = true
+        }
+    }
+    fileprivate func documentValid() {
+        DispatchQueue.main.async {[weak self] in
+            
+            self?.showAlert = false
         }
     }
 //      MARK: - Extract items
@@ -23,19 +30,19 @@ class DashBoardViewModel: ObservableObject{
        print(text)
         if !text.contains("Product Name") || !text.contains("Product Quantity") || !text.contains("Total price"){
             documentNotValid()
-            return self.items
+            return []
         }else{
+            documentValid()
             if #available(iOS 16.0, *) {
-                extractItem16Devv(from: text)
-                return self.items
+                return extractItem16Devv(from: text)
             } else {
-                extractItemsLegacy(from: text)
-                return self.items
+                return extractItemsLegacy(from: text)
+                
             }
         }
     }
     // MARK: devices legecy
-    private func  extractItemsLegacy(from text: String) {
+    private func  extractItemsLegacy(from text: String) -> [Item] {
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
         storeName = lines[0]
@@ -51,10 +58,11 @@ class DashBoardViewModel: ObservableObject{
                 items[items.count - 1].price = Double(line) ?? 0
             }
         }
+        return items
     }
     
     // MARK: Extract item for iphone 16+ devices
-    private func extractItem16Dev(from text: String){
+    private func extractItem16Dev(from text: String) -> [Item]{
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
         storeName = lines[0]
@@ -64,18 +72,16 @@ class DashBoardViewModel: ObservableObject{
         for i in 0...a-2{
             items.append(Item(name: lines[i+1], quantity: Int(lines[a+i+1]) ?? 0, price: Double(lines[b+i+1]) ?? 0.0))
         }
-        DispatchQueue.main.async { [weak self] in
-            self?.items = items
-        }
+        return items
     }
     
-    private func extractItem16Devv(from text: String) {
+    private func extractItem16Devv(from text: String)-> [Item] {
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
 
         guard lines.count >= 3 else {
            documentNotValid()
-            return
+            return []
         }
 
         storeName = lines[0]
@@ -86,7 +92,7 @@ class DashBoardViewModel: ObservableObject{
         // Ensure there are enough lines to extract data for each item.
         guard a > 0, lines.count >= b + a else {
             documentNotValid()
-            return
+            return []
         }
 
         for i in 0...(a - 2) {
@@ -98,19 +104,12 @@ class DashBoardViewModel: ObservableObject{
             guard let quantity = Int(lines[quantityIndex]),
                   let price = Double(lines[priceIndex]) else {
                 documentNotValid()
-                return
+                return []
             }
-
             items.append(Item(name: lines[nameIndex], quantity: quantity, price: price))
         }
-
-        // Update the items on the main queue.
-        DispatchQueue.main.async { [weak self] in
-            self?.items = items
-        }
+        return items
     }
-
-
 }
 
 enum documentError: Error {
