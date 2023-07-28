@@ -8,21 +8,33 @@
 import Foundation
 import CloudKit
 class DashBoardViewModel: ObservableObject{
-
+    
     var storeName = ""
     @Published var isValidDocument = true
-    @Published var items:[Item] = []
-
-    func extractItems(from text: String) -> [Item]{
-        if #available(iOS 16.0, *) {
-        extractItem16Dev(from: text)
-            return self.items
-        } else {
-        extractItemsLegacy(from: text)
-            return self.items
+    var items:[Item] = []
+    
+    fileprivate func documentNotValid() {
+        DispatchQueue.main.async {[weak self] in
+            self?.isValidDocument = false
         }
     }
-   // devices < ios 16
+//      MARK: - Extract items
+    func extractItems(from text: String) -> [Item]{
+       print(text)
+        if !text.contains("Product Name") || !text.contains("Product Quantity") || !text.contains("Total price"){
+            documentNotValid()
+            return self.items
+        }else{
+            if #available(iOS 16.0, *) {
+                extractItem16Devv(from: text)
+                return self.items
+            } else {
+                extractItemsLegacy(from: text)
+                return self.items
+            }
+        }
+    }
+    // MARK: devices legecy
     private func  extractItemsLegacy(from text: String) {
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
@@ -39,15 +51,12 @@ class DashBoardViewModel: ObservableObject{
                 items[items.count - 1].price = Double(line) ?? 0
             }
         }
-        self.items = items
     }
-
+    
     // MARK: Extract item for iphone 16+ devices
     private func extractItem16Dev(from text: String){
         var items: [Item] = []
         var lines = text.components(separatedBy: .newlines)
-
-
         storeName = lines[0]
         lines.removeFirst(2)
         let a = lines.count/3
@@ -59,21 +68,49 @@ class DashBoardViewModel: ObservableObject{
             self?.items = items
         }
     }
-
-
-//    // MARK: Remove storename and date from the array
-//    private func removeElementsBeforeProductQuantity(_ array: [String]) -> [String] {
-//        guard let productQuantityIndex = array.firstIndex(of: "Product Quantity") else {
-//            return array
-//        }
-//        let indexToRemove = max(productQuantityIndex - 2, 0)
-//        var newArray = array
-//        newArray.remove(at: indexToRemove)
-//        newArray.remove(at: indexToRemove)
-//
-//        return newArray
-//    }
     
+    private func extractItem16Devv(from text: String) {
+        var items: [Item] = []
+        var lines = text.components(separatedBy: .newlines)
+
+        guard lines.count >= 3 else {
+           documentNotValid()
+            return
+        }
+
+        storeName = lines[0]
+        lines.removeFirst(2)
+        let a = lines.count / 3
+        let b = a + a
+
+        // Ensure there are enough lines to extract data for each item.
+        guard a > 0, lines.count >= b + a else {
+            documentNotValid()
+            return
+        }
+
+        for i in 0...(a - 2) {
+            let nameIndex = i + 1
+            let quantityIndex = a + i + 1
+            let priceIndex = b + i + 1
+
+            // Extract data for each item, handling potential conversion errors.
+            guard let quantity = Int(lines[quantityIndex]),
+                  let price = Double(lines[priceIndex]) else {
+                documentNotValid()
+                return
+            }
+
+            items.append(Item(name: lines[nameIndex], quantity: quantity, price: price))
+        }
+
+        // Update the items on the main queue.
+        DispatchQueue.main.async { [weak self] in
+            self?.items = items
+        }
+    }
+
+
 }
 
 enum documentError: Error {
