@@ -22,7 +22,7 @@ struct GraphView: View {
         minY = 0
         
         let priceChange = (data.last ?? 0) - (data.first ?? 0)
-        lineColor = Color("PrimaryBackgroundColor")
+        lineColor = Constant.primaryBgColor
         endingDate = Date()
         startingDate = endingDate.addingTimeInterval(-14*24*60*60)
     }
@@ -38,7 +38,7 @@ struct GraphView: View {
                 .padding(8)
         }
         .font(.caption)
-        .foregroundColor(Color("PrimaryBackgroundColor"))
+        .foregroundColor(Constant.primaryBgColor)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 withAnimation(.linear(duration: 2.0)) {

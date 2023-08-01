@@ -21,13 +21,14 @@ struct UserProfileView: View {
     
     // MARK: - VIEW
     var body: some View {
-//        NavigationView {
+
         List {
             ForEach(vm.userInfo, id: \.self) { user in
+                // MARK: - Profile Section
                 Section(header: Text("Profile")) {
                     VStack {
                         ZStack {
-                            Image("AvaterImage")
+                            Image(Constant.avaterImage)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 150, height: 150)
@@ -65,7 +66,7 @@ struct UserProfileView: View {
                                             Button(action: {
                                                 // Handle button tap action here
                                             }) {
-                                                Image(systemName: "square.and.pencil")
+                                                Image(systemName:  Constant.editProfileIcon)
                                                     .foregroundColor(.white)
                                             }
                                             .buttonStyle(PlainButtonStyle())
@@ -76,8 +77,6 @@ struct UserProfileView: View {
                                 .onTapGesture {
                                     isButtonVisible.toggle()
                                 }
-
-
                         }
                         HStack {
                             Text(user.fullName)
@@ -87,19 +86,19 @@ struct UserProfileView: View {
                             Button(action: {
                                 // Handle button tap action here
                                 changedValue = ""
-                                selectedRow = "User Name"
+                                selectedRow = Constant.userNameLable
                                 vm.showingNameAlert = true
 
                                 
                             }) {
-                                Image(systemName: "square.and.pencil")
+                                Image(systemName:  Constant.editProfileIcon)
                                     .foregroundColor(.gray)
                             }
-                            .alert("Edit Info", isPresented: $vm.showingNameAlert) {
+                            .alert(Constant.editAlertTitle, isPresented: $vm.showingNameAlert) {
                                 TextField("Name", text: $changedValue)
                                 Button("OK", action: submitName)
                             } message: {
-                                Text("Change User Name")
+                                Text(Constant.changeUserNameMessage)
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
@@ -109,38 +108,38 @@ struct UserProfileView: View {
                         isShimmering = true
                     }
                 }
-                
+                // MARK: - Personal Details
                 Section(header: Text("Personal Information")) {
-                    // Family Members
+                    // MARK: Family Member
                     HStack {
-                        InfoRow(label: "Family Member", value: "\(user.userNoOfFamilyMember)")
+                        InfoRow(label: Constant.familyMemberLabel, value: "\(user.userNoOfFamilyMember)")
                         Spacer()
                         Button(action: {
                             // Handle button tap action here
                             changedValue = ""
-                            selectedRow = "Family Member"
+                            selectedRow = Constant.familyMemberLabel
                             vm.showingFamilyAlert = true
                         }) {
-                            Image(systemName: "square.and.pencil")
+                            Image(systemName: Constant.editProfileIcon)
                                 .foregroundColor(.gray)
                         }
-                        .alert("Edit Info", isPresented: $vm.showingFamilyAlert) {
+                        .alert(Constant.editAlertTitle, isPresented: $vm.showingFamilyAlert) {
                             TextField("No of Family Members", text: $changedValue)
                             Button("OK", action: submitNoOfFamily)
                         } message: {
-                            Text("Change No of Family Members")
+                            Text(Constant.changeFamilyMemberMessage)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
-                    // Email
+                    // MARK: Email
                     HStack {
-                        InfoRow(label: "Email", value: "\(user.userEmail)")
+                        InfoRow(label: Constant.emailLable, value: "\(user.userEmail)")
                         Spacer()
                     }
                     //InfoRow(label: "Phone", value: "+1 123-456-7890")
                 }
-
-                Section(header: Text("Address")) {
+                // MARK: Adrress Section
+                Section(header: Text(Constant.addressLable)) {
                     HStack {
                         Text(user.userAddress)
                             .multilineTextAlignment(.center)
@@ -148,17 +147,17 @@ struct UserProfileView: View {
                         Button(action: {
                             // Handle button tap action here
                             changedValue = ""
-                            selectedRow = "Address"
+                            selectedRow = Constant.addressLable
                             vm.showingAddressAlert = true
                         }) {
-                            Image(systemName: "square.and.pencil")
+                            Image(systemName: Constant.editProfileIcon)
                                 .foregroundColor(.gray)
                         }
-                        .alert("Edit Info", isPresented: $vm.showingAddressAlert) {
-                            TextField("Address", text: $changedValue)
+                        .alert(Constant.editAlertTitle, isPresented: $vm.showingAddressAlert) {
+                            TextField(Constant.addressLable, text: $changedValue)
                             Button("OK", action: submitAddress)
                         } message: {
-                            Text("Change Your Address")
+                            Text(Constant.changeAddressMessage)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
@@ -171,14 +170,7 @@ struct UserProfileView: View {
         }
         .padding(EdgeInsets(top: 60, leading: 0, bottom: 60, trailing: 0))
     }
-//    }
-
-
-    //    func submitFamilyMember() {
-    //        print("You entered \(changedValue)")
-    //        let record = CKRecord(recordType: "expenditure_info")
-    //        record["user_email"] = changedValue
-    //    }
+    // MARK: Submit information functions
     func submitAddress() {
         vm.showingAddressAlert = false
         submitData(type: 3)
@@ -194,6 +186,7 @@ struct UserProfileView: View {
         submitData(type: 1)
     }
 
+    // MARK: - Submit Data to CK
     func submitData(type: Int) {
         let container = CloudKitViewModel.ckContainer
         let database = container.publicCloudDatabase
@@ -201,16 +194,16 @@ struct UserProfileView: View {
         switch type {
             case 0 :
                 vm.userInfo[0].fullName = changedValue
-                vm.userInfo.first?.record["user_name"] = changedValue
+            vm.userInfo.first?.record[Constant.ckUserNameRecord] = changedValue
             case 1 :
                 vm.userInfo[0].userNoOfFamilyMember = Int(changedValue) ?? 0
-                vm.userInfo.first?.record["no_of_family_member"] = Int(changedValue) ?? 0
+            vm.userInfo.first?.record[Constant.ckNoOfFamilyMemberRecord] = Int(changedValue) ?? 0
             case 2 :
                 vm.userInfo[0].userEmail = changedValue
-                vm.userInfo.first?.record["user_email"] = changedValue
+            vm.userInfo.first?.record[Constant.ckUserEmailRecord] = changedValue
             case 3 :
                 vm.userInfo[0].userAddress = changedValue
-                vm.userInfo.first?.record["user_address"] = changedValue
+            vm.userInfo.first?.record[Constant.ckUserAddressRecord] = changedValue
             default :
                 break
         }
@@ -218,6 +211,7 @@ struct UserProfileView: View {
         // Save the updated record
         database.save(vm.userInfo.first!.record) { (savedRecord, saveError) in
             if let saveError = saveError {
+                // TODO: Show alert accordingly
                 print("Failed to save record: \(saveError.localizedDescription)")
             } else {
                 print("Record updated successfully")
@@ -229,6 +223,8 @@ struct UserProfileView: View {
         print("You entered \(changedValue)")
     }
 }
+
+// MARK: Infro Row
 struct InfoRow: View {
     var label: String
     var value: String
@@ -240,6 +236,7 @@ struct InfoRow: View {
             Spacer()
             Text(value)
                 .foregroundColor(.secondary)
+                .padding(.trailing, 5)
         }
     }
 }

@@ -87,11 +87,11 @@ class CloudKitViewModel {
     }
     
     static func checkUserExistsWithEmail(email: String, completion: @escaping (Result<Bool, Error>) -> Void) {
-            let predicate = NSPredicate(format: "user_email == %@", email)
-            let recordType = "expenditure_user"
+        let predicate = NSPredicate(format: Constant.emailPredicate, email)
+        let recordType = Constant.expUserRecordType
 
             fetch(predicate: predicate, recordType: recordType) { (users: [User]) in
-                print("userscount: ", users.count)
+                
                 if users.isEmpty {
                     
                     // User with the provided email does not exist
@@ -109,7 +109,7 @@ class CloudKitViewModel {
         let publicDatabase = CKContainer.default().publicCloudDatabase
                
                // Initialize Query
-               let query = CKQuery(recordType: "expenditure_user", predicate: NSPredicate(format: "user_email == %@", "yeasir.arefin@bjitgroup.com"))
+        let query = CKQuery(recordType: Constant.expUserRecordType, predicate: NSPredicate(format: Constant.ckUserEmailRecord, "yeasir.arefin@bjitgroup.com"))
                
                
                // Perform Query
@@ -246,13 +246,13 @@ class CloudKitViewModel {
    static func saveItemsToCloudKit(_ items: [ExpenditureRecord], completion: @escaping (Bool) -> ()) {
         let records = items.map { item in
             let recordID = CKRecord.ID(recordName: item.expenditureRecordId.uuidString)
-            let record = CKRecord(recordType: "expenditure_info", recordID: recordID)
-            record["product_name"] = item.productName as CKRecordValue
-            record["product_quantity"] = item.productQuantity as CKRecordValue
-            record["product_price"] = item.productPrice as CKRecordValue
-            record["date"] = item.timestamp as CKRecordValue
-            record["category"] = item.category as CKRecordValue
-            record["user_email"] = item.userEmail as CKRecordValue
+            let record = CKRecord(recordType: Constant.expInfoRecordType, recordID: recordID)
+            record[Constant.ckProductNameRecord] = item.productName as CKRecordValue
+            record[Constant.ckProductQuantityRecord] = item.productQuantity as CKRecordValue
+            record[Constant.ckProductPriceRecord] = item.productPrice as CKRecordValue
+            record[Constant.ckDateRecord] = item.timestamp as CKRecordValue
+            record[Constant.ckCategoryRecord] = item.category as CKRecordValue
+            record[Constant.ckUserEmailRecord] = item.userEmail as CKRecordValue
             return record
         }
         let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: nil)

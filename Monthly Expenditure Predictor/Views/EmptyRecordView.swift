@@ -11,13 +11,14 @@ struct EmptyRecordView: View {
     var state = 0
     var body: some View {
         VStack {
-            Image(systemName: "list.bullet.rectangle.fill")
+            Image(systemName: Constant.emptyRecordViewIcon)
                 .resizable()
-                .foregroundColor(Color.black).opacity(0.7)
+                .foregroundColor(Constant.primaryBgColor).opacity(0.7)
                 .frame(width: UIScreen.screenWidth/6, height: UIScreen.screenHeight/12)
                 .cornerRadius(15)
-            Text(state == 0 ? "Please Select Year & Month" : state == 2 ? "Please select year first then month!" : "No expense data available!")
+            Text(state == 0 ? Constant.selectYearMonthMessage : state == 2 ? Constant.selectYearFirstMessage : Constant.noExpenseDataMessage)
                 .font(.footnote)
+                .foregroundColor(Color.black.opacity(0.7))
                 .fontWeight(.semibold)
                 .padding(20)
                 .buttonStyle(PlainButtonStyle()) 

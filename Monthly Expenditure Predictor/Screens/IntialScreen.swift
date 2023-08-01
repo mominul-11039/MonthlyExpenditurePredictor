@@ -21,19 +21,18 @@ struct InitialScreenView: View {
                 HomeScreen(tabSelection: .home)
                     .environmentObject(sessionManager)
             } else {
+                // MARK: - Background View
                 ZStack {
-                    Color("AppBackground")
+                    Constant.appBackground
                         .ignoresSafeArea(.all,edges: .all)
                     VStack {
-                        Spacer()
+                        // MARK: - Header View
                         VStack{
-                            Text("SPENDWISE")
+                            Text(Constant.appName)
                                 .font(.system(size: 32, weight: .bold))
-                                .foregroundColor(Color("PrimaryBackgroundColor"))
+                                .foregroundColor(Constant.primaryBgColor)
                                 .padding(.vertical, 8)
-                            Text("""
-                            The simple and efficient expense tracker app to effortlessly manage your finances on the go
-                            """)
+                            Text(Constant.appSlogan)
                             .font(.system(size: 16))
                               .fontWeight(.light)
                               .foregroundColor(.gray)
@@ -43,8 +42,8 @@ struct InitialScreenView: View {
                         .opacity(isAnimating ? 1 : 0)
                         .offset(y: isAnimating ? 0 : -40)
                         .animation(.easeOut(duration: 1), value: isAnimating)
-                        
-                        Image("InitialScreenImage")
+                        // MARK: - Document Image View
+                        Image(Constant.onBoardingScreenImage)
                             .resizable()
                             .scaledToFit()
                             .opacity(isAnimating ? 1 : 0)
@@ -53,7 +52,7 @@ struct InitialScreenView: View {
                             .opacity(isAnimating ? 1 : 0)
                         
                         Spacer()
-                        
+                        // MARK: - Footer
                         ZStack{
                             // Background
                             Capsule(style: .circular)
@@ -67,7 +66,7 @@ struct InitialScreenView: View {
                             Text("Get Started")
                                 .font(.system(.title3, design: .rounded))
                                 .fontWeight(.bold)
-                                .foregroundColor(Color("PrimaryBackgroundColor"))
+                                .foregroundColor(Constant.primaryBgColor)
                                 .offset(x: 20)
                         
                             // Dynamic capsul
@@ -84,7 +83,7 @@ struct InitialScreenView: View {
                                     Circle()
                                         .fill(.black.opacity(0.10))
                                         .padding(8)
-                                    Image(systemName: "chevron.forward.2")
+                                    Image(systemName: Constant.forwardIcon)
                                         .font(.system(size: 24, weight: .bold))
                                         .foregroundColor(.white)
                                     

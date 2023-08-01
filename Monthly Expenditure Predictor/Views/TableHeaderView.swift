@@ -37,6 +37,7 @@ struct TableHeaderView: View {
         }
         .font(.headline)
         .padding(.horizontal)
+        
     }
 }
 

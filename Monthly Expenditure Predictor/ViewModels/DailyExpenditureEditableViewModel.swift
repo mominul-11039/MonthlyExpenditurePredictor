@@ -21,13 +21,13 @@ class DailyExpenditureEditableViewModel: ObservableObject{
    private func makeCkRecordList() -> [ExpenditureRecord]{
         
         let items:[ExpenditureRecord] = items.compactMap {
-            let record = CKRecord(recordType: "expenditure_info")
-            record["product_name"] = $0.name
-            record["category"] = "default"
-            record["date"] = Int(Date().timeIntervalSince1970)
-            record["product_price"] = $0.price
-            record["product_quantity"] = $0.quantity
-            record["user_email"] = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME") ?? ""
+            let record = CKRecord(recordType: Constant.expInfoRecordType)
+            record[Constant.ckProductNameRecord] = $0.name
+            record[Constant.ckCategoryRecord] = "default"
+            record[Constant.ckDateRecord] = Int(Date().timeIntervalSince1970)
+            record[Constant.ckProductPriceRecord] = $0.price
+            record[Constant.ckProductQuantityRecord] = $0.quantity
+            record[Constant.ckUserEmailRecord] = UserDefaults.standard.string(forKey: Constant.loggedinUserKey) ?? ""
             return ExpenditureRecord(record: record)
         }
         return items

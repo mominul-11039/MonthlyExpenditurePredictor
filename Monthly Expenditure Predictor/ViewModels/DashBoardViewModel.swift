@@ -8,10 +8,8 @@
 import Foundation
 import CloudKit
 class DashBoardViewModel: ObservableObject{
-    
     var storeName = ""
     @Published var showAlert = false
-    
     
     fileprivate func documentNotValid() {
         DispatchQueue.main.async {[weak self] in
@@ -19,6 +17,7 @@ class DashBoardViewModel: ObservableObject{
             self?.showAlert = true
         }
     }
+    
     fileprivate func documentValid() {
         DispatchQueue.main.async {[weak self] in
             
@@ -41,6 +40,7 @@ class DashBoardViewModel: ObservableObject{
             }
         }
     }
+    
     // MARK: devices legecy
     private func  extractItemsLegacy(from text: String) -> [Item] {
         var items: [Item] = []

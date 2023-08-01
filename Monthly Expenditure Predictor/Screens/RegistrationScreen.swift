@@ -17,38 +17,22 @@ struct RegistrationScreen: View {
     var body: some View {
        
             VStack(alignment: .center) {
-                VStack{
-                    Image("ExpIcon")
-                        .resizable()
-                        .imageScale(.small)
-                        .scaledToFit()
-                        .frame(maxWidth: 100, maxHeight: 100)
-                    Text("SPENDWISE")
-                        .fontWeight(.heavy)
-                        .font(.system(size: 24))
-                        .foregroundColor(.black.opacity(0.6))
-                    Text("Empowering Your Financial Future")
-                        .fontWeight(.heavy)
-                        .font(.system(size: 12))
-                        .foregroundColor(.black.opacity(0.5))
-                }
+                SloganView()
                 Spacer()
-                TextField("Email", text: $viewModel.email)
+                TextField(Constant.emailPlaceholderText, text: $viewModel.email)
                     .styledTextField()
                     .keyboardType(.emailAddress)
                     .padding(.horizontal, 20)
-                SecureField("Password [At least 6 char]", text: $viewModel.password)
+                SecureField(Constant.passwordPlaceholderText, text: $viewModel.password)
                     .styledTextField()
                     .padding(.horizontal, 20)
-                SecureField("Confirm Password", text: $viewModel.confirmPassword)
+                SecureField(Constant.confirmPasswordPlaceholderText, text: $viewModel.confirmPassword)
                     .styledTextField()
                     .frame(alignment: .center)
                     .padding(.horizontal, 20)
                 
                 if viewModel.isUserExists{
-                    Text("""
-                         This email address is already registered. Please use a different email address or try logging in.
-                         """)
+                    Text(Constant.alreadyExistsAlertMessage)
                         .font(.system(size: 12))
                         .foregroundColor(.red)
                         .padding(8)

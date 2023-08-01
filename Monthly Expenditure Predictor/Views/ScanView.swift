@@ -14,24 +14,29 @@ struct ScanView: View {
     @State private var screenHeight: Double = UIScreen.main.bounds.height
     @State private var screenWidth: Double = UIScreen.main.bounds.width
     @State private var itemsArray:[Items] = []
+    
+    // MARK: - View
     var body: some View {
+        // MARK: - BackgroundView
         ZStack{
-            Color("listBackground")
+           Constant.listBackground 
                 .ignoresSafeArea()
+            // MARK: - Contents View
             VStack{
+                // MARK: Title
                 HStack{
-                    Image(systemName: "doc.viewfinder.fill")
+                    Image(systemName: Constant.documentViewFinderIcon)
                         .foregroundColor(Constant.primaryBgColor)
                         .font(.system(size: 34))
-                    
                     Text("Scan Document")
                         .font(.system(size: 20))
                         .fontWeight(.heavy)
                         .foregroundColor(.black.opacity(0.6))
                     Spacer()
-                }
-                .padding(20)
-                
+                } //:- Title
+                .padding(.top, 30)
+                .padding(.horizontal, 20)
+                // MARK: Document list
                 if itemsArray.count > 0 && !viewModel.showAlert {
                     List{
                         ForEach($itemsArray){$items in
@@ -48,6 +53,7 @@ struct ScanView: View {
                 }
                 else{
                     Spacer()
+                    // If there is items show
                     if itemsArray.count > 0 {
                         List{
                             ForEach($itemsArray){$items in
@@ -61,9 +67,9 @@ struct ScanView: View {
                             }
                         }
                         .listStyle(.automatic)
-                    }else{
+                    }else{ // otherwise show empty screen
                         VStack{
-                            Image("EmptyData")
+                            Image(Constant.emptyImage)
                                 .resizable()
                                 .frame(width: 120, height: 120)
                                 .padding(.bottom, 20)
@@ -75,6 +81,7 @@ struct ScanView: View {
                     }
                 }
                 Spacer()
+                //:- Document List
                 
                 // MARK: Camera
                 HStack{
@@ -83,7 +90,7 @@ struct ScanView: View {
                         self.showScannerSheet = true
                         print(showScannerSheet)
                     }, label: {
-                        Image(systemName: "camera.viewfinder")
+                        Image(systemName: Constant.cameraScannerIcon)
                             .font(.title)
                     })
                     .padding()
@@ -93,28 +100,28 @@ struct ScanView: View {
                     .sheet(isPresented: $showScannerSheet, content: {
                         self.makeScannerView()
                     })
-                }
+                } //:- Camera
                 .padding(.trailing, 36)
                 .padding(.bottom, 60)
-            }
-            //: VSTACK
+                .shadow(color: Color.black.opacity(0.3), radius: 3, x: 0, y: 1)
+            }//: - Contents view
             .padding(EdgeInsets(top: 50, leading: 0, bottom: 60, trailing: 0))
         }.alert(isPresented: $viewModel.showAlert, content: {
-            Alert(title: Text("Invalid Document"),
-                  message: Text("The scanned document is not valid! Please try again with a valid document."),
+            Alert(title: Text(Constant.invalidDocumentTitle),
+                  message: Text(Constant.invalidDocumentMessage),
                   primaryButton: .default(Text("Cancel"), action: {
-//                self.itemsArray = []
+                
                 viewModel.showAlert = false
             }),
                   secondaryButton: .default(Text("Try Again"), action: {
-//                self.itemsArray = []
+                
                 self.showScannerSheet = true
             })//:- secondary button
-            ) //:- Alert
-        })//:- .alert
+            )})//:- .alert
+        .navigationBarHidden(true)
     }
     
-    // MARK: ScannerView
+    // MARK: - ScannerView
     private  func makeScannerView()-> DocumentCameraView {
         DocumentCameraView(completion: {
             textPerPage in
@@ -129,6 +136,8 @@ struct ScanView: View {
         })
     }
 }
+
+// MARK: - Preview
 
 struct ScanView_Previews: PreviewProvider {
     static var previews: some View {

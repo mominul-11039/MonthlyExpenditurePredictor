@@ -19,7 +19,7 @@ class ProfileViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     
     init() {
-        self.userEmail = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME")
+        self.userEmail = UserDefaults.standard.string(forKey: Constant.loggedinUserKey)
         if let userEmail =  userEmail {
             self.getUserInformations(email: userEmail)
         }
@@ -27,9 +27,9 @@ class ProfileViewModel: ObservableObject {
     
     private func getUserInformations(email: String) {
         let email = email
-        let predicate = NSPredicate(format: "user_email == %@", email)
+        let predicate = NSPredicate(format: Constant.emailPredicate, email)
         
-        let recordType = "expenditure_user"
+        let recordType = Constant.expUserRecordType
         CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
             .receive(on: DispatchQueue.main)
             .sink { _ in

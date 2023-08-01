@@ -14,14 +14,21 @@ struct CurrentMonthExpenseView: View {
     // MARK: - VIEW
     var body: some View {
         VStack {
+            // MARK: Title View
             HStack {
                 Text("Date")
-                    .fontWeight(.medium)
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 16))
+                    .foregroundColor(Color.black.opacity(0.7))
                 Spacer()
                 Text("Price")
-                    .fontWeight(.medium)
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 16))
+                    .foregroundColor(Color.black.opacity(0.7))
             } //:- HSTACK
             .padding(.horizontal, 15)
+            .padding(.top, 15)
+            // MARK:  Expense View
             List(dailyExpense) { expense in
                 HStack {
                     Text(expense.date)
@@ -30,15 +37,15 @@ struct CurrentMonthExpenseView: View {
                     Text("৳ \(expense.price)")
                         .font(Font.system(size: 14))
                         .fontWeight(.semibold)
-                        .foregroundColor(Color("PrimaryBackgroundColor"))
+                        .foregroundColor(Constant.primaryBgColor)
                 } //:- HSTACK
                 .listRowBackground(Color.clear)
-            } //:- LIST
+            } //:- Expense View
             .padding(.bottom, 30)
         } //:- VSTACK
         .frame(width: 300, height: UIScreen.screenHeight - 400)
         .listStyle(.plain)
-    }
+    } //:- View
 }
 
 // MARK: - PREVIEW

@@ -36,10 +36,8 @@ class LoginViewModel: ObservableObject{
             }
             return
         }
-        let predicate = NSPredicate(format: "user_email == %@", userEmail)
-        let recordType = "expenditure_user"
-        print("User email : \(userEmail)")
-        print("User password : \(password)")
+        let predicate = NSPredicate(format: Constant.emailPredicate, userEmail)
+        let recordType = Constant.expUserRecordType
         CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
             .receive(on: DispatchQueue.main)
             .sink { _ in
@@ -51,7 +49,7 @@ class LoginViewModel: ObservableObject{
                         self?.isWrongEmailOrPassword = false
                         self?.isAuthenticated = true
                     }
-                    UserDefaults.standard.set(self?.user?.userEmail, forKey: "MEP_LOGGED_IN_USER_NAME")
+                    UserDefaults.standard.set(self?.user?.userEmail, forKey: Constant.loggedinUserKey)
                     self?.sessionManager?.login()
                 } else {
                     DispatchQueue.main.async { [weak self] in

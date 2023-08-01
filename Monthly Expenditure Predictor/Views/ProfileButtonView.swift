@@ -18,7 +18,7 @@ struct ProfileButtonView: View {
                     .frame(width: 125, height: 60)
                     .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 2)
                     .overlay(
-                        Image(systemName: "person.crop.circle")
+                        Image(systemName: Constant.profileButtonIcon)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 35, height: 35)

@@ -22,14 +22,14 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
     }
     
     func getExpenditures() {
-        let userEmail = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME") ?? ""
+        let userEmail = UserDefaults.standard.string(forKey: Constant.loggedinUserKey) ?? ""
         let startingTimestamp = Int(Date().timeIntervalSince1970)
         let endingTimestamp = startingTimestamp - (14 * 24 * 60 * 60)
         print(startingTimestamp)
         print(endingTimestamp)
         print(userEmail)
         let predicate = NSPredicate(format: "date >= %d AND date <= %d AND user_email == %@",  endingTimestamp,  startingTimestamp, userEmail)
-        let recordType = "expenditure_info"
+        let recordType = Constant.expInfoRecordType
         CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
             .receive(on: DispatchQueue.main)
             .sink { _ in
@@ -80,7 +80,6 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
             print(timeStamprange.startTimestamp)
             print(timeStamprange.endTimestamp)
             expenditureList.forEach { expenditure in
-                print("expenditure.timestamp : \(expenditure.timestamp)")
                 if expenditure.timestamp >= Int(timeStamprange.startTimestamp) && expenditure.timestamp <= Int(timeStamprange.endTimestamp) {
                     dailyExpense[i].price = dailyExpense[i].price + expenditure.productPrice
                 }

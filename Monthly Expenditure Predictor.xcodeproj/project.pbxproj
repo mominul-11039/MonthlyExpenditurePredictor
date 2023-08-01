@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		186FDC1A2A6FD77500B73907 /* CurrentMonthExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FDC192A6FD77500B73907 /* CurrentMonthExpenseView.swift */; };
 		186FDC1C2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FDC1B2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift */; };
+		24D3F6282A78F9AA00BC773D /* SloganView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F6272A78F9AA00BC773D /* SloganView.swift */; };
 		24DA46EB2A73C409009F1DE2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA46EA2A73C409009F1DE2 /* Items.swift */; };
 		891093F92A6A3D7F00B7CAF9 /* HomeBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */; };
 		891093FB2A6A4E8B00B7CAF9 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093FA2A6A4E8B00B7CAF9 /* GraphView.swift */; };
@@ -54,7 +55,6 @@
 		89EF9F3D2A53DD6A00C5FB13 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */; };
 		89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */; };
 		89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F3F2A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift */; };
-		89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F402A53DD8A00C5FB13 /* RegistrationView.swift */; };
 		89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F452A53DFFA00C5FB13 /* ViewExtension.swift */; };
 		89EF9F482A53E39C00C5FB13 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */; };
 		89EF9F4A2A53E3AA00C5FB13 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EF9F492A53E3AA00C5FB13 /* LoginScreen.swift */; };
@@ -87,6 +87,7 @@
 /* Begin PBXFileReference section */
 		186FDC192A6FD77500B73907 /* CurrentMonthExpenseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMonthExpenseView.swift; sourceTree = "<group>"; };
 		186FDC1B2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMonthExpenditureViewModel.swift; sourceTree = "<group>"; };
+		24D3F6272A78F9AA00BC773D /* SloganView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganView.swift; sourceTree = "<group>"; };
 		24DA46EA2A73C409009F1DE2 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackGroundView.swift; sourceTree = "<group>"; };
 		891093FA2A6A4E8B00B7CAF9 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		89EF9F3C2A53DD6A00C5FB13 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyExpenditureEditableView.swift; sourceTree = "<group>"; };
 		89EF9F3F2A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPersonalDetailsView.swift; sourceTree = "<group>"; };
-		89EF9F402A53DD8A00C5FB13 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		89EF9F452A53DFFA00C5FB13 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		89EF9F472A53E39C00C5FB13 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		89EF9F492A53E3AA00C5FB13 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -257,7 +257,6 @@
 				89EF9F4E2A54041800C5FB13 /* UserProfileView.swift */,
 				89EF9F3E2A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift */,
 				89EF9F3F2A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift */,
-				89EF9F402A53DD8A00C5FB13 /* RegistrationView.swift */,
 				89B436962A2EE13C002C1CEB /* MonthlyExpenditureView.swift */,
 				89B436A32A2F2BB8002C1CEB /* CustomTabBarView.swift */,
 				89B436A92A2F36A2002C1CEB /* CustomTabBarContainerView.swift */,
@@ -270,6 +269,7 @@
 				891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */,
 				891093FA2A6A4E8B00B7CAF9 /* GraphView.swift */,
 				891094082A6A8BFC00B7CAF9 /* ScanView.swift */,
+				24D3F6272A78F9AA00BC773D /* SloganView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,10 +472,10 @@
 				89BA2EE72A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift in Sources */,
 				89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */,
 				186FDC1A2A6FD77500B73907 /* CurrentMonthExpenseView.swift in Sources */,
+				24D3F6282A78F9AA00BC773D /* SloganView.swift in Sources */,
 				89BA2EEB2A569AC600EEBDA5 /* Item.swift in Sources */,
 				89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */,
 				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
-				89EF9F432A53DD8A00C5FB13 /* RegistrationView.swift in Sources */,
 				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				891094042A6A503100B7CAF9 /* Color.swift in Sources */,
@@ -683,6 +683,8 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SpendWise;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -715,6 +717,8 @@
 				DEVELOPMENT_TEAM = 2BL4KQW6R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SpendWise;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
