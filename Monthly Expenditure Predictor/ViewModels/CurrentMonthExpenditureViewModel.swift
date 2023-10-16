@@ -13,12 +13,20 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
     @Published var expenditureList: [ExpenditureRecord] = []
     @Published var isShowGraph: Bool = false
     @Published var isShowList: Bool = false
+    
+    
     var dailyExpense: [DailyExpense] = []
     var graphData: [Double] = []
     var cancellables = Set<AnyCancellable>()
     
+    // MARK: - Expense Prediction Service Variable
+    var expensePredictor: ExpenditurePredictionProtocol = ExpenditurePredictor()
+    @Published var predictedMonthEndExpense: Double = 0.0
+    @Published var predictionError: String = ""
+    
     init() {
         getExpenditures()
+        predictMonthEndExpenditure()
     }
     
     func getExpenditures() {
@@ -75,7 +83,6 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
     func getDailyExpenditure() {
         for i in 0...13 {
             let timeStamprange = getTimestampRange(numberOfDay: i)
-            
             dailyExpense.append(DailyExpense(date: getRelativeDateTime(timestamp: timeStamprange.startTimestamp + 1), price: 0))
             print(timeStamprange.startTimestamp)
             print(timeStamprange.endTimestamp)
@@ -109,6 +116,31 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
         let endTimestamp = endOfTheDay?.timeIntervalSince1970 ?? startTimestamp - 1
         
         return (startTimestamp, endTimestamp)
+    }
+    
+    // MARK: - Month-end expenditure prediction
+    func predictMonthEndExpenditure(){
+        // TODO: Add real values
+        let paramenters =
+        ExpenditurePredictionParams(userName: "Yeasir Arefin Tusher",
+                                    userAge: 28,
+                                    address: "Dhaka",
+                                    noOfFamilyMember: 4,
+                                    expenseAmount: 450,
+                                    cumulativeSum: 1177,
+                                    month: 10,
+                                    day: 5)
+        
+        var result = expensePredictor.getApproximateMonthendExpense(feature: paramenters)
+        
+        switch result{
+        case .success(let monthEndExpense):
+            debugPrint("Expected Month-End Expenditure: \(monthEndExpense)")
+            self.predictedMonthEndExpense = monthEndExpense
+        case .failure(let errorMessage):
+            debugPrint("Prediction Error: \(errorMessage.localizedDescription)")
+            self.predictionError = errorMessage.localizedDescription
+        }
     }
 }
 

@@ -38,7 +38,7 @@ struct HomeBackGroundView: View {
                 .ignoresSafeArea()
                 .overlay(alignment: .bottom) {
                     if vm.isShowList {
-                        CurrentMonthExpenseView(dailyExpense: vm.dailyExpense)
+                        CurrentMonthExpenseView(dailyExpense: vm.dailyExpense, expectedMonthEndExpense: vm.predictedMonthEndExpense)
                     } else {
                         ProgressView()
                         .frame(width: 300, height: UIScreen.screenHeight - 400)

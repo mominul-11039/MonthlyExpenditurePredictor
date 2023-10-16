@@ -10,6 +10,7 @@ import SwiftUI
 struct CurrentMonthExpenseView: View {
     // MARK: - PROPERTIES
     var dailyExpense: [DailyExpense] = []
+    var expectedMonthEndExpense:Double = 0
     
     // MARK: - VIEW
     var body: some View {
@@ -41,7 +42,18 @@ struct CurrentMonthExpenseView: View {
                 } //:- HSTACK
                 .listRowBackground(Color.clear)
             } //:- Expense View
-            .padding(.bottom, 30)
+            HStack {
+                Text("Predicted Month-End Expense:")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 12))
+                    .foregroundColor(Color.black.opacity(0.6))
+                Spacer()
+                Text("৳ \(Int(expectedMonthEndExpense))")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 12))
+                    .foregroundColor(Constant.primaryBgColor)
+            } //:- HSTACK
+            .padding(10)
         } //:- VSTACK
         .frame(width: 300, height: UIScreen.screenHeight - 400)
         .listStyle(.plain)
