@@ -42,15 +42,15 @@ class RegistrationViewModel: ObservableObject {
 
     // MARK: Save User to cloudkit
     private func saveUser(){
-        let record = CKRecord(recordType: "expenditure_user")
+        let record = CKRecord(recordType: Constant.expUserRecordType)
 
-        record["user_name"] = self.fullName as CKRecordValue
-        record["user_email"] = self.email as CKRecordValue
-        record["user_address"] = self.address as CKRecordValue
-        record["user_age"] = self.age as CKRecordValue
-        record["no_of_family_member"] = self.noOfFamilyMember as CKRecordValue
-        record["password"] = self.password as CKRecordValue
-        record["confirm_password"] = self.confirmPassword as CKRecordValue
+        record[Constant.ckUserNameRecord] = self.fullName as CKRecordValue
+        record[Constant.ckUserEmailRecord] = self.email as CKRecordValue
+        record[Constant.ckUserAddressRecord] = self.address as CKRecordValue
+        record[Constant.ckUserAgeRecord] = self.age as CKRecordValue
+        record[Constant.ckNoOfFamilyMemberRecord] = self.noOfFamilyMember as CKRecordValue
+        record[Constant.ckPasswordRecord] = self.password as CKRecordValue
+        record[Constant.ckConfirmPasswordRecord] = self.confirmPassword as CKRecordValue
 
         CloudKitViewModel.add(item: User(record: record)!) { [weak self] result in
             switch result{
@@ -60,7 +60,7 @@ class RegistrationViewModel: ObservableObject {
                 print("Succeed!!")
                 DispatchQueue.main.async { [weak self] in
                     self?.isAuthenticated = true
-                    UserDefaults.standard.set(self?.email, forKey: "MEP_LOGGED_IN_USER_NAME")
+                    UserDefaults.standard.set(self?.email, forKey: Constant.loggedinUserKey)
                     self?.sessionManager?.login()
 
                 }
@@ -87,6 +87,6 @@ class RegistrationViewModel: ObservableObject {
     }
 
     func register() {
-        isValid ? saveUser() : print("registration unsuccessful")
+        isValid ? saveUser() : print()
     }
 }

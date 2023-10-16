@@ -1,0 +1,36 @@
+{
+  "Outputs" : {
+    "Month-End Expense" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "Inputs" : {
+    "Family Members" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "User Age" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Address" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "User Name" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Cumulative Sum" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Expense Amount" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Month" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "Day" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}

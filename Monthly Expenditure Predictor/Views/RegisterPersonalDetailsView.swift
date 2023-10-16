@@ -12,7 +12,7 @@ struct RegisterPersonalDetailsView: View {
     @ObservedObject var viewModel: RegistrationViewModel
     
     var body: some View {
-       
+       // MARK: - Background View
         ZStack {
             Constant.appBackground
                 .ignoresSafeArea()
@@ -23,8 +23,9 @@ struct RegisterPersonalDetailsView: View {
                         EmptyView()
                 }
             } else {
+                // MARK: - Registration form
                 VStack {
-                    Image("AvaterImage")
+                    Image(Constant.avaterImage)
                         .resizable()
                         .frame(width: 180, height: 180)
                         
@@ -72,7 +73,7 @@ struct RegisterPersonalDetailsView: View {
         }
     }
 }
-
+// MARK: - Preview
 struct RegisterPersonalDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterPersonalDetailsView(viewModel: RegistrationViewModel())

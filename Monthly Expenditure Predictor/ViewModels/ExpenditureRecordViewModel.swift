@@ -30,12 +30,11 @@ class ExpenditureRecordViewModel: ObservableObject {
     }
 
         func getExpenditures(startingTimestamp: Int, endingTimestamp: Int) {
-            let userEmail = UserDefaults.standard.string(forKey: "MEP_LOGGED_IN_USER_NAME") ?? ""
-            print("startingTimestamp",startingTimestamp)
-            print("endingTimestamp",endingTimestamp)
+            let userEmail = UserDefaults.standard.string(forKey: Constant.loggedinUserKey) ?? ""
+            
             let predicate = NSPredicate(format: "date >= %d AND date <= %d AND user_email == %@",  startingTimestamp,  endingTimestamp, userEmail)
 
-            let recordType = "expenditure_info"
+            let recordType = Constant.expInfoRecordType
             CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
                 .receive(on: DispatchQueue.main)
                 .sink { _ in
@@ -45,48 +44,6 @@ class ExpenditureRecordViewModel: ObservableObject {
                 }
                 .store(in: &cancellables)
         }
-
-
-//    func getExpenditures(startingTimestamp: Int, endingTimestamp: Int) -> [ExpenditureRecord] {
-//        print("startingTimestamp", startingTimestamp)
-//        print("endingTimestamp", endingTimestamp)
-//        let predicate = NSPredicate(format: "date >= %d AND date <= %d", startingTimestamp, endingTimestamp)
-//
-//        let recordType = "expenditure_info"
-//        //var expenditureList: [ExpenditureRecord] = []
-//
-//        let cancellable = CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
-//            .receive(on: DispatchQueue.main)
-//            .sink { _ in
-//            } receiveValue: { returnedItems in
-//                self.expenditureList = returnedItems
-//            }
-//
-//        cancellables.insert(cancellable)
-//        return expenditureList
-//    }
-
-    
-    //    func getExpenditures(startingTimestamp: Int, endingTimestamp: Int, completion: @escaping ([ExpenditureRecord]) -> Void) {
-    //        print("startingTimestamp", startingTimestamp)
-    //        print("endingTimestamp", endingTimestamp)
-    //        let predicate = NSPredicate(format: "date >= %d AND date <= %d", startingTimestamp, endingTimestamp)
-    //
-    //        let recordType = "expenditure_info"
-    //        var expenditureList: [ExpenditureRecord] = []
-    //
-    //        let cancellable = CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
-    //            .receive(on: DispatchQueue.main)
-    //            .sink { _ in
-    //            } receiveValue: { returnedItems in
-    //                expenditureList = returnedItems
-    //                completion(expenditureList) // Call the completion handler when records are received
-    //            }
-    //
-    //        cancellables.insert(cancellable)
-    //    }
-
-
     func getProcessedExpenditureList() -> [ExpenditureRecord] {
         return expenditureList
     }

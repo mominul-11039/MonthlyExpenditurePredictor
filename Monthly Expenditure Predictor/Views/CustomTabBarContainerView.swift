@@ -23,7 +23,6 @@ struct CustomTabBarContainerView<Content:View>: View {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .ignoresSafeArea()
-            
             CustomTabBarView(tabs: tabs, selection: $selection, localSelection: selection)
             
         }

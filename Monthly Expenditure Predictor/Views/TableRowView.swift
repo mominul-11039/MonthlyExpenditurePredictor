@@ -33,12 +33,12 @@ struct TableRowView: View {
                     .font(Font.system(size: 12))
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .foregroundColor(Color("PrimaryBackgroundColor"))
+                    .foregroundColor(Constant.primaryBgColor)
                     .cornerRadius(15)
             }
         }
         .listRowBackground(
-            Color("SecondaryBackgroundColor")
+            Constant.secondaryBgColor
         )
         .padding(0)
     }

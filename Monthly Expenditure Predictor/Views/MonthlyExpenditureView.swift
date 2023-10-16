@@ -28,8 +28,9 @@ struct MonthlyExpenditureView: View {
     let gridItemLayoutH = [GridItem(.flexible())]
 
     var body: some View {
+        // MARK: - Background View
         ZStack (alignment: .top) {
-            Color("PrimaryBackgroundColor").opacity(0.8)
+            Constant.primaryBgColor.opacity(0.8)
             ZStack (alignment: .bottom) {
                 ZStack(alignment: .top) {
                     WaveShape()
@@ -38,7 +39,7 @@ struct MonthlyExpenditureView: View {
                         .ignoresSafeArea()
                 }
                 listContainerView()
-                    .fill(Color("SecondaryBackgroundColor"))
+                    .fill(Constant.secondaryBgColor)
                     .shadow(color: Color.black.opacity(0.2),radius: 5, x: -5, y: -5)
                     .ignoresSafeArea()
                     .overlay (alignment: .bottom) {
@@ -68,7 +69,7 @@ struct MonthlyExpenditureView: View {
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0))
     }
-
+// MARK: Starting Time
     func getStartingTimestamp(for month: String, year: Int) -> TimeInterval {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
@@ -79,18 +80,18 @@ struct MonthlyExpenditureView: View {
         }
         return Date().timeIntervalSince1970
     }
-
+    // MARK: Ending Time
     func getEndingTimestamp(for month: String, year: Int) -> TimeInterval {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
         let dateString = "\(month) \(year)"
         if let date = formatter.date(from: dateString) {
-            print("date.startOfMonth().timeIntervalSince1970",date.endOfMonth().timeIntervalSince1970)
             return date.endOfMonth().timeIntervalSince1970
         }
         return Date().timeIntervalSince1970
     }
 
+    // MARK: Expenditure Record
     func getExpenditureRecords(for month: String, startingTimestamp: Int, endingTimestamp: Int) -> [ExpenditureRecord] {
         return expenditureRecords.filter { record in
             let timestamp = record.timestamp
@@ -99,31 +100,32 @@ struct MonthlyExpenditureView: View {
             timestamp <= endingTimestamp
         }
     }
-
+    // MARK: Month
     func getMonth(from timestamp: TimeInterval) -> String {
         let date = Date(timeIntervalSince1970: timestamp)
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM"
         return formatter.string(from: date)
     }
-
+   
+    // MARK: - Top View
     var topView: some View {
         VStack {
-            Text("Please choose a year")
+            Text("Filter")
                 .font(.headline)
-                .padding(.top, 50)
+                .padding(.top, 30)
                 .frame(height: 40)
-                .foregroundColor(Color("SecondaryBackgroundColor"))
+                .foregroundColor(Constant.secondaryBgColor)
 
             ScrollView(.horizontal) {
-                LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
+                LazyHGrid(rows: gridItemLayoutH, spacing: 5) {
                     ForEach(2023...2100, id: \.self) { year in
                         Text(verbatim: "\(year)")
                             .font(.subheadline)
                             .padding(6)
-                            .background(selectedYear == "\(year)" ? Color("SecondaryBackgroundColor"): Color("PrimaryBackgroundColor").opacity(0.7))
-                            .cornerRadius(10)
-                            .foregroundColor(selectedYear == "\(year)" ? Color("PrimaryBackgroundColor") : Color("SecondaryBackgroundColor"))
+                            .background(selectedYear == "\(year)" ? Constant.secondaryBgColor: Constant.primaryBgColor.opacity(0.7))
+                            .cornerRadius(6)
+                            .foregroundColor(selectedYear == "\(year)" ? Constant.primaryBgColor : Constant.secondaryBgColor)
                             .onTapGesture {
                                 selectedYear = "\(year)"
                             }
@@ -136,7 +138,7 @@ struct MonthlyExpenditureView: View {
             }
 
             ScrollView(.horizontal) {
-                LazyHGrid(rows: gridItemLayoutH, spacing: 10) {
+                LazyHGrid(rows: gridItemLayoutH, spacing: 5) {
                     ForEach(months, id: \.self) { month in
                         Button(action: {
                             selectedMonth = month
@@ -152,9 +154,9 @@ struct MonthlyExpenditureView: View {
                                 .font(.subheadline)
                                 .frame(maxHeight: .infinity)
                                 .padding(8)
-                                .background(selectedMonth == month ? Color("PrimaryBackgroundColor").opacity(0.7) : Color("SecondaryBackgroundColor"))
+                                .background(selectedMonth == month ? Constant.primaryBgColor.opacity(0.7) : Constant.secondaryBgColor)
                                 .cornerRadius(10)
-                                .foregroundColor(selectedMonth == month ? Color("SecondaryBackgroundColor") : Color.black)
+                                .foregroundColor(selectedMonth == month ? Constant.secondaryBgColor : Color.black)
                                 .shadow(color: Color.black.opacity(0.2),radius: 3, x: 3, y: 3)
                         }
                     }

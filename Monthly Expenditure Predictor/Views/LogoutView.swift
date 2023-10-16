@@ -16,7 +16,7 @@ struct LogoutButtonView: View {
             Text("Logout")
                 .foregroundColor(Color.red)
             Spacer()
-            Image(systemName: "rectangle.portrait.and.arrow.right")
+            Image(systemName: Constant.logoutIcon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 20, height: 20)

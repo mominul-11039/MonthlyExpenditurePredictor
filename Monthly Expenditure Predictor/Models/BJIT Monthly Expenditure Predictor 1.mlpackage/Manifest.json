@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "03167418-6367-449E-AA30-72B63E86A047": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "5CD189B7-6BDE-4499-A83D-7B10BFE3D56F": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "BJIT Monthly Expenditure Predictor 1.mlmodel",
+            "path": "com.apple.CoreML/BJIT Monthly Expenditure Predictor 1.mlmodel"
+        },
+        "8BF3E6C1-BE12-4BA6-BC27-1230CB2C3DB6": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        }
+    },
+    "rootModelIdentifier": "5CD189B7-6BDE-4499-A83D-7B10BFE3D56F"
+}

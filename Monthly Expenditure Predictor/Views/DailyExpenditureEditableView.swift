@@ -20,62 +20,51 @@ struct DailyExpenditureEditableView: View {
             currencyFormatter.maximumFractionDigits = 2
             self.viewModel = DailyExpenditureEditableViewModel(items: items)
             UINavigationBar.appearance().barTintColor = UIColor(Constant.primaryBgColor)
-
-                        
         }
     
     var body: some View {
         ZStack{
             Constant.listBackground
                 .ignoresSafeArea()
-            VStack{
-                if viewModel.isError {
-                    Text("Something Went Wrong! Please Try Again" )
-                        .font(.system(.callout))
-                        .foregroundColor(.red)
-                        .padding(20)
-                }
-               
-                List {
+            VStack{List {
                     Section{
                         ForEach($viewModel.items.indices, id: \.self) { index in
                             HStack {
-                                //                    TextField("Item Description", text: $items[index].name)
                                 TextEditor(text: $viewModel.items[index].name)
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(2)
                                     .font(.system(size: 12, weight: .bold))
                                     .foregroundColor(.secondary)
-                                
                                 TextField("Quantity", value: $viewModel.items[index].quantity, formatter: NumberFormatter())
                                     .multilineTextAlignment(.center)
                                     .font(.system(size: 12, weight: .bold))
                                     .foregroundColor(.secondary)
-                                
                                 TextField("Price", value: $viewModel.items[index].price, formatter: currencyFormatter)
                                     .keyboardType(.decimalPad)
                                     .multilineTextAlignment(.trailing)
                                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
                                     .font(.system(size: 12, weight: .bold))
                                     .foregroundColor(.secondary)
-                                
                             }
                         }
                     }header: {
                         HStack(){
                             Text("Item")
+                                .multilineTextAlignment(.leading)
                                 .styledHeader()
+                                .frame(alignment: .leading)
                                 
                             Text("Quantity")
                                 .styledHeader()
                                
                             Text("Price")
                                 .styledHeader()
-                                
                         }
-                            
+                        .padding(0)
                     }
+                    .padding(0)
                 }
+            .listStyle(.plain)
                 .navigationTitle("Save To CloudKit")
                 .navigationBarTitleDisplayMode(.inline)
                 
@@ -89,18 +78,27 @@ struct DailyExpenditureEditableView: View {
                         .background(Constant.gradientBG)
                         .cornerRadius(8)
                         .padding(10)
-               
-                    
                 })
-                            
             }
             if viewModel.willShowLoader {
                 ProgressView()
                     .frame(width: 100, height: 100)
-                    .background(Color("SecondaryBackgroundColor"))
+                    .background(Constant.secondaryBgColor)
             }
         }
+        .alert(isPresented: $viewModel.isError, content: {
+            Alert(title: Text(Constant.wrongAlertTitle),
+                  message: Text(Constant.notAvailableMessage),
+                  primaryButton: .default(Text("Cancel"), action: {
+                
+                viewModel.isError = false
+            }),
+                  secondaryButton: .default(Text("Try Again"), action: {
+                  viewModel.saveToCloudKit()
+            })//:- secondary button
+            )})
     }
+       
         
     
     struct DailyExpenditureEditableView_Previews: PreviewProvider {
