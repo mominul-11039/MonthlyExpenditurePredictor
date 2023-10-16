@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		186FDC1A2A6FD77500B73907 /* CurrentMonthExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FDC192A6FD77500B73907 /* CurrentMonthExpenseView.swift */; };
 		186FDC1C2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FDC1B2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift */; };
+		246EFD122ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD112ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage */; };
+		246EFD132ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD112ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage */; };
+		246EFD142ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD112ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage */; };
+		246EFD162ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD152ADCFDCE00373572 /* ExpenditurePredictor.swift */; };
+		246EFD172ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD152ADCFDCE00373572 /* ExpenditurePredictor.swift */; };
+		246EFD182ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD152ADCFDCE00373572 /* ExpenditurePredictor.swift */; };
+		246EFD1A2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD192ADCFDF400373572 /* ExpenditurePredictionProtocol.swift */; };
+		246EFD1B2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD192ADCFDF400373572 /* ExpenditurePredictionProtocol.swift */; };
+		246EFD1C2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD192ADCFDF400373572 /* ExpenditurePredictionProtocol.swift */; };
+		246EFD1E2ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD1D2ADCFEAF00373572 /* ExpenditurePredictionParams.swift */; };
+		246EFD1F2ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD1D2ADCFEAF00373572 /* ExpenditurePredictionParams.swift */; };
+		246EFD202ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246EFD1D2ADCFEAF00373572 /* ExpenditurePredictionParams.swift */; };
 		24D3F6282A78F9AA00BC773D /* SloganView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F6272A78F9AA00BC773D /* SloganView.swift */; };
 		24DA46EB2A73C409009F1DE2 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA46EA2A73C409009F1DE2 /* Items.swift */; };
 		891093F92A6A3D7F00B7CAF9 /* HomeBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */; };
@@ -87,6 +99,10 @@
 /* Begin PBXFileReference section */
 		186FDC192A6FD77500B73907 /* CurrentMonthExpenseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMonthExpenseView.swift; sourceTree = "<group>"; };
 		186FDC1B2A6FD77D00B73907 /* CurrentMonthExpenditureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMonthExpenditureViewModel.swift; sourceTree = "<group>"; };
+		246EFD112ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "BJIT Monthly Expenditure Predictor 1.mlpackage"; sourceTree = "<group>"; };
+		246EFD152ADCFDCE00373572 /* ExpenditurePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditurePredictor.swift; sourceTree = "<group>"; };
+		246EFD192ADCFDF400373572 /* ExpenditurePredictionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditurePredictionProtocol.swift; sourceTree = "<group>"; };
+		246EFD1D2ADCFEAF00373572 /* ExpenditurePredictionParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditurePredictionParams.swift; sourceTree = "<group>"; };
 		24D3F6272A78F9AA00BC773D /* SloganView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganView.swift; sourceTree = "<group>"; };
 		24DA46EA2A73C409009F1DE2 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		891093F82A6A3D7F00B7CAF9 /* HomeBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackGroundView.swift; sourceTree = "<group>"; };
@@ -179,6 +195,8 @@
 			children = (
 				89BA2EE42A569A9500EEBDA5 /* TextRecognizer.swift */,
 				896530C02A39DB4300008392 /* DateHelper.swift */,
+				246EFD152ADCFDCE00373572 /* ExpenditurePredictor.swift */,
+				246EFD192ADCFDF400373572 /* ExpenditurePredictionProtocol.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -299,11 +317,13 @@
 		89B4369D2A2EE180002C1CEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				246EFD112ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage */,
 				89BA2EE92A569AC600EEBDA5 /* Item.swift */,
 				89BA2EE82A569AC600EEBDA5 /* ScanData.swift */,
 				89B4369E2A2EE191002C1CEB /* User.swift */,
 				89BCB3302A396BFA00C2EF89 /* ExpenditureRecord.swift */,
 				24DA46EA2A73C409009F1DE2 /* Items.swift */,
+				246EFD1D2ADCFEAF00373572 /* ExpenditurePredictionParams.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,14 +492,17 @@
 				89BA2EE72A569AB800EEBDA5 /* DailyExpenditureEditableViewModel.swift in Sources */,
 				89EF9F4C2A53E3B200C5FB13 /* RegistrationScreen.swift in Sources */,
 				186FDC1A2A6FD77500B73907 /* CurrentMonthExpenseView.swift in Sources */,
+				246EFD162ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */,
 				24D3F6282A78F9AA00BC773D /* SloganView.swift in Sources */,
 				89BA2EEB2A569AC600EEBDA5 /* Item.swift in Sources */,
 				89EF9F422A53DD8A00C5FB13 /* RegisterPersonalDetailsView.swift in Sources */,
 				89D7F2BE2A3ACD8100B3A0DA /* TableHeaderView.swift in Sources */,
 				896530C12A39DB4300008392 /* DateHelper.swift in Sources */,
+				246EFD122ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */,
 				89EF45252A3819AD004D2361 /* IntialScreen.swift in Sources */,
 				891094042A6A503100B7CAF9 /* Color.swift in Sources */,
 				89EF9F412A53DD8A00C5FB13 /* DailyExpenditureEditableView.swift in Sources */,
+				246EFD1A2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */,
 				89BA2EEA2A569AC600EEBDA5 /* ScanData.swift in Sources */,
 				89EF9F462A53DFFA00C5FB13 /* ViewExtension.swift in Sources */,
 				89B436992A2EE14E002C1CEB /* HomeScreen.swift in Sources */,
@@ -511,6 +534,7 @@
 				89EF9F522A54042500C5FB13 /* ProfileViewModel.swift in Sources */,
 				89B436AC2A2F41AB002C1CEB /* DashBoardView.swift in Sources */,
 				89EF9F542A5408DB00C5FB13 /* LogoutView.swift in Sources */,
+				246EFD1E2ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */,
 				89EF9F502A54041800C5FB13 /* UserProfileView.swift in Sources */,
 				891094092A6A8BFC00B7CAF9 /* ScanView.swift in Sources */,
 				89BA2EE52A569A9500EEBDA5 /* TextRecognizer.swift in Sources */,
@@ -528,7 +552,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246EFD172ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */,
 				89B4367B2A2EDF93002C1CEB /* Monthly_Expenditure_PredictorTests.swift in Sources */,
+				246EFD1B2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */,
+				246EFD1F2ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */,
+				246EFD132ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,8 +564,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246EFD1C2ADCFDF400373572 /* ExpenditurePredictionProtocol.swift in Sources */,
 				89B436852A2EDF93002C1CEB /* Monthly_Expenditure_PredictorUITests.swift in Sources */,
 				89B436872A2EDF93002C1CEB /* Monthly_Expenditure_PredictorUITestsLaunchTests.swift in Sources */,
+				246EFD182ADCFDCE00373572 /* ExpenditurePredictor.swift in Sources */,
+				246EFD202ADCFEAF00373572 /* ExpenditurePredictionParams.swift in Sources */,
+				246EFD142ADCFD4800373572 /* BJIT Monthly Expenditure Predictor 1.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
