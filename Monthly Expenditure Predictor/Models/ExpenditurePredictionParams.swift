@@ -13,7 +13,7 @@ class ExpenditurePredictionParams{
          address: String,
          noOfFamilyMember: Int,
          expenseAmount: Int,
-         cumulativeSum: Int,
+         cumulativeSum: Double,
          month: Int,
          day: Int) 
     {
