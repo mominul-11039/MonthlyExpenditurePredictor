@@ -26,7 +26,6 @@ class ExpenditurePredictor : ExpenditurePredictionProtocol{
             )
             
             return Result.success(prediction.Month_End_Expense)
-            
         }catch  {
             return Result.failure(.SomethingWentWrong(message: "Something went wrong!"))
         }
