@@ -26,7 +26,7 @@ class ExpenditurePredictionParams{
         self.month = Int64(month)
         self.day = Int64(day)
     }
-    // MARK: - Protperties
+    // MARK: - Properties
     final var userName: String
     final var userAge: Int64
     final var address: String
