@@ -13,7 +13,7 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
     @Published var expenditureList: [ExpenditureRecord] = []
     @Published var isShowGraph: Bool = false
     @Published var isShowList: Bool = false
-    
+    @Published var monthlyExpenditureSum: Double?
     
     var dailyExpense: [DailyExpense] = []
     var graphData: [Double] = []
@@ -26,7 +26,7 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
     
     init() {
         getExpenditures()
-        predictMonthEndExpenditure()
+        getTotalMonthlyExpenditure()
     }
     
     func getExpenditures() {
@@ -117,22 +117,66 @@ class CurrentMonthExpenditureViewModel: ObservableObject {
         
         return (startTimestamp, endTimestamp)
     }
-    
+
+    func getTotalMonthlyExpenditure() {
+        guard let userEmail = UserDefaults.standard.string(forKey: Constant.loggedinUserKey) else {
+            print("User email not found.")
+            return
+        }
+
+        let currentDate = Date()
+        let calendar = Calendar.current
+
+        guard let startDateOfMonth = calendar.dateInterval(of: .month, for: currentDate)?.start else {
+            print("Failed to calculate the start date of the current month.")
+            return
+        }
+
+        let endDateOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startDateOfMonth)!
+
+        let startingTimestamp = Int(startDateOfMonth.timeIntervalSince1970)
+        let endingTimestamp = Int(endDateOfMonth.timeIntervalSince1970) 
+
+        print("Starting Timestamp:", startingTimestamp)
+        print("Ending Timestamp:", endingTimestamp)
+        print("User Email:", userEmail)
+
+        let predicate = NSPredicate(format: "date >= %d AND date <= %d AND user_email == %@",  startingTimestamp,  endingTimestamp, userEmail)
+        let recordType = Constant.expInfoRecordType
+
+        CloudKitViewModel.fetch(predicate: predicate, recordType: recordType)
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+            } receiveValue: { [weak self] returnedItems in
+                self?.expenditureList = returnedItems
+                self?.monthlyExpenditureSum = self?.calculateTotalMonthlyExpenditure()
+                self?.predictMonthEndExpenditure()
+            }
+            .store(in: &cancellables)
+    }
+
+    func calculateTotalMonthlyExpenditure() -> Double {
+        let totalMonthlyExpenditure = expenditureList.reduce(0.0) { result, record in
+            return result + (Double(record.productQuantity) * Double(record.productPrice))
+        }
+        return totalMonthlyExpenditure
+    }
+
     // MARK: - Month-end expenditure prediction
     func predictMonthEndExpenditure(){
         // TODO: Add real values
-        let paramenters =
+        let parameters =
         ExpenditurePredictionParams(userName: "Yeasir Arefin Tusher",
                                     userAge: 28,
                                     address: "Dhaka",
                                     noOfFamilyMember: 4,
                                     expenseAmount: 450,
-                                    cumulativeSum: 1177,
+                                    cumulativeSum: calculateTotalMonthlyExpenditure(),
                                     month: 10,
                                     day: 5)
-        
-        var result = expensePredictor.getApproximateMonthendExpense(feature: paramenters)
-        
+
+        var result = expensePredictor.getApproximateMonthendExpense(feature: parameters)
+
         switch result{
         case .success(let monthEndExpense):
             debugPrint("Expected Month-End Expenditure: \(monthEndExpense)")
